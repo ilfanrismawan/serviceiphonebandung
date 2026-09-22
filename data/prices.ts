@@ -1,0 +1,515 @@
+import type { PriceKey } from "@/types";
+
+export interface DetailedPrice {
+  name: string;
+  slug: string;
+  lcdHd?: number;
+  lcdFhd?: number;
+  lcdOled?: number;
+  lcdGenuine?: number;
+  battery?: number;
+  batteryGenuine?: number;
+  cameraFront?: number;
+  cameraBack?: number;
+}
+
+export const detailedPricelist: DetailedPrice[] = [
+  {
+    name: "iPhone 6",
+    slug: "iphone-6",
+    lcdHd: 118_000,
+    lcdGenuine: 229_000,
+    battery: 49_000,
+    cameraFront: 29_000,
+    cameraBack: 27_000,
+  },
+  {
+    name: "iPhone 6 Plus",
+    slug: "iphone-6-plus",
+    lcdHd: 169_000,
+    lcdGenuine: 249_000,
+    battery: 59_000,
+    cameraFront: 29_000,
+    cameraBack: 37_000,
+  },
+  {
+    name: "iPhone 6S",
+    slug: "iphone-6s",
+    lcdHd: 149_000,
+    lcdGenuine: 229_000,
+    battery: 49_000,
+    cameraFront: 29_000,
+    cameraBack: 47_000,
+  },
+  {
+    name: "iPhone 6S Plus",
+    slug: "iphone-6s-plus",
+    lcdHd: 169_000,
+    lcdGenuine: 349_000,
+    battery: 69_000,
+    cameraFront: 29_000,
+    cameraBack: 69_000,
+  },
+  {
+    name: "iPhone 7",
+    slug: "iphone-7",
+    lcdHd: 139_000,
+    lcdGenuine: 239_000,
+    battery: 59_000,
+    cameraFront: 74_000,
+    cameraBack: 79_000,
+  },
+  {
+    name: "iPhone 7 Plus",
+    slug: "iphone-7-plus",
+    lcdHd: 149_000,
+    lcdGenuine: 349_000,
+    battery: 69_000,
+    cameraFront: 64_000,
+    cameraBack: 199_000,
+  },
+  {
+    name: "iPhone 8",
+    slug: "iphone-8",
+    lcdHd: 139_000,
+    lcdGenuine: 239_000,
+    battery: 69_000,
+    cameraFront: 74_000,
+    cameraBack: 119_000,
+  },
+  {
+    name: "iPhone 8 Plus",
+    slug: "iphone-8-plus",
+    lcdHd: 149_000,
+    lcdGenuine: 349_000,
+    battery: 79_000,
+    cameraFront: 54_000,
+    cameraBack: 199_000,
+  },
+  {
+    name: "iPhone X",
+    slug: "iphone-x",
+    lcdHd: 249_000,
+    lcdFhd: 399_000,
+    lcdOled: 499_000,
+    lcdGenuine: 649_000,
+    battery: 99_000,
+    cameraFront: 99_000,
+    cameraBack: 199_000,
+  },
+  {
+    name: "iPhone XR",
+    slug: "iphone-xr",
+    lcdHd: 249_000,
+    lcdFhd: 299_000,
+    lcdOled: 399_000,
+    lcdGenuine: 449_000,
+    battery: 109_000,
+    cameraFront: 99_000,
+    cameraBack: 199_000,
+  },
+  {
+    name: "iPhone XS",
+    slug: "iphone-xs",
+    lcdHd: 249_000,
+    lcdFhd: 399_000,
+    lcdOled: 499_000,
+    lcdGenuine: 749_000,
+    battery: 119_000,
+    cameraFront: 99_000,
+    cameraBack: 199_000,
+  },
+  {
+    name: "iPhone XS Max",
+    slug: "iphone-xs-max",
+    lcdHd: 279_000,
+    lcdFhd: 429_000,
+    lcdOled: 649_000,
+    lcdGenuine: 949_000,
+    battery: 139_000,
+    cameraFront: 99_000,
+    cameraBack: 279_000,
+  },
+  {
+    name: "iPhone 11",
+    slug: "iphone-11",
+    lcdHd: 289_000,
+    lcdFhd: 349_000,
+    lcdOled: 449_000,
+    lcdGenuine: 549_000,
+    battery: 99_000,
+    cameraFront: 99_000,
+    cameraBack: 199_000,
+  },
+  {
+    name: "iPhone 11 Pro",
+    slug: "iphone-11-pro",
+    lcdHd: 299_000,
+    lcdFhd: 399_000,
+    lcdOled: 549_000,
+    lcdGenuine: 1_199_000,
+    battery: 139_000,
+    cameraFront: 99_000,
+    cameraBack: 499_000,
+  },
+  {
+    name: "iPhone 11 Pro Max",
+    slug: "iphone-11-pro-max",
+    lcdHd: 329_000,
+    lcdFhd: 459_000,
+    lcdOled: 599_000,
+    lcdGenuine: 1_499_000,
+    battery: 139_000,
+    cameraFront: 99_000,
+    cameraBack: 499_000,
+  },
+  {
+    name: "iPhone 12",
+    slug: "iphone-12",
+    lcdHd: 349_000,
+    lcdFhd: 429_000,
+    lcdOled: 699_000,
+    lcdGenuine: 1_249_000,
+    battery: 149_000,
+    batteryGenuine: 239_000,
+    cameraFront: 99_000,
+    cameraBack: 249_000,
+  },
+  {
+    name: "iPhone 12 Mini",
+    slug: "iphone-12-mini",
+    lcdHd: 399_000,
+    lcdFhd: 679_000,
+    lcdOled: 999_000,
+    lcdGenuine: 1_349_000,
+    battery: 149_000,
+    batteryGenuine: 239_000,
+    cameraFront: 99_000,
+    cameraBack: 349_000,
+  },
+  {
+    name: "iPhone 12 Pro",
+    slug: "iphone-12-pro",
+    lcdHd: 349_000,
+    lcdFhd: 429_000,
+    lcdOled: 749_000,
+    lcdGenuine: 1_449_000,
+    battery: 169_000,
+    batteryGenuine: 259_000,
+    cameraFront: 99_000,
+    cameraBack: 949_000,
+  },
+  {
+    name: "iPhone 12 Pro Max",
+    slug: "iphone-12-pro-max",
+    lcdHd: 429_000,
+    lcdFhd: 679_000,
+    lcdOled: 1_199_000,
+    lcdGenuine: 1_749_000,
+    battery: 189_000,
+    batteryGenuine: 279_000,
+    cameraFront: 99_000,
+    cameraBack: 849_000,
+  },
+  {
+    name: "iPhone SE 2 (2020)",
+    slug: "iphone-se-2",
+    battery: 79_000,
+    cameraFront: 59_000,
+    cameraBack: 129_000,
+  },
+  {
+    name: "iPhone SE 3 (2022)",
+    slug: "iphone-se-3",
+  },
+  {
+    name: "iPhone 13",
+    slug: "iphone-13",
+    lcdHd: 349_000,
+    lcdFhd: 529_000,
+    lcdOled: 1_049_000,
+    lcdGenuine: 1_099_000,
+    battery: 199_000,
+    batteryGenuine: 299_000,
+    cameraFront: 99_000,
+    cameraBack: 229_000,
+  },
+  {
+    name: "iPhone 13 Mini",
+    slug: "iphone-13-mini",
+    lcdHd: 379_000,
+    lcdFhd: 729_000,
+    lcdOled: 1_149_000,
+    lcdGenuine: 1_799_000,
+    battery: 199_000,
+    batteryGenuine: 299_000,
+    cameraFront: 99_000,
+    cameraBack: 249_000,
+  },
+  {
+    name: "iPhone 13 Pro",
+    slug: "iphone-13-pro",
+    lcdHd: 579_000,
+    lcdFhd: 829_000,
+    lcdOled: 1_649_000,
+    lcdGenuine: 1_799_000,
+    battery: 199_000,
+    batteryGenuine: 299_000,
+    cameraFront: 99_000,
+    cameraBack: 799_000,
+  },
+  {
+    name: "iPhone 13 Pro Max",
+    slug: "iphone-13-pro-max",
+    lcdHd: 799_000,
+    lcdFhd: 879_000,
+    lcdOled: 1_740_000,
+    lcdGenuine: 1_899_000,
+    battery: 199_000,
+    batteryGenuine: 299_000,
+    cameraFront: 129_000,
+    cameraBack: 849_000,
+  },
+  {
+    name: "iPhone 14",
+    slug: "iphone-14",
+    lcdHd: 399_000,
+    lcdFhd: 549_000,
+    lcdOled: 1_199_000,
+    lcdGenuine: 1_349_000,
+    battery: 199_000,
+    batteryGenuine: 364_000,
+    cameraFront: 299_000,
+    cameraBack: 549_000,
+  },
+  {
+    name: "iPhone 14 Plus",
+    slug: "iphone-14-plus",
+    lcdHd: 529_000,
+    lcdFhd: 579_000,
+    lcdOled: 1_299_000,
+    lcdGenuine: 2_499_000,
+    battery: 249_000,
+    batteryGenuine: 344_000,
+    cameraFront: 299_000,
+    cameraBack: 499_000,
+  },
+  {
+    name: "iPhone 14 Pro",
+    slug: "iphone-14-pro",
+    lcdHd: 699_000,
+    lcdFhd: 859_000,
+    lcdOled: 2_299_000,
+    lcdGenuine: 2_349_000,
+    battery: 229_000,
+    batteryGenuine: 364_000,
+    cameraFront: 299_000,
+    cameraBack: 699_000,
+  },
+  {
+    name: "iPhone 14 Pro Max",
+    slug: "iphone-14-pro-max",
+    lcdHd: 889_000,
+    lcdFhd: 1_029_000,
+    lcdOled: 3_199_000,
+    lcdGenuine: 3_379_000,
+    battery: 249_000,
+    batteryGenuine: 364_000,
+    cameraFront: 299_000,
+    cameraBack: 699_000,
+  },
+  {
+    name: "iPhone 15",
+    slug: "iphone-15",
+    lcdHd: 599_000,
+    lcdFhd: 629_000,
+    lcdOled: 1_849_000,
+    lcdGenuine: 2_279_000,
+    battery: 249_000,
+    batteryGenuine: 469_000,
+    cameraFront: 399_000,
+    cameraBack: 679_000,
+  },
+  {
+    name: "iPhone 15 Plus",
+    slug: "iphone-15-plus",
+    lcdHd: 599_000,
+    lcdFhd: 829_000,
+    lcdOled: 2_399_000,
+    lcdGenuine: 2_549_000,
+    battery: 329_000,
+    batteryGenuine: 389_000,
+    cameraFront: 399_000,
+    cameraBack: 699_000,
+  },
+  {
+    name: "iPhone 15 Pro",
+    slug: "iphone-15-pro",
+    lcdHd: 699_000,
+    lcdFhd: 1_279_000,
+    lcdOled: 2_499_000,
+    lcdGenuine: 2_649_000,
+    battery: 249_000,
+    batteryGenuine: 539_000,
+    cameraFront: 549_000,
+    cameraBack: 1_049_000,
+  },
+  {
+    name: "iPhone 15 Pro Max",
+    slug: "iphone-15-pro-max",
+    lcdHd: 899_000,
+    lcdFhd: 1_079_000,
+    lcdOled: 3_149_000,
+    lcdGenuine: 3_299_000,
+    battery: 399_000,
+    batteryGenuine: 639_000,
+    cameraFront: 549_000,
+    cameraBack: 1_149_000,
+  },
+  {
+    name: "iPhone 16",
+    slug: "iphone-16",
+    lcdHd: 1_099_000,
+    lcdFhd: 1_099_000,
+    lcdOled: 1_899_000,
+    lcdGenuine: 2_849_000,
+    battery: 499_000,
+    cameraFront: 399_000,
+    cameraBack: 999_000,
+  },
+  {
+    name: "iPhone 16 Plus",
+    slug: "iphone-16-plus",
+    lcdHd: 1_099_000,
+    lcdFhd: 1_279_000,
+    lcdOled: 2_399_000,
+    lcdGenuine: 2_899_000,
+    battery: 499_000,
+    cameraFront: 399_000,
+    cameraBack: 1_099_000,
+  },
+  {
+    name: "iPhone 16 Pro",
+    slug: "iphone-16-pro",
+    lcdHd: 1_199_000,
+    lcdFhd: 1_699_000,
+    lcdOled: 2_499_000,
+    lcdGenuine: 3_999_000,
+    battery: 499_000,
+    cameraFront: 599_000,
+    cameraBack: 1_199_000,
+  },
+  {
+    name: "iPhone 16 Pro Max",
+    slug: "iphone-16-pro-max",
+    lcdHd: 1_599_000,
+    lcdFhd: 1_599_000,
+    lcdOled: 4_799_000,
+    lcdGenuine: 5_299_000,
+    battery: 499_000,
+    cameraFront: 699_000,
+    cameraBack: 1_249_000,
+  },
+  {
+    name: "iPhone 16E",
+    slug: "iphone-16e",
+    lcdFhd: 799_000,
+    lcdOled: 999_000,
+    battery: 499_000,
+    cameraBack: 1_249_000,
+  },
+  {
+    name: "iPhone 17",
+    slug: "iphone-17",
+    lcdHd: 1_299_000,
+    lcdFhd: 1_599_000,
+    lcdOled: 1_999_000,
+    lcdGenuine: 3_999_000,
+    battery: 499_000,
+    cameraFront: 799_000,
+    cameraBack: 1_499_000,
+  },
+  {
+    name: "iPhone 17 Pro",
+    slug: "iphone-17-pro",
+    lcdHd: 1_399_000,
+    lcdFhd: 1_799_000,
+    lcdOled: 2_499_000,
+    lcdGenuine: 4_499_000,
+    battery: 599_000,
+    cameraFront: 999_000,
+    cameraBack: 1_499_000,
+  },
+  {
+    name: "iPhone 17 Pro Max",
+    slug: "iphone-17-pro-max",
+    lcdHd: 1_599_000,
+    lcdFhd: 1_999_000,
+    lcdOled: 2_799_000,
+    lcdGenuine: 5_299_000,
+    battery: 599_000,
+    cameraFront: 999_000,
+    cameraBack: 1_449_000,
+  },
+  {
+    name: "iPhone 17 Air",
+    slug: "iphone-17-air",
+    lcdGenuine: 5_299_000,
+    battery: 599_000,
+    cameraFront: 1_499_000,
+    cameraBack: 1_499_000,
+  },
+];
+
+/**
+ * Mapping backwards-compatible priceBook untuk servicePriceTable dan helper lama.
+ * Mengambil harga mulai dari (termurah) untuk masing-masing kategori kerusakan.
+ */
+export const priceBook: Record<string, Partial<Record<PriceKey, number>>> = Object.fromEntries(
+  detailedPricelist.map((item) => {
+    // Cari harga LCD terendah yang ada
+    const lcdPrices = [item.lcdHd, item.lcdFhd, item.lcdOled, item.lcdGenuine].filter(
+      (p): p is number => typeof p === "number" && p > 0
+    );
+    const minLcd = lcdPrices.length > 0 ? Math.min(...lcdPrices) : undefined;
+
+    // Charger estimasi standar port
+    const charger = item.slug.startsWith("iphone-15") || item.slug.startsWith("iphone-16") || item.slug.startsWith("iphone-17")
+      ? 350_000
+      : 250_000;
+
+    const camera = item.cameraBack ?? item.cameraFront;
+
+    return [
+      item.slug,
+      {
+        baterai: item.battery ?? item.batteryGenuine,
+        lcd: minLcd,
+        charger,
+        kamera: camera,
+      },
+    ];
+  })
+);
+
+export const priceLabels: Record<PriceKey, string> = {
+  baterai: "Ganti baterai",
+  lcd: "Ganti LCD",
+  charger: "Ganti port charger",
+  kamera: "Ganti kamera belakang",
+};
+
+export const PROMO_TITLE = "Promo Spesial iPhone Parts — Diskon Hingga 20%";
+export const PROMO_SUBTITLE =
+  "Bisa klaim garansi di seluruh cabang. Garansi LCD hingga 36 bulan!";
+
+export const PRICE_DISCLAIMER =
+  "Harga promo berlaku untuk suku cadang berkualitas tinggi. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di tempat.";
+
+export function getPrice(modelSlug: string, key: PriceKey): number | undefined {
+  return priceBook[modelSlug]?.[key];
+}
+
+export function getDetailedPrice(modelSlug: string): DetailedPrice | undefined {
+  return detailedPricelist.find((p) => p.slug === modelSlug);
+}
