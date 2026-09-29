@@ -14,7 +14,11 @@ export type IconName =
   | "check"
   | "chevron"
   | "menu"
-  | "close";
+  | "close"
+  | "wrench"
+  | "receipt"
+  | "newspaper"
+  | "phone";
 
 export interface Faq {
   question: string;
@@ -22,7 +26,7 @@ export interface Faq {
 }
 
 /** Kunci harga yang tersedia di price book. */
-export type PriceKey = "baterai" | "lcd" | "charger" | "kamera";
+export type PriceKey = "baterai" | "lcd" | "charger" | "kamera" | "speaker";
 
 export interface ServiceItem {
   slug: string;

@@ -26,19 +26,19 @@ export function HowItWorks() {
       <SectionHeading
         id="how-heading"
         title="Prosesnya sederhana"
-        description="Empat langkah, tidak ada biaya kejutan di tengah jalan."
+        description="Empat langkah praktis, tanpa biaya kejutan di tengah jalan."
       />
-      <ol className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ol className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, i) => (
           <li
             key={step.title}
-            className="group relative rounded-3xl border border-black/5 bg-mist/60 p-7 transition-all duration-300 hover:bg-mist hover:shadow-sm"
+            className="group relative overflow-hidden rounded-3xl glass-card p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-accent text-sm font-bold text-white shadow-sm">
+            <span className="liquid-step-badge inline-flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-xs font-bold text-white shadow-xs">
               {`0${i + 1}`}
             </span>
-            <p className="mt-5 text-lg font-semibold text-ink">{step.title}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{step.text}</p>
+            <p className="mt-4 text-[17px] font-bold tracking-tight text-ink">{step.title}</p>
+            <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted/90">{step.text}</p>
           </li>
         ))}
       </ol>

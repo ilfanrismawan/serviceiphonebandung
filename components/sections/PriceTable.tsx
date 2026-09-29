@@ -3,11 +3,11 @@
 import { useMemo, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { Button } from "@/components/ui/Button";
-import { detailedPricelist, type DetailedPrice } from "@/data/prices";
+import { detailedPricelist } from "@/data/prices";
 import { formatRupiah } from "@/lib/format";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-type CategoryTab = "all" | "lcd" | "battery" | "camera";
+type CategoryTab = "all" | "lcd" | "battery" | "camera" | "charger" | "speaker";
 
 export function PriceTable() {
   const [search, setSearch] = useState("");
@@ -32,19 +32,19 @@ export function PriceTable() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-400/20 px-3 py-1 text-xs font-semibold text-emerald-300">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>PROMO SEPTEMBER • DISKON S.D 20%</span>
+              <span>DAFTAR HARGA UPDATE • GARANSI RESMI TOKO</span>
             </div>
             <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl text-white">
               Pricelist Sparepart &amp; Servis iPhone Bandung
             </h2>
             <p className="mt-1 text-sm text-white/80">
-              Bisa klaim garansi di seluruh cabang. Garansi resmi layar LCD hingga 36 bulan (3 tahun)!
+              Transparan dan bergaransi. Suku cadang berkualitas mulai dari Grade A, OLED Plus, hingga Genuine Apple.
             </p>
           </div>
 
           <div className="shrink-0">
             <Button
-              href={buildWhatsAppUrl("Halo iServis Bandung, saya mau tanya ketersediaan promo part iPhone.")}
+              href={buildWhatsAppUrl("Halo iServis Bandung, saya mau tanya ketersediaan stok sparepart iPhone.")}
               external
               variant="inverse"
               icon="whatsapp"
@@ -62,7 +62,7 @@ export function PriceTable() {
           <button
             type="button"
             onClick={() => setActiveTab("all")}
-            className={`rounded-xl px-4 py-2 text-xs font-semibold transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
               activeTab === "all"
                 ? "bg-accent text-white shadow-sm"
                 : "bg-mist text-muted hover:bg-black/5 hover:text-ink"
@@ -73,35 +73,57 @@ export function PriceTable() {
           <button
             type="button"
             onClick={() => setActiveTab("lcd")}
-            className={`rounded-xl px-4 py-2 text-xs font-semibold transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
               activeTab === "lcd"
                 ? "bg-accent text-white shadow-sm"
                 : "bg-mist text-muted hover:bg-black/5 hover:text-ink"
             }`}
           >
-            🖥️ LCD / Layar (4 Pilihan Kualitas)
+            🖥️ Layar / LCD
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("battery")}
-            className={`rounded-xl px-4 py-2 text-xs font-semibold transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
               activeTab === "battery"
                 ? "bg-accent text-white shadow-sm"
                 : "bg-mist text-muted hover:bg-black/5 hover:text-ink"
             }`}
           >
-            🔋 Baterai &amp; Genuine
+            🔋 Baterai
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("camera")}
-            className={`rounded-xl px-4 py-2 text-xs font-semibold transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
               activeTab === "camera"
                 ? "bg-accent text-white shadow-sm"
                 : "bg-mist text-muted hover:bg-black/5 hover:text-ink"
             }`}
           >
-            📷 Kamera (Depan / Belakang)
+            📷 Kamera Belakang
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab("charger")}
+            className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
+              activeTab === "charger"
+                ? "bg-accent text-white shadow-sm"
+                : "bg-mist text-muted hover:bg-black/5 hover:text-ink"
+            }`}
+          >
+            ⚡ Konektor Charger
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab("speaker")}
+            className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
+              activeTab === "speaker"
+                ? "bg-accent text-white shadow-sm"
+                : "bg-mist text-muted hover:bg-black/5 hover:text-ink"
+            }`}
+          >
+            🔊 Speaker Atas/Bawah
           </button>
         </div>
 
@@ -127,54 +149,52 @@ export function PriceTable() {
             <thead className="border-b border-black/10 bg-mist/70 text-xs text-ink font-semibold">
               <tr>
                 <th className="py-4 px-5 sticky left-0 z-10 bg-mist/95 backdrop-blur-sm">
-                  Model iPhone
+                  Tipe iPhone
                 </th>
 
                 {(activeTab === "all" || activeTab === "lcd") && (
                   <>
                     <th className="py-4 px-4 whitespace-nowrap">
-                      LCD HD+
-                      <span className="block text-[10px] font-normal text-muted">Garansi 6 Bulan</span>
+                      LCD (Grade A)
+                      <span className="block text-[10px] font-normal text-muted">Ekonomis</span>
                     </th>
                     <th className="py-4 px-4 whitespace-nowrap">
-                      LCD FHD
-                      <span className="block text-[10px] font-normal text-muted">Garansi 12 Bulan</span>
+                      LCD (Oled Plus)
+                      <span className="block text-[10px] font-normal text-accent font-semibold">Warna Tajam</span>
                     </th>
                     <th className="py-4 px-4 whitespace-nowrap">
-                      LCD OLED
-                      <span className="block text-[10px] font-normal text-accent font-semibold">Garansi 18 Bulan</span>
-                    </th>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      Diagnostic Genuine
-                      <span className="block text-[10px] font-normal text-emerald-600 font-semibold">Garansi 36 Bulan</span>
+                      LCD (Genuine/Asli)
+                      <span className="block text-[10px] font-normal text-emerald-600 font-semibold">Original Apple</span>
                     </th>
                   </>
                 )}
 
                 {(activeTab === "all" || activeTab === "battery") && (
-                  <>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      Baterai
-                      <span className="block text-[10px] font-normal text-muted">Premium Cell</span>
-                    </th>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      Baterai Genuine
-                      <span className="block text-[10px] font-normal text-emerald-600 font-semibold">Original Apple Part</span>
-                    </th>
-                  </>
+                  <th className="py-4 px-4 whitespace-nowrap">
+                    Baterai
+                    <span className="block text-[10px] font-normal text-muted">Kapasitas 100%</span>
+                  </th>
                 )}
 
                 {(activeTab === "all" || activeTab === "camera") && (
-                  <>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      Kamera Depan
-                      <span className="block text-[10px] font-normal text-muted">TrueDepth / Face ID</span>
-                    </th>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      Kamera Belakang
-                      <span className="block text-[10px] font-normal text-muted">Sensor &amp; OIS</span>
-                    </th>
-                  </>
+                  <th className="py-4 px-4 whitespace-nowrap">
+                    Kamera Belakang
+                    <span className="block text-[10px] font-normal text-muted">Sensor &amp; OIS</span>
+                  </th>
+                )}
+
+                {(activeTab === "all" || activeTab === "charger") && (
+                  <th className="py-4 px-4 whitespace-nowrap">
+                    Konektor Charger
+                    <span className="block text-[10px] font-normal text-muted">Port Charging</span>
+                  </th>
+                )}
+
+                {(activeTab === "all" || activeTab === "speaker") && (
+                  <th className="py-4 px-4 whitespace-nowrap">
+                    Speaker Atas/Bawah
+                    <span className="block text-[10px] font-normal text-muted">Earpiece / Buzzer</span>
+                  </th>
                 )}
 
                 <th className="py-4 px-4 text-center">Aksi</th>
@@ -185,7 +205,7 @@ export function PriceTable() {
               {filteredList.length === 0 ? (
                 <tr>
                   <td colSpan={10} className="py-12 text-center text-muted">
-                    Model &ldquo;{search}&rdquo; tidak ditemukan. Silakan hubungi kami untuk seri lainnya.
+                    Model &ldquo;{search}&rdquo; tidak ditemukan. Silakan hubungi kami untuk informasi ketersediaan part.
                   </td>
                 </tr>
               ) : (
@@ -197,25 +217,26 @@ export function PriceTable() {
 
                     {(activeTab === "all" || activeTab === "lcd") && (
                       <>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdHd)}</td>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdFhd)}</td>
+                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdGradeA)}</td>
                         <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdOled)}</td>
                         <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdGenuine)}</td>
                       </>
                     )}
 
                     {(activeTab === "all" || activeTab === "battery") && (
-                      <>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.battery)}</td>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.batteryGenuine)}</td>
-                      </>
+                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.battery)}</td>
                     )}
 
                     {(activeTab === "all" || activeTab === "camera") && (
-                      <>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.cameraFront)}</td>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.cameraBack)}</td>
-                      </>
+                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.cameraBack)}</td>
+                    )}
+
+                    {(activeTab === "all" || activeTab === "charger") && (
+                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.charger)}</td>
+                    )}
+
+                    {(activeTab === "all" || activeTab === "speaker") && (
+                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.speaker)}</td>
                     )}
 
                     <td className="py-3.5 px-4 text-center whitespace-nowrap">
@@ -239,7 +260,7 @@ export function PriceTable() {
 
       {/* Notes and Badges Footer */}
       <div className="rounded-3xl border border-black/10 bg-mist/60 p-6 sm:p-7">
-        <h3 className="text-sm font-bold text-ink">Catatan &amp; Ketentuan Promo:</h3>
+        <h3 className="text-sm font-bold text-ink">Catatan &amp; Ketentuan Servis:</h3>
         <ul className="mt-3 space-y-1.5 text-xs text-muted leading-relaxed">
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -247,15 +268,15 @@ export function PriceTable() {
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span><strong>Garansi resmi:</strong> Hanya berlaku jika pemasangan langsung dilakukan di workshop iServis Bandung.</span>
+            <span><strong>Garansi resmi:</strong> Berlaku jika pemasangan langsung dilakukan di workshop iServis Bandung.</span>
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span><strong>Metode pembayaran promo:</strong> Berlaku untuk pembayaran non-tunai (QRIS, Transfer Bank, Debit, &amp; Kartu Kredit).</span>
+            <span><strong>Metode pembayaran:</strong> Menerima pembayaran tunai dan non-tunai (QRIS, Transfer Bank, Debit, &amp; Kartu Kredit).</span>
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span><strong>Garansi LCD:</strong> Kualitas HD+ (6 Bulan), FHD (12 Bulan), OLED (18 Bulan), Diagnostic Genuine (36 Bulan / 3 Tahun).</span>
+            <span><strong>Pilihan Kualitas LCD:</strong> Tersedia Grade A (ekonomis terjangkau), OLED Plus (kontras tinggi tajam), dan Genuine/Asli (Original bawaan Apple).</span>
           </li>
         </ul>
       </div>

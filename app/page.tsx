@@ -7,6 +7,9 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { Hero } from "@/components/sections/Hero";
 import { Highlights } from "@/components/sections/Highlights";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { BeforeAfterShowcase } from "@/components/sections/BeforeAfterShowcase";
+import { SparepartGuide } from "@/components/sections/SparepartGuide";
+import { VideoEducation } from "@/components/sections/VideoEducation";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { WarrantyGuarantee } from "@/components/sections/WarrantyGuarantee";
@@ -34,9 +37,12 @@ export default function HomePage() {
       <Hero />
       <Highlights />
       <CostEstimator />
+      <SparepartGuide />
       <ServiceGrid services={services} />
       <WarrantyGuarantee />
       <HowItWorks />
+      <VideoEducation />
+      <BeforeAfterShowcase />
       <Testimonials />
       <AreaGrid />
       <BlogPreview />

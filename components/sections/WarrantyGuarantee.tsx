@@ -46,11 +46,11 @@ export function WarrantyGuarantee() {
         {guarantees.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col justify-between rounded-3xl border border-black/5 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            className="flex flex-col justify-between rounded-3xl glass-card liquid-shimmer overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1"
           >
             <div>
               <div className="flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+                <div className="liquid-icon-glow flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                   <Icon name={item.icon} size={24} />
                 </div>
                 <span className="rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold text-accent">

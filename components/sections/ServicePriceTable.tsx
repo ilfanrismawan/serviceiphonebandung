@@ -10,17 +10,15 @@ export function ServicePriceTable({ priceKey, label }: { priceKey: PriceKey; lab
   if (priceKey === "lcd") {
     const headers = [
       "Model iPhone",
-      "Kualitas HD+ (6 Bln)",
-      "Kualitas FHD (12 Bln)",
-      "Kualitas OLED (18 Bln)",
-      "Genuine (36 Bln)",
+      "LCD (Grade A)",
+      "LCD (Oled Plus)",
+      "LCD (Genuine/Asli)",
     ];
     const rows = detailedPricelist
-      .filter((m) => m.lcdHd || m.lcdFhd || m.lcdOled || m.lcdGenuine)
+      .filter((m) => m.lcdGradeA || m.lcdOled || m.lcdGenuine)
       .map((item) => [
         item.name,
-        fmt(item.lcdHd),
-        fmt(item.lcdFhd),
+        fmt(item.lcdGradeA),
         fmt(item.lcdOled),
         fmt(item.lcdGenuine),
       ]);
@@ -35,18 +33,10 @@ export function ServicePriceTable({ priceKey, label }: { priceKey: PriceKey; lab
   }
 
   if (priceKey === "baterai") {
-    const headers = [
-      "Model iPhone",
-      "Baterai Premium Cell",
-      "Baterai Diagnostic Genuine (Resmi)",
-    ];
+    const headers = ["Model iPhone", "Baterai"];
     const rows = detailedPricelist
-      .filter((m) => m.battery || m.batteryGenuine)
-      .map((item) => [
-        item.name,
-        fmt(item.battery),
-        fmt(item.batteryGenuine),
-      ]);
+      .filter((m) => m.battery)
+      .map((item) => [item.name, fmt(item.battery)]);
 
     return (
       <Table
@@ -58,25 +48,51 @@ export function ServicePriceTable({ priceKey, label }: { priceKey: PriceKey; lab
   }
 
   if (priceKey === "kamera") {
-    const headers = ["Model iPhone", "Kamera Depan", "Kamera Belakang"];
+    const headers = ["Model iPhone", "Kamera Belakang"];
     const rows = detailedPricelist
-      .filter((m) => m.cameraFront || m.cameraBack)
-      .map((item) => [
-        item.name,
-        fmt(item.cameraFront),
-        fmt(item.cameraBack),
-      ]);
+      .filter((m) => m.cameraBack)
+      .map((item) => [item.name, fmt(item.cameraBack)]);
 
     return (
       <Table
-        caption="Daftar harga perbaikan kamera iPhone di Bandung"
+        caption="Daftar harga perbaikan modul kamera belakang iPhone di Bandung"
         headers={headers}
         rows={rows}
       />
     );
   }
 
-  // Fallback (charger / default)
+  if (priceKey === "charger") {
+    const headers = ["Model iPhone", "Konektor Charger"];
+    const rows = detailedPricelist
+      .filter((m) => m.charger)
+      .map((item) => [item.name, fmt(item.charger)]);
+
+    return (
+      <Table
+        caption="Daftar harga service konektor charger iPhone di Bandung"
+        headers={headers}
+        rows={rows}
+      />
+    );
+  }
+
+  if (priceKey === "speaker") {
+    const headers = ["Model iPhone", "Speaker Atas / Bawah"];
+    const rows = detailedPricelist
+      .filter((m) => m.speaker)
+      .map((item) => [item.name, fmt(item.speaker)]);
+
+    return (
+      <Table
+        caption="Daftar harga perbaikan speaker iPhone di Bandung"
+        headers={headers}
+        rows={rows}
+      />
+    );
+  }
+
+  // Fallback
   const rows = detailedPricelist.map((item) => {
     const price = getPrice(item.slug, priceKey);
     return [item.name, price ? formatRupiah(price) : "Hubungi kami"];

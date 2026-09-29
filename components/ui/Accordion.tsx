@@ -4,7 +4,7 @@ import { Icon } from "./Icon";
 /** Accordion berbasis <details>: aksesibel, tanpa JavaScript. */
 export function Accordion({ items }: { items: Faq[] }) {
   return (
-    <div className="divide-y divide-black/10 border-y border-black/10">
+    <div className="divide-y divide-black/8 border-y border-black/8 rounded-2xl">
       {items.map((item) => (
         <details key={item.question} className="group py-5">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-lg font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">

@@ -20,7 +20,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-10 sm:mb-14",
+        "mb-8 sm:mb-12",
         align === "center" && "mx-auto text-center",
         className,
       )}
@@ -28,10 +28,10 @@ export function SectionHeading({
       <Tag
         id={id}
         className={cn(
-          "font-semibold tracking-tight text-ink text-balance",
+          "font-bold tracking-[-0.03em] text-ink text-balance",
           Tag === "h1"
-            ? "text-4xl leading-[1.08] sm:text-6xl"
-            : "text-3xl leading-tight sm:text-5xl",
+            ? "text-4xl leading-[1.08] sm:text-6xl sm:leading-[1.04]"
+            : "text-2xl leading-tight sm:text-4xl sm:leading-[1.12]",
         )}
       >
         {title}
@@ -39,7 +39,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            "mt-4 max-w-2xl text-lg leading-relaxed text-muted text-pretty",
+            "mt-3 max-w-2xl text-[15px] sm:text-[17px] leading-relaxed text-muted font-normal text-pretty",
             align === "center" && "mx-auto",
           )}
         >

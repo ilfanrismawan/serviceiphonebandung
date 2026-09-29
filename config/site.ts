@@ -7,10 +7,10 @@ import type { IconName } from "@/types";
  */
 export const siteConfig = {
   // TODO: ganti dengan nama brand kamu
-  name: "iServis Bandung",
-  legalName: "iServis Bandung",
+  name: "Flow Service",
+  legalName: "Flow Service",
   tagline: "Service iPhone di Bandung",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://serviceiphonebandung.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://flowservice.id",
   locale: "id_ID",
   language: "id",
   description:
@@ -20,7 +20,7 @@ export const siteConfig = {
     // TODO: nomor WhatsApp format internasional tanpa + atau spasi
     whatsapp: "6285924045726",
     phoneDisplay: "0859-2404-5726",
-    email: "halo@serviceiphonebandung.com",
+    email: "",
   },
 
   address: {
@@ -32,8 +32,8 @@ export const siteConfig = {
     postalCode: "42315",
     country: "ID",
     // TODO: koordinat asli (klik kanan di Google Maps > salin koordinat)
-    geo: { lat: -6.9175, lng: 107.6191 },
-    mapsUrl: "https://maps.google.com/?q=Bandung",
+    geo: { lat: -6.890842983641312, lng: 107.61699082594095 },
+    mapsUrl: "https://maps.google.com/?q=Flow+Service+Bandung",
   },
 
   /** Jam buka. `days` memakai nama hari schema.org. */
@@ -49,21 +49,21 @@ export const siteConfig = {
         "Sunday",
       ],
       opens: "10:00",
-      closes: "20:00",
+      closes: "22:00",
     },
   ],
-  hoursLabel: "Setiap hari, 10.00 – 20.00 WIB",
+  hoursLabel: "Setiap hari, 10.00 – 22.00 WIB",
 
   social: {
-    instagram: "https://www.instagram.com/",
-    tiktok: "https://www.tiktok.com/",
+    instagram: "https://www.instagram.com/flowservice_",
+    tiktok: "https://www.tiktok.com/@fixwithflow",
   },
 
   nav: [
-    { label: "Layanan", href: "/layanan" },
-    { label: "Harga", href: "/harga" },
-    { label: "Blog", href: "/blog" },
-    { label: "Kontak", href: "/kontak" },
+    { label: "Layanan", href: "/layanan", icon: "wrench" as const, description: "Semua jenis servis iPhone" },
+    { label: "Harga", href: "/harga", icon: "receipt" as const, description: "Estimasi biaya transparan" },
+    { label: "Blog", href: "/blog", icon: "newspaper" as const, description: "Tips & panduan perawatan" },
+    { label: "Kontak", href: "/kontak", icon: "phone" as const, description: "Hubungi teknisi kami" },
   ],
 
   /** Keunggulan yang tampil di beranda. Sesuaikan dengan kondisi bisnis sebenarnya. */

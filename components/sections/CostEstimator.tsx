@@ -6,7 +6,7 @@ import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { models } from "@/data/models";
-import { detailedPricelist, getDetailedPrice, priceBook } from "@/data/prices";
+import { getDetailedPrice, priceBook } from "@/data/prices";
 import { formatRupiah } from "@/lib/format";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import type { PriceKey } from "@/types";
@@ -24,29 +24,36 @@ const issueOptions: IssueOption[] = [
     id: "lcd",
     name: "Ganti Layar / LCD (Pecah/Garis/Blank)",
     duration: "20 – 45 Menit",
-    warranty: "s.d 36 Bulan (Genuine)",
-    description: "Tersedia 4 opsi: HD+ (6 Bln), FHD (12 Bln), OLED (18 Bln), & Diagnostic Genuine (36 Bln).",
+    warranty: "Garansi Toko",
+    description: "Tersedia 3 opsi kualitas: LCD Grade A, LCD OLED Plus, dan LCD Genuine / Asli.",
   },
   {
     id: "baterai",
     name: "Ganti Baterai (Boros/Drop/Kembung)",
     duration: "15 – 30 Menit",
-    warranty: "Garansi Toko & Resmi",
-    description: "Tersedia baterai Premium Cell dan Diagnostic Genuine berkapasitas 100%.",
+    warranty: "Garansi Toko",
+    description: "Penggantian cell baterai baru berkapasitas 100% stabil dan bergaransi.",
   },
   {
     id: "charger",
-    name: "Port Charger (Tidak Mengisi/Longgar)",
+    name: "Konektor Charger (Tidak Mengisi/Longgar)",
     duration: "20 – 40 Menit",
     warranty: "60 Hari",
-    description: "Pembersihan jalur pin atau penggantian konektor Lightning / USB-C baru.",
+    description: "Pembersihan jalur pin atau penggantian flexibel konektor charger baru.",
   },
   {
     id: "kamera",
-    name: "Kamera (Belakang Getar / Depan Face ID)",
+    name: "Kamera Belakang (Getar / Buram / Blank)",
     duration: "30 – 60 Menit",
     warranty: "60 Hari",
-    description: "Penggantian modul sensor kamera depan atau belakang bergaransi.",
+    description: "Penggantian modul sensor kamera belakang bergaransi resmi toko.",
+  },
+  {
+    id: "speaker",
+    name: "Speaker Atas / Bawah (Kresek / Mati / Kecil)",
+    duration: "20 – 40 Menit",
+    warranty: "60 Hari",
+    description: "Pembersihan mesh atau penggantian modul speaker earpiece dan buzzer bawah.",
   },
   {
     id: "kena-air",
@@ -69,7 +76,7 @@ export function CostEstimator() {
   const [selectedIssueId, setSelectedIssueId] = useState<IssueOption["id"]>("lcd");
 
   const selectedModel = useMemo(
-    () => models.find((m) => m.slug === selectedModelSlug) ?? models[3],
+    () => models.find((m) => m.slug === selectedModelSlug) ?? models[0],
     [selectedModelSlug]
   );
 
@@ -96,7 +103,7 @@ export function CostEstimator() {
     return "Hubungi Teknisi";
   }, [selectedModelSlug, selectedIssueId]);
 
-  const whatsappMessage = `Halo iServis Bandung, saya mau konsultasi servis ${selectedModel.name} untuk kerusakan ${selectedIssue.name}. Estimasi biaya promo: ${estimatedPrice}. Apakah part-nya ready hari ini?`;
+  const whatsappMessage = `Halo iServis Bandung, saya mau konsultasi servis ${selectedModel.name} untuk keluhan ${selectedIssue.name}. Estimasi biaya: ${estimatedPrice}. Apakah part-nya ready?`;
 
   return (
     <Section tone="white" labelledBy="estimator-heading">
@@ -106,7 +113,7 @@ export function CostEstimator() {
         description="Pilih tipe iPhone dan kerusakan kamu untuk melihat perkiraan harga dan lama pengerjaan secara instan."
       />
 
-      <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-black/10 bg-mist/60 shadow-xl lg:grid lg:grid-cols-12">
+      <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl glass-card shadow-xl lg:grid lg:grid-cols-12">
         {/* Left Column: Input Selectors */}
         <div className="p-6 sm:p-10 lg:col-span-7">
           <div className="space-y-6">
@@ -120,11 +127,11 @@ export function CostEstimator() {
                   id="model-select"
                   value={selectedModelSlug}
                   onChange={(e) => setSelectedModelSlug(e.target.value)}
-                  className="w-full appearance-none rounded-2xl border border-black/15 bg-white px-4 py-3.5 pr-10 text-base font-medium text-ink shadow-sm transition-all focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                  className="w-full appearance-none rounded-2xl liquid-input px-4 py-3.5 pr-10 text-base font-medium text-ink transition-all focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                 >
                   {models.map((m) => (
                     <option key={m.slug} value={m.slug}>
-                      {m.name} ({m.variants.length > 1 ? `Semua varian ${m.name}` : m.name})
+                      {m.name}
                     </option>
                   ))}
                 </select>
@@ -144,7 +151,7 @@ export function CostEstimator() {
                   id="issue-select"
                   value={selectedIssueId}
                   onChange={(e) => setSelectedIssueId(e.target.value as IssueOption["id"])}
-                  className="w-full appearance-none rounded-2xl border border-black/15 bg-white px-4 py-3.5 pr-10 text-base font-medium text-ink shadow-sm transition-all focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                  className="w-full appearance-none rounded-2xl liquid-input px-4 py-3.5 pr-10 text-base font-medium text-ink transition-all focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                 >
                   {issueOptions.map((issue) => (
                     <option key={issue.id} value={issue.id}>
@@ -167,7 +174,7 @@ export function CostEstimator() {
         </div>
 
         {/* Right Column: Output Estimasi Card */}
-        <div className="flex flex-col justify-between border-t border-black/10 bg-white p-6 sm:p-10 lg:col-span-5 lg:border-l lg:border-t-0">
+        <div className="flex flex-col justify-between border-t border-black/8 bg-white/80 backdrop-blur-xl p-6 sm:p-10 lg:col-span-5 lg:border-l lg:border-t-0">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -175,25 +182,20 @@ export function CostEstimator() {
             </span>
 
             <p className="mt-4 text-xs font-medium text-muted">Estimasi Biaya Servis</p>
-            <p className="mt-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+            <p className="mt-1 text-2xl font-bold tracking-[-0.03em] text-ink sm:text-3xl">
               {estimatedPrice}
             </p>
 
             {selectedIssueId === "lcd" && detail && (
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {detail.lcdHd && (
+                {detail.lcdGradeA && (
                   <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
-                    HD+: {formatRupiah(detail.lcdHd)}
-                  </span>
-                )}
-                {detail.lcdFhd && (
-                  <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
-                    FHD: {formatRupiah(detail.lcdFhd)}
+                    Grade A: {formatRupiah(detail.lcdGradeA)}
                   </span>
                 )}
                 {detail.lcdOled && (
                   <span className="rounded-lg bg-accent/10 px-2.5 py-1 text-[11px] font-semibold text-accent">
-                    OLED: {formatRupiah(detail.lcdOled)}
+                    OLED Plus: {formatRupiah(detail.lcdOled)}
                   </span>
                 )}
                 {detail.lcdGenuine && (
@@ -204,33 +206,35 @@ export function CostEstimator() {
               </div>
             )}
 
-            {selectedIssueId === "baterai" && detail && (
+            {selectedIssueId === "baterai" && detail && detail.battery && (
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {detail.battery && (
-                  <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
-                    Baterai: {formatRupiah(detail.battery)}
-                  </span>
-                )}
-                {detail.batteryGenuine && (
-                  <span className="rounded-lg bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">
-                    Genuine: {formatRupiah(detail.batteryGenuine)}
-                  </span>
-                )}
+                <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
+                  Baterai: {formatRupiah(detail.battery)}
+                </span>
               </div>
             )}
 
-            {selectedIssueId === "kamera" && detail && (
+            {selectedIssueId === "kamera" && detail && detail.cameraBack && (
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {detail.cameraFront && (
-                  <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
-                    Depan: {formatRupiah(detail.cameraFront)}
-                  </span>
-                )}
-                {detail.cameraBack && (
-                  <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
-                    Belakang: {formatRupiah(detail.cameraBack)}
-                  </span>
-                )}
+                <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
+                  Kamera Belakang: {formatRupiah(detail.cameraBack)}
+                </span>
+              </div>
+            )}
+
+            {selectedIssueId === "charger" && detail && detail.charger && (
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
+                  Konektor Charger: {formatRupiah(detail.charger)}
+                </span>
+              </div>
+            )}
+
+            {selectedIssueId === "speaker" && detail && detail.speaker && (
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                <span className="rounded-lg bg-mist px-2.5 py-1 text-[11px] font-medium text-ink">
+                  Speaker: {formatRupiah(detail.speaker)}
+                </span>
               </div>
             )}
 

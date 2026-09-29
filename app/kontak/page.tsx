@@ -92,7 +92,7 @@ export default function KontakPage() {
               <div className="p-6 bg-white/90 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-sm font-semibold text-accent">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                  <span>Buka Setiap Hari: 10.00 – 20.00 WIB</span>
+                  <span>Buka Setiap Hari: 10.00 – 22.00 WIB</span>
                 </div>
                 <p className="mt-2 text-sm text-muted">
                   Ruang tunggu nyaman dengan meja periksa transparan. Kamu bisa melihat langsung proses pengecekan gadget kamu.

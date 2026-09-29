@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: `Harga Service iPhone ${siteConfig.address.city}`,
   description:
-    "Daftar harga service iPhone di Bandung: ganti baterai, LCD, port charger, dan kamera untuk semua model dari iPhone XR sampai iPhone 16.",
+    "Daftar harga service iPhone di Bandung: ganti baterai, LCD, port charger, kamera, dan speaker untuk semua model dari iPhone 7 sampai iPhone 16 Pro Max.",
   path: "/harga",
   keywords: ["harga service iphone bandung", "biaya ganti lcd iphone bandung", "harga ganti baterai iphone bandung"],
 });

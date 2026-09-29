@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -15,9 +14,9 @@ export function Testimonials() {
           className="mb-0 max-w-2xl"
         />
 
-        {/* Google Rating Badge */}
-        <div className="inline-flex items-center gap-3 rounded-2xl border border-black/10 bg-mist px-4 py-3 shadow-sm">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-xs font-bold text-lg text-amber-500">
+        {/* Google Rating Badge — glass pill */}
+        <div className="glass-pill inline-flex items-center gap-3 rounded-2xl px-4 py-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/80 shadow-sm font-bold text-lg text-amber-500">
             ★
           </div>
           <div>
@@ -34,8 +33,11 @@ export function Testimonials() {
         {testimonials.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col justify-between rounded-3xl border border-black/5 bg-mist/50 p-6 shadow-xs transition-all duration-300 hover:bg-mist hover:shadow-sm"
+            className="glass-card liquid-shimmer relative flex flex-col justify-between overflow-hidden rounded-3xl p-6 transition-all duration-300 hover:-translate-y-0.5"
           >
+            {/* Specular top line */}
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+
             <div>
               {/* Star rating */}
               <div className="flex items-center gap-1 text-amber-400">

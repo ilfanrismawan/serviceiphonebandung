@@ -15,10 +15,10 @@ export function CtaBanner({
 }: CtaBannerProps) {
   return (
     <Section tone="white">
-      <div className="relative overflow-hidden flex flex-col items-start gap-8 rounded-[2.5rem] bg-ink px-8 py-14 sm:flex-row sm:items-center sm:justify-between sm:px-14 shadow-2xl">
+      <div className="relative overflow-hidden flex flex-col items-start gap-8 rounded-[2.5rem] glass-dark px-8 py-14 sm:flex-row sm:items-center sm:justify-between sm:px-14">
         {/* Subtle decorative background glows */}
-        <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl pointer-events-none" />
-        <div className="absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-accent/10 blur-3xl pointer-events-none" />
+        <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent/25 blur-3xl pointer-events-none liquid-glow-pulse" />
+        <div className="absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-accent/15 blur-3xl pointer-events-none liquid-glow-pulse" />
 
         <div className="relative z-10 max-w-lg">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90 mb-3">

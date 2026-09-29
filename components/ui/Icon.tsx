@@ -65,6 +65,26 @@ const paths: Record<IconName, ReactNode> = {
   chevron: <path d="M9 6l6 6-6 6" />,
   menu: <path d="M4 8h16M4 16h16" />,
   close: <path d="M6 6l12 12M18 6L6 18" />,
+  wrench: (
+    <>
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+    </>
+  ),
+  receipt: (
+    <>
+      <path d="M4 2h16v20l-3-2-2 2-2-2-2 2-2-2-3 2Z" />
+      <path d="M8 9h8M8 13h6" />
+    </>
+  ),
+  newspaper: (
+    <>
+      <path d="M4 3h16a1 1 0 0 1 1 1v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z" />
+      <path d="M8 7h8M8 11h8M8 15h4" />
+    </>
+  ),
+  phone: (
+    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+  ),
 };
 
 interface IconProps extends Omit<SVGProps<SVGSVGElement>, "name"> {

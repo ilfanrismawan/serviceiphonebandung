@@ -37,7 +37,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang={siteConfig.language}>
-      <body>
+      <body className="liquid-bg">
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <a
