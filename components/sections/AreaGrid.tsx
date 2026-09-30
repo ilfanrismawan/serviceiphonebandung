@@ -15,10 +15,14 @@ export function AreaGrid() {
       />
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
         {areas.map((area) => (
-          <Card key={area.slug} href={`/area/${area.slug}`} tone="white" className="p-6">
-            <div className="flex items-center gap-2">
-              <Icon name="pin" size={18} className="text-accent" />
-              <span className="font-medium text-ink">{area.name}</span>
+          <Card key={area.slug} href={`/area/${area.slug}`} tone="glass" className="p-4 sm:p-5">
+            <div className="flex items-center gap-3">
+              <div className="liquid-icon-glow flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                <Icon name="pin" size={16} />
+              </div>
+              <span className="text-[14px] sm:text-[15px] font-semibold tracking-tight text-ink group-hover:text-accent transition-colors">
+                {area.name}
+              </span>
             </div>
           </Card>
         ))}

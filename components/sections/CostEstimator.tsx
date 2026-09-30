@@ -103,7 +103,7 @@ export function CostEstimator() {
     return "Hubungi Teknisi";
   }, [selectedModelSlug, selectedIssueId]);
 
-  const whatsappMessage = `Halo iServis Bandung, saya mau konsultasi servis ${selectedModel.name} untuk keluhan ${selectedIssue.name}. Estimasi biaya: ${estimatedPrice}. Apakah part-nya ready?`;
+  const whatsappMessage = `Halo Flow Service Bandung, saya mau konsultasi servis ${selectedModel.name} untuk keluhan ${selectedIssue.name}. Estimasi biaya: ${estimatedPrice}. Apakah part-nya ready?`;
 
   return (
     <Section tone="white" labelledBy="estimator-heading">

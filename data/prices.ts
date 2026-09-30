@@ -378,7 +378,7 @@ export const PROMO_SUBTITLE =
   "Bisa klaim garansi di seluruh cabang. Garansi resmi toko untuk setiap penggantian part!";
 
 export const PRICE_DISCLAIMER =
-  "Harga suku cadang berkualitas tinggi dan terupdate. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di workshop iServis Bandung.";
+  "Harga suku cadang berkualitas tinggi dan terupdate. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di workshop Flow Service Bandung.";
 
 export function getPrice(modelSlug: string, key: PriceKey): number | undefined {
   return priceBook[modelSlug]?.[key];

@@ -23,9 +23,9 @@ export function ServiceGrid({
       <SectionHeading id="services-heading" title={title} description={description} />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
-          <Card key={service.slug} href={`/layanan/${service.slug}`} tone={tone === "white" ? "mist" : "white"}>
+          <Card key={service.slug} href={`/layanan/${service.slug}`} tone="glass">
             {service.image && (
-              <div className="relative mb-5 -mx-1 -mt-1 aspect-[16/10] overflow-hidden rounded-2xl bg-black/5">
+              <div className="relative mb-5 -mx-1 -mt-1 aspect-[16/10] overflow-hidden rounded-2xl bg-black/5 border border-white/60 shadow-inner">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -33,17 +33,21 @@ export function ServiceGrid({
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-white/90 text-accent shadow-sm backdrop-blur-sm">
-                  <Icon name={service.icon} size={20} />
+                <div className="liquid-glass-pill absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl text-accent shadow-md">
+                  <Icon name={service.icon} size={18} />
                 </div>
               </div>
             )}
-            {!service.image && <Icon name={service.icon} size={26} className="text-accent" />}
-            <p className="mt-2 text-lg font-semibold text-ink group-hover:text-accent transition-colors">{service.shortTitle}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted line-clamp-2">{service.tagline}</p>
-            <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent">
+            {!service.image && <Icon name={service.icon} size={24} className="text-accent" />}
+            <p className="mt-2 text-[17px] font-bold tracking-tight text-ink group-hover:text-accent transition-colors">
+              {service.shortTitle}
+            </p>
+            <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted line-clamp-2">
+              {service.tagline}
+            </p>
+            <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold tracking-tight text-accent">
               Lihat detail &amp; estimasi
-              <Icon name="chevron" size={15} className="transition-transform group-hover:translate-x-1" />
+              <Icon name="chevron" size={14} className="transition-transform group-hover:translate-x-1" />
             </span>
           </Card>
         ))}

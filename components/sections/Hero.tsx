@@ -11,6 +11,7 @@ export function Hero() {
       {/* Ambient aurora glow orbs */}
       <div className="pointer-events-none absolute -top-40 left-1/4 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-gradient-to-br from-blue-400/25 via-cyan-300/15 to-transparent blur-3xl liquid-aurora" />
       <div className="pointer-events-none absolute -top-20 right-1/4 h-[500px] w-[500px] translate-x-1/2 rounded-full bg-gradient-to-bl from-indigo-400/20 via-accent/15 to-transparent blur-3xl liquid-aurora-delayed" />
+      <div className="pointer-events-none absolute top-1/4 right-1/3 h-[420px] w-[420px] rounded-full bg-gradient-to-b from-amber-400/15 via-orange-300/10 to-transparent blur-3xl liquid-aurora-slow" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-gradient-to-tr from-sky-400/15 to-transparent blur-3xl liquid-aurora-slow" />
 
       <Container>
@@ -35,7 +36,7 @@ export function Hero() {
               <Button href={buildWhatsAppUrl(DEFAULT_WA_MESSAGE)} external size="lg" icon="whatsapp">
                 Konsultasi via WhatsApp
               </Button>
-              <Button href="/harga" variant="secondary" size="lg">
+              <Button href="/harga" variant="glass" size="lg">
                 Lihat daftar harga
               </Button>
             </div>

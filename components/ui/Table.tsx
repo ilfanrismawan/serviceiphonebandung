@@ -6,35 +6,35 @@ interface TableProps {
   rows: ReactNode[][];
 }
 
-/** Tabel generik yang bisa di-scroll horizontal di layar sempit. */
+/** Tabel liquid glass yang bisa di-scroll horizontal di layar sempit. */
 export function Table({ caption, headers, rows }: TableProps) {
   return (
-    <div className="overflow-x-auto rounded-3xl bg-white ring-1 ring-black/5">
-      <table className="w-full min-w-[520px] border-collapse text-left text-[15px]">
+    <div className="overflow-x-auto rounded-3xl glass-card border border-white/80 shadow-xl">
+      <table className="w-full min-w-[520px] border-collapse text-left text-[14.5px]">
         <caption className="sr-only">{caption}</caption>
         <thead>
-          <tr className="border-b border-black/10 text-muted">
+          <tr className="border-b border-black/8 bg-white/60 backdrop-blur-md text-xs font-semibold text-muted uppercase tracking-wider">
             {headers.map((h, i) => (
               <th
                 key={h}
                 scope="col"
-                className={`px-6 py-4 font-medium ${i > 0 ? "text-right" : ""}`}
+                className={`px-6 py-4 font-semibold text-ink ${i > 0 ? "text-right" : ""}`}
               >
                 {h}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-black/5">
           {rows.map((cells, r) => (
-            <tr key={r} className="border-b border-black/5 last:border-0">
+            <tr key={r} className="transition-colors hover:bg-black/[0.02]">
               {cells.map((cell, c) =>
                 c === 0 ? (
-                  <th key={c} scope="row" className="px-6 py-4 font-medium text-ink">
+                  <th key={c} scope="row" className="px-6 py-4 font-semibold text-ink">
                     {cell}
                   </th>
                 ) : (
-                  <td key={c} className="px-6 py-4 text-right tabular-nums text-ink">
+                  <td key={c} className="px-6 py-4 text-right tabular-nums text-ink/90 font-medium">
                     {cell}
                   </td>
                 ),

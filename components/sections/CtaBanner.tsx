@@ -15,20 +15,23 @@ export function CtaBanner({
 }: CtaBannerProps) {
   return (
     <Section tone="white">
-      <div className="relative overflow-hidden flex flex-col items-start gap-8 rounded-[2.5rem] glass-dark px-8 py-14 sm:flex-row sm:items-center sm:justify-between sm:px-14">
+      <div className="glass-dark liquid-shimmer-dark relative overflow-hidden flex flex-col items-start gap-8 rounded-[2.5rem] border border-white/20 p-8 sm:p-14 sm:flex-row sm:items-center sm:justify-between shadow-2xl">
+        {/* Specular top rim */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+
         {/* Subtle decorative background glows */}
-        <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent/25 blur-3xl pointer-events-none liquid-glow-pulse" />
-        <div className="absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-accent/15 blur-3xl pointer-events-none liquid-glow-pulse" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent/30 blur-3xl liquid-glow-pulse" />
+        <div className="pointer-events-none absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl liquid-glow-pulse" />
 
         <div className="relative z-10 max-w-lg">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90 mb-3">
+          <div className="glass-pill inline-flex items-center gap-2 rounded-full px-3.5 py-1 text-xs font-semibold text-white/95 mb-4 border border-white/20">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>Teknisi Siap Melayani di Bandung</span>
           </div>
-          <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-balance text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-3 text-pretty leading-relaxed text-white/70">
+          <p className="mt-3 text-pretty text-[15px] sm:text-base leading-relaxed text-white/80">
             {description}
           </p>
         </div>

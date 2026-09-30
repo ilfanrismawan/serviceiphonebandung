@@ -8,19 +8,28 @@ type Variant = "primary" | "secondary" | "inverse" | "link" | "glass";
 type Size = "md" | "lg";
 
 const base =
-  "relative inline-flex items-center justify-center gap-2 font-medium tracking-tight overflow-hidden transition-all duration-300 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent select-none";
+  "group liquid-btn-shimmer relative inline-flex items-center justify-center gap-2.5 font-semibold tracking-[-0.015em] rounded-full overflow-hidden transition-all duration-200 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent select-none";
 
 const variants: Record<Variant, string> = {
+  // Apple Electric Flat Blue Pill (referensi Image 2: "Accept" / "Plant Seed") — Tanpa efek 3D
   primary:
-    "rounded-full bg-gradient-to-b from-[#0077ED]/95 via-[#0071E3] to-[#0062C4] text-white border border-white/25 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),0_4px_16px_rgba(0,113,227,0.32),0_1px_2px_rgba(0,0,0,0.1)] hover:from-[#1483F2] hover:to-[#006BD6] hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.65),0_6px_22px_rgba(0,113,227,0.45)] hover:border-white/40",
+    "bg-[#0071e3] hover:bg-[#0077ed] text-white border border-white/20 shadow-[0_4px_16px_rgba(0,113,227,0.32)] hover:shadow-[0_8px_24px_rgba(0,113,227,0.45)] hover:scale-[1.015]",
+
+  // VisionOS Flat Frosted Glass Pill (referensi Image 2: "Cancel" / "Play") — Tanpa efek 3D
   secondary:
-    "rounded-full bg-gradient-to-b from-white/90 to-white/65 text-ink border border-white/80 backdrop-blur-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.95),0_2px_8px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.02)] hover:bg-white/95 hover:border-white hover:shadow-[inset_0_1px_1px_rgba(255,255,255,1),0_4px_16px_rgba(0,0,0,0.08)]",
+    "bg-gradient-to-b from-white/80 via-white/60 to-[#f0f0f5]/55 text-ink backdrop-blur-2xl border border-white/85 shadow-[inset_0_1.5px_1.5px_0_rgba(255,255,255,1),inset_0_-1px_2px_0_rgba(0,0,0,0.03),0_6px_20px_-2px_rgba(0,0,0,0.06),0_1px_3px_0_rgba(0,0,0,0.02)] hover:bg-white/95 hover:border-white hover:shadow-[inset_0_2px_2px_0_rgba(255,255,255,1),0_10px_28px_-4px_rgba(0,0,0,0.1)] hover:scale-[1.02]",
+
+  // Inverse Flat White Glass for Dark Canvas
   inverse:
-    "rounded-full bg-gradient-to-b from-white/95 to-white/85 text-ink border border-white/90 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,1),0_4px_20px_rgba(0,0,0,0.18)] hover:bg-white hover:shadow-[inset_0_1px_0_rgba(255,255,255,1),0_6px_28px_rgba(0,0,0,0.25)]",
-  link:
-    "text-accent hover:text-accent-hover hover:underline underline-offset-4 font-medium transition-colors",
+    "bg-white hover:bg-white/92 text-ink shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.22)] hover:scale-[1.015]",
+
+  // Pure Flat Translucent Liquid Glass Capsule (referensi Image 1: Figma Liquid Glass Pill) — Tanpa efek 3D
   glass:
-    "rounded-full bg-gradient-to-b from-white/65 to-white/40 text-ink border border-white/70 backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.85),0_2px_10px_rgba(0,0,0,0.03)] hover:bg-white/80 hover:border-white hover:shadow-[inset_0_1px_1px_rgba(255,255,255,1),0_6px_20px_rgba(0,0,0,0.06)]",
+    // "bg-white/40 hover:bg-white/60 text-ink backdrop-blur-2xl border border-white/70 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:scale-[1.015]",
+   "bg-gradient-to-b from-white/45 via-white/20 to-white/35 text-ink backdrop-blur-2xl border border-white/80 shadow-[inset_0_1.5px_2px_0_rgba(255,255,255,0.9),inset_0_-1.5px_2px_0_rgba(255,255,255,0.25),inset_0_0_14px_0_rgba(255,255,255,0.2),0_8px_28px_-4px_rgba(0,0,0,0.08)] hover:bg-white/60 hover:border-white hover:shadow-[inset_0_2px_2.5px_0_rgba(255,255,255,1),0_14px_36px_-4px_rgba(0,0,0,0.14)] hover:scale-[1.02]",
+  // Minimalist flat text link
+  link:
+    "text-accent hover:text-accent-hover hover:underline underline-offset-4 font-semibold transition-colors",
 };
 
 const sizes: Record<Variant, Record<Size, string>> = {
@@ -58,15 +67,21 @@ export function Button({
   const classes = cn(buttonClasses(variant, size), className);
   const content = (
     <>
-      {/* Subtle specular sheen sweep on hover */}
+      {/* Specular shimmer beam sweep on hover */}
       {variant !== "link" && (
         <span
-          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full group-active:translate-x-full"
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full group-active:translate-x-full"
           aria-hidden="true"
         />
       )}
-      {icon && <Icon name={icon} size={18} className="shrink-0 transition-transform duration-200" />}
-      <span>{children}</span>
+      {icon && (
+        <Icon
+          name={icon}
+          size={18}
+          className="shrink-0 transition-transform duration-200 group-hover:scale-105"
+        />
+      )}
+      <span className="relative z-10">{children}</span>
     </>
   );
 
