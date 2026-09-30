@@ -18,8 +18,8 @@ export const siteConfig = {
 
   contact: {
     // TODO: nomor WhatsApp format internasional tanpa + atau spasi
-    whatsapp: "6285924045726",
-    phoneDisplay: "0859-2404-5726",
+    whatsapp: "6287860002347",
+    phoneDisplay: "0878-6000-2347",
     email: "",
   },
 
