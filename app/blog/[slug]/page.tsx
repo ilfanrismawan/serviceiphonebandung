@@ -97,6 +97,19 @@ export default async function BlogPostPage({ params }: PageProps) {
             ))}
           </div>
 
+          {post.sources && (
+            <section className="mt-10 border-t border-black/10 pt-6" aria-labelledby="article-sources">
+              <h2 id="article-sources" className="text-xl font-semibold text-ink">Sumber dan referensi</h2>
+              <ul className="mt-4 space-y-3">
+                {post.sources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} className="text-accent underline underline-offset-4">{source.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           {relatedService && (
             <div className="mt-14 rounded-3xl bg-mist p-8">
               <p className="text-lg font-medium text-ink">

@@ -76,6 +76,7 @@ export interface BlogPost {
   readingMinutes: number;
   relatedServiceSlug: string;
   sections: BlogSection[];
+  sources?: { title: string; url: string }[];
 }
 
 export interface BreadcrumbItem {
