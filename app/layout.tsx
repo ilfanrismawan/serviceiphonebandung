@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { StickyWhatsApp } from "@/components/layout/StickyWhatsApp";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Analytics } from "@/components/seo/Analytics";
 import { siteConfig } from "@/config/site";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <StickyWhatsApp />
+        <Analytics />
       </body>
     </html>
   );

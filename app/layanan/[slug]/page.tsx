@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Button } from "@/components/ui/Button";
@@ -82,6 +83,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   Lihat semua harga
                 </Button>
               </div>
+              <p className="mt-5 text-muted">Kunjungi toko independen kami di <Link href="/lokasi/dipatiukur" className="text-accent underline">Jl. Dipati Ukur No.86 lantai 2, Bandung</Link>. Konfirmasikan model iPhone, stok komponen dan jadwal sebelum datang.</p>
             </div>
 
             {service.image && (

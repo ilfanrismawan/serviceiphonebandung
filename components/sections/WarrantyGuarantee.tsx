@@ -19,10 +19,10 @@ const guarantees = [
   },
   {
     icon: "check" as const,
-    title: "Garansi Tukar Part Baru",
+    title: "Garansi Servis 2–3 Bulan",
     description:
-      "Jika muncul kendala pada part yang kami ganti dalam masa garansi hingga 90 hari, kami ganti part baru tanpa berbelit-belit.",
-    tag: "Garansi s.d 90 Hari",
+      "Garansi 2–3 bulan. Konfirmasikan durasi, cakupan dan pengecualian untuk jenis perbaikan Anda sebelum pengerjaan.",
+    tag: "Garansi 2–3 Bulan",
   },
   {
     icon: "tag" as const,

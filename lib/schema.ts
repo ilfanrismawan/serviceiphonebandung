@@ -7,7 +7,7 @@ import type {
   ServiceItem,
 } from "@/types";
 
-const { address, contact } = siteConfig;
+const { address } = siteConfig;
 
 export function localBusinessSchema() {
   return {
@@ -15,34 +15,21 @@ export function localBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": absoluteUrl("/#business"),
     name: siteConfig.name,
-    description: siteConfig.description,
+    description: `${siteConfig.name} adalah tempat servis iPhone independen di ${address.street}, ${address.district}, ${address.city}.`,
     url: siteConfig.url,
-    telephone: `+${contact.whatsapp}`,
-    email: contact.email,
+    telephone: `+${siteConfig.contact.whatsapp}`,
     image: absoluteUrl("/opengraph-image"),
     address: {
       "@type": "PostalAddress",
       streetAddress: address.street,
       addressLocality: address.city,
       addressRegion: address.region,
-      postalCode: address.postalCode,
       addressCountry: address.country,
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: address.geo.lat,
-      longitude: address.geo.lng,
-    },
-    openingHoursSpecification: siteConfig.hours.map((h) => ({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.days,
-      opens: h.opens,
-      closes: h.closes,
-    })),
+    // TODO(owner): confirm coordinates and hours for No.86 before adding them.
     areaServed: { "@type": "City", name: address.city },
-    sameAs: Object.values(siteConfig.social),
-    // Catatan: aggregateRating sengaja tidak dipasang. Tambahkan hanya jika
-    // memakai ulasan asli yang bisa diverifikasi (kebijakan Google).
+    hasMap: address.mapsListingUrl,
+    // No aggregateRating/review markup for the business's own reviews.
   };
 }
 

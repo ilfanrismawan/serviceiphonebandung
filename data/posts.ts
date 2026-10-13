@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/types";
+import { isPublishedPost } from "@/lib/publication";
 
 export const posts: BlogPost[] = [
   {
@@ -815,5 +816,5 @@ export const posts: BlogPost[] = [
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
-  return posts.find((p) => p.slug === slug);
+  return posts.find((p) => p.slug === slug && isPublishedPost(p));
 }

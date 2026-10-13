@@ -1,4 +1,5 @@
 import type { IconName } from "@/types";
+import { getSiteOrigin } from "./origin";
 
 /**
  * SATU-SATUNYA tempat untuk mengubah identitas bisnis.
@@ -6,34 +7,35 @@ import type { IconName } from "@/types";
  * Ganti semua nilai bertanda TODO sebelum go-live.
  */
 export const siteConfig = {
-  // TODO: ganti dengan nama brand kamu
+  // Owner-confirmed business identity, 2026-10-13.
   name: "Flow Service",
   legalName: "Flow Service",
   tagline: "Service iPhone di Bandung",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://flowservice.id",
+  url: getSiteOrigin(),
   locale: "id_ID",
   language: "id",
   description:
     "Service iPhone di Bandung: ganti baterai, LCD, port charger, kamera, iPhone mati total dan kena air. Diagnosa gratis, harga jelas sebelum dikerjakan, bergaransi.",
 
   contact: {
-    // TODO: nomor WhatsApp format internasional tanpa + atau spasi
+    // Owner-confirmed WhatsApp, international format without + or spaces.
     whatsapp: "6287860002347",
     phoneDisplay: "0878-6000-2347",
     email: "",
   },
 
   address: {
-    // TODO: alamat asli toko
-    street: "Jl. Dipati Ukur No.51 Lt 2, Lebakgede",
+    // Owner-confirmed No.86 address, 2026-10-13.
+    street: "Jl. Dipati Ukur No.86 Lt 2, Lebakgede",
     district: "Coblong",
     city: "Bandung",
     region: "Jawa Barat",
-    postalCode: "42315",
+    postalCode: "", // TODO(owner): verify postcode; do not infer a replacement.
     country: "ID",
     // TODO: koordinat asli (klik kanan di Google Maps > salin koordinat)
     geo: { lat: -6.890842983641312, lng: 107.61699082594095 },
-    mapsUrl: "https://maps.google.com/?q=Flow+Service+Bandung",
+    mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Jl.%20Dipati%20Ukur%20No.86%20Lebakgede%20Coblong%20Bandung",
+    mapsListingUrl: "https://share.google/QbGeqpEWGPLHdoigW", // Owner supplied 2026-10-13.
   },
 
   /** Jam buka. `days` memakai nama hari schema.org. */

@@ -31,7 +31,7 @@ const repairCases: CaseItem[] = [
     category: "Layar / LCD",
     model: "iPhone 13",
     duration: "25 Menit",
-    warranty: "18 Bulan (OLED)",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     beforeDescription:
       "Kaca layar retak parah akibat terjatuh, muncul garis hijau vertikal (green line), dan area sentuh tidak responsif.",
     afterDescription:
@@ -48,7 +48,7 @@ const repairCases: CaseItem[] = [
     category: "Bodi & Kaca Belakang",
     model: "iPhone 14 Pro",
     duration: "45 Menit",
-    warranty: "60 Hari",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     beforeDescription:
       "Kaca bodi belakang pecah seribu hingga serpihan terlepas di sekitar modul kamera MagSafe.",
     afterDescription:
@@ -65,7 +65,7 @@ const repairCases: CaseItem[] = [
     category: "Kamera",
     model: "iPhone 12",
     duration: "20 Menit",
-    warranty: "60 Hari",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     beforeDescription:
       "Kaca pelindung lensa kamera retak bolong, debu masuk membuat jepretan foto buram dan silau flare.",
     afterDescription:
@@ -163,7 +163,6 @@ export function BeforeAfterShowcase() {
                 src={activeCase.afterImage}
                 alt={`${activeCase.title} - Kondisi Setelah Servis`}
                 fill
-                priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
@@ -202,7 +201,6 @@ export function BeforeAfterShowcase() {
                 src={activeCase.beforeImage}
                 alt={`${activeCase.title} - Kondisi Sebelum Servis`}
                 fill
-                priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
@@ -250,7 +248,7 @@ export function BeforeAfterShowcase() {
         {/* Right Side: Details & Action */}
         <div className="flex flex-col justify-between p-6 sm:p-10 lg:col-span-5 bg-white">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+            <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-[#005bb5]">
               <span>{activeCase.category}</span>
               <span>•</span>
               <span>{activeCase.model}</span>
@@ -297,7 +295,7 @@ export function BeforeAfterShowcase() {
               </div>
               <div>
                 <p className="text-muted">Masa Garansi</p>
-                <p className="mt-0.5 font-semibold text-emerald-600 sm:text-sm">{activeCase.warranty}</p>
+                  <p className="mt-0.5 font-semibold text-emerald-700 sm:text-sm">{activeCase.warranty}</p>
               </div>
             </div>
           </div>

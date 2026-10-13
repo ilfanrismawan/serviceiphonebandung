@@ -10,6 +10,7 @@ interface ServiceGridProps {
   title?: string;
   description?: string;
   tone?: "white" | "mist";
+  headingAs?: "h1" | "h2";
 }
 
 export function ServiceGrid({
@@ -17,10 +18,11 @@ export function ServiceGrid({
   title = "Layanan yang kami tangani",
   description = "Setiap kerusakan dicek dulu sebelum ada tindakan atau biaya.",
   tone = "white",
+  headingAs = "h2",
 }: ServiceGridProps) {
   return (
     <Section tone={tone} labelledBy="services-heading">
-      <SectionHeading id="services-heading" title={title} description={description} />
+      <SectionHeading id="services-heading" as={headingAs} title={title} description={description} />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <Card key={service.slug} href={`/layanan/${service.slug}`} tone="glass">

@@ -27,7 +27,7 @@ const lcdTiers: LcdTier[] = [
     name: "Tipe HD+",
     tag: "Paling Hemat",
     tagColor: "bg-zinc-100 text-zinc-700 border-zinc-200",
-    warranty: "6 Bulan",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     panel: "IPS LCD Standar",
     trueTone: "Bisa dipindahkan",
     touchResponse: "60Hz Standar",
@@ -39,7 +39,7 @@ const lcdTiers: LcdTier[] = [
     name: "Tipe FHD",
     tag: "Value Terbaik",
     tagColor: "bg-blue-50 text-blue-700 border-blue-200",
-    warranty: "12 Bulan",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     panel: "IPS LCD High Density",
     trueTone: "Mendukung True Tone",
     touchResponse: "Presisi & Halus (60Hz)",
@@ -51,7 +51,7 @@ const lcdTiers: LcdTier[] = [
     name: "Tipe OLED Super Retina",
     tag: "Paling Populer ★",
     tagColor: "bg-amber-50 text-amber-700 border-amber-200",
-    warranty: "18 Bulan",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     panel: "OLED Tipis Kontras Tinggi",
     trueTone: "True Tone Aktif 100%",
     touchResponse: "Support 120Hz ProMotion",
@@ -64,7 +64,7 @@ const lcdTiers: LcdTier[] = [
     name: "Diagnostic Genuine",
     tag: "Standar Resmi",
     tagColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    warranty: "s.d 36 Bulan",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     panel: "Original Apple Module",
     trueTone: "Sistem Resmi Apple",
     touchResponse: "100% Standar Pabrikan",
@@ -92,7 +92,7 @@ const batteryTiers: BatteryTier[] = [
     name: "Premium High-Capacity Cell",
     tag: "Pilihan Ekonomis",
     tagColor: "bg-blue-50 text-blue-700 border-blue-200",
-    warranty: "90 Hari",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     cellQuality: "Cobalt Cell Kapasitas Murni 100%",
     batteryHealth: "Health terbaca via software diagnostic",
     iosNotification: "Pesan informasi part di iOS Setting (bisa dipindah chip)",
@@ -104,7 +104,7 @@ const batteryTiers: BatteryTier[] = [
     name: "Diagnostic Genuine Battery",
     tag: "Standar Resmi Apple",
     tagColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    warranty: "12 Bulan",
+    warranty: "2–3 Bulan (konfirmasi per layanan)",
     cellQuality: "Original Cell Apple",
     batteryHealth: "Battery Health 100% resmi di Pengaturan iOS",
     iosNotification: "Terkalibrasi Resmi (Tanpa Pesan Peringatan)",
@@ -113,6 +113,7 @@ const batteryTiers: BatteryTier[] = [
 ];
 
 export function SparepartGuide() {
+  // TODO(owner): verify tier specifications and sourcing; warranty confirmed as 2–3 months.
   const [activeTab, setActiveTab] = useState<"lcd" | "baterai">("lcd");
 
   return (

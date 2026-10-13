@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `Service iPhone ${area.name} — ${siteConfig.address.city}`,
     description: `Service iPhone terdekat untuk pelanggan di ${area.name} dan sekitarnya. ${area.intro}`,
     path: `/area/${area.slug}`,
+    noIndex: true, // Preserve URLs while withholding thin area templates from indexing.
     keywords: [`service iphone ${area.name.toLowerCase()}`, `service iphone dekat ${area.name.toLowerCase()}`],
   });
 }

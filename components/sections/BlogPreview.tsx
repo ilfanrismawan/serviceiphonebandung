@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { posts } from "@/data/posts";
+import { isPublishedPost } from "@/lib/publication";
 import { formatDate } from "@/lib/format";
 
 export function BlogPreview() {
@@ -21,7 +22,7 @@ export function BlogPreview() {
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-        {posts.slice(0, 3).map((post) => (
+        {posts.filter(isPublishedPost).slice(0, 3).map((post) => (
           <Card key={post.slug} href={`/blog/${post.slug}`} tone="glass">
             {post.image && (
               <div className="relative mb-4 -mx-1 -mt-1 aspect-[16/10] overflow-hidden rounded-2xl bg-black/5 border border-white/60 shadow-inner">

@@ -9,7 +9,7 @@ import { buildWhatsAppUrl, DEFAULT_WA_MESSAGE } from "@/lib/whatsapp";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: `Kontak & Lokasi — ${siteConfig.name}`,
+  title: "Kontak & Lokasi Dipati Ukur, Bandung",
   description: `Alamat, jam buka, dan kontak WhatsApp ${siteConfig.name} di ${siteConfig.address.city}.`,
   path: "/kontak",
 });
@@ -74,6 +74,8 @@ export default function KontakPage() {
               <Button href={buildWhatsAppUrl(DEFAULT_WA_MESSAGE)} external size="lg" icon="whatsapp">
                 Chat via WhatsApp
               </Button>
+              <div className="mt-4"><Button href={siteConfig.address.mapsUrl} external icon="pin">Petunjuk arah ke toko</Button></div>
+              <p className="mt-4 text-muted">Jam buka perlu konfirmasi pemilik. <a href="/lokasi/dipatiukur" className="text-accent underline">Panduan kunjungan ke Dipatiukur</a>.</p>
             </div>
           </div>
 
@@ -92,7 +94,7 @@ export default function KontakPage() {
               <div className="p-6 bg-white/90 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-sm font-semibold text-accent">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                  <span>Buka Setiap Hari: 10.00 – 22.00 WIB</span>
+                  <span>{siteConfig.hoursLabel} (perlu konfirmasi)</span>
                 </div>
                 <p className="mt-2 text-sm text-muted">
                   Ruang tunggu nyaman dengan meja periksa transparan. Kamu bisa melihat langsung proses pengecekan gadget kamu.

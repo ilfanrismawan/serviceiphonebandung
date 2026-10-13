@@ -60,7 +60,7 @@ function VideoCard({ video }: { video: EducationVideo }) {
           <button
             type="button"
             onClick={handlePlay}
-            aria-label={`Putar video: ${video.title}`}
+            aria-label={`Putar video: ${video.title}, durasi ${video.duration}`}
             className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-ink/30 transition-all hover:bg-ink/20"
           >
             {/* Ambient glow behind button */}
@@ -82,7 +82,7 @@ function VideoCard({ video }: { video: EducationVideo }) {
 
             {/* Duration badge */}
             <span className="glass-pill rounded-full px-3 py-1 text-xs font-semibold text-ink">
-              ▶ {video.duration}
+              <span aria-hidden="true">▶</span> {video.duration}
             </span>
           </button>
         )}

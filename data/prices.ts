@@ -375,7 +375,7 @@ export const priceLabels: Record<PriceKey, string> = {
 
 export const PROMO_TITLE = "Pricelist Sparepart & Servis iPhone Bandung";
 export const PROMO_SUBTITLE =
-  "Bisa klaim garansi di seluruh cabang. Garansi resmi toko untuk setiap penggantian part!";
+  "Garansi 2–3 bulan. Konfirmasikan durasi, cakupan dan pengecualian sesuai perbaikan sebelum pengerjaan.";
 
 export const PRICE_DISCLAIMER =
   "Harga suku cadang berkualitas tinggi dan terupdate. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di workshop Flow Service Bandung.";

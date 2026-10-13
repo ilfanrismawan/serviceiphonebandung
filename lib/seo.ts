@@ -36,7 +36,7 @@ export function buildMetadata({
     title: absoluteTitle ? { absolute: title } : title,
     description,
     keywords,
-    alternates: { canonical: path },
+    alternates: { canonical: url },
     robots: noIndex ? { index: false, follow: false } : undefined,
     openGraph: {
       title,
@@ -45,10 +45,12 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type,
+      images: [{ url: absoluteUrl("/opengraph-image"), width: 1200, height: 630, alt: `${siteConfig.name} — Service iPhone Bandung` }],
       ...(type === "article" && { publishedTime, modifiedTime }),
     },
     twitter: {
       card: "summary_large_image",
+      images: [absoluteUrl("/opengraph-image")],
       title,
       description,
     },

@@ -64,6 +64,8 @@ export function Footer() {
                   {siteConfig.address.street}, {siteConfig.address.city}
                 </span>
               </li>
+              <li><a href={siteConfig.address.mapsListingUrl} data-seo-event="directions_click">Flow Service - Google Maps</a></li>
+              <li><Link href="/lokasi/dipatiukur">Lokasi toko di Dipatiukur</Link></li>
               <li>{siteConfig.hoursLabel}</li>
               <li>{siteConfig.contact.phoneDisplay}</li>
             </ul>

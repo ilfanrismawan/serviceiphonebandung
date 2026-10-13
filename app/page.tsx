@@ -11,7 +11,6 @@ import { BeforeAfterShowcase } from "@/components/sections/BeforeAfterShowcase";
 import { SparepartGuide } from "@/components/sections/SparepartGuide";
 import { VideoEducation } from "@/components/sections/VideoEducation";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { WarrantyGuarantee } from "@/components/sections/WarrantyGuarantee";
 import { siteConfig } from "@/config/site";
 import { generalFaqs } from "@/data/faqs";
@@ -19,7 +18,7 @@ import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${siteConfig.name} — Service iPhone Bandung Bergaransi`,
+  title: `Service iPhone Bandung di Dipati Ukur | ${siteConfig.name}`,
   description: siteConfig.description,
   path: "/",
   absoluteTitle: true,
@@ -43,7 +42,7 @@ export default function HomePage() {
       <HowItWorks />
       <VideoEducation />
       <BeforeAfterShowcase />
-      <Testimonials />
+      {/* TODO(owner): restore testimonials only with source URLs and permission. */}
       <AreaGrid />
       <BlogPreview />
       <FaqSection faqs={generalFaqs} />

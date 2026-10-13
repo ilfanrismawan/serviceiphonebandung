@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getPost, posts } from "@/data/posts";
+import { isPublishedPost } from "@/lib/publication";
 import { getService } from "@/data/services";
 import { formatDate } from "@/lib/format";
 import { articleSchema } from "@/lib/schema";
@@ -18,7 +19,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return posts.map((p) => ({ slug: p.slug }));
+  return posts.filter(isPublishedPost).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

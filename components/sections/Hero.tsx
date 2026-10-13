@@ -39,6 +39,7 @@ export function Hero() {
               <Button href="/harga" variant="glass" size="lg">
                 Lihat daftar harga
               </Button>
+              <Button href="/lokasi/dipatiukur" variant="secondary">Lokasi Dipatiukur</Button>
             </div>
 
             {/* Trust points */}
@@ -94,7 +95,7 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="text-[11px] font-medium text-muted">Garansi Servis</p>
-                    <p className="text-sm font-semibold tracking-tight text-ink sm:text-base">Hingga 90 Hari</p>
+                    <p className="text-sm font-semibold tracking-tight text-ink sm:text-base">2–3 Bulan</p>
                   </div>
                 </div>
               </div>

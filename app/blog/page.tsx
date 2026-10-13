@@ -5,12 +5,12 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { posts } from "@/data/posts";
+import { isPublishedPost } from "@/lib/publication";
 import { formatDate } from "@/lib/format";
 import { buildMetadata } from "@/lib/seo";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: `Blog — ${siteConfig.name}`,
+  title: "Panduan Perawatan dan Servis iPhone",
   description: "Panduan singkat seputar perawatan dan kerusakan iPhone, ditulis oleh tim service kami.",
   path: "/blog",
 });
@@ -22,7 +22,7 @@ export default function BlogIndexPage() {
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
         <SectionHeading as="h1" title="Blog" description="Tips praktis sebelum kamu memutuskan servis." />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
+          {posts.filter(isPublishedPost).map((post) => (
             <Card key={post.slug} href={`/blog/${post.slug}`}>
               {post.image && (
                 <div className="relative mb-4 -mx-1 -mt-1 aspect-[16/10] overflow-hidden rounded-2xl bg-black/5">

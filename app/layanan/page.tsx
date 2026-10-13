@@ -24,7 +24,8 @@ export default function LayananPage() {
       </div>
       <ServiceGrid
         services={services}
-        title="Semua layanan"
+        title="Layanan Service iPhone Bandung"
+        headingAs="h1"
         description="Pilih jenis kerusakan iPhone kamu untuk lihat detail, gejala, dan estimasi harga."
         tone="white"
       />
