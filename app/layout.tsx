@@ -40,18 +40,6 @@ export default function RootLayout({
   return (
     <html lang={siteConfig.language}>
       <body className="liquid-bg">
-            <Script
-      src="https://www.googletagmanager.com/gtag/js?id=AW-18534863324"
-      strategy="afterInteractive"
-    />
-    <Script id="google-ads-gtag" strategy="afterInteractive">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-18534863324');
-      `}
-    </Script>
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <a
@@ -62,6 +50,19 @@ export default function RootLayout({
         </a>
         <Header />
         <main id="main-content">{children}</main>
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=AW-18534863324"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-ads-tag" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18534863324');
+  `}
+</Script>
         <Footer />
         <StickyWhatsApp />
         <Analytics />
