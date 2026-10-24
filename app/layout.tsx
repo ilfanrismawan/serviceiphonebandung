@@ -7,6 +7,7 @@ import { Analytics } from "@/components/seo/Analytics";
 import { siteConfig } from "@/config/site";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
+import { GoogleTag } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -53,6 +54,7 @@ export default function RootLayout({
         <StickyWhatsApp />
         <Analytics />
       </body>
+	  <GoogleTag gaId="AW-18534863324" />
     </html>
   );
 }
