@@ -7,7 +7,7 @@ import { Analytics } from "@/components/seo/Analytics";
 import { siteConfig } from "@/config/site";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
-import { GoogleTag } from '@next/third-parties/google'
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -40,6 +40,18 @@ export default function RootLayout({
   return (
     <html lang={siteConfig.language}>
       <body className="liquid-bg">
+            <Script
+      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}`}
+      strategy="afterInteractive"
+    />
+    <Script id="google-ads-gtag" strategy="afterInteractive">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');
+      `}
+    </Script>
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <a
@@ -54,7 +66,6 @@ export default function RootLayout({
         <StickyWhatsApp />
         <Analytics />
       </body>
-	  <GoogleTag gaId="AW-18534863324" />
     </html>
   );
 }
