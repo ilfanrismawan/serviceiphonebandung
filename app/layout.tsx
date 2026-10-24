@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang={siteConfig.language}>
       <body className="liquid-bg">
             <Script
-      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}`}
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18534863324"
       strategy="afterInteractive"
     />
     <Script id="google-ads-gtag" strategy="afterInteractive">
@@ -49,7 +49,7 @@ export default function RootLayout({
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');
+        gtag('config', 'AW-18534863324');
       `}
     </Script>
         <JsonLd data={localBusinessSchema()} />
