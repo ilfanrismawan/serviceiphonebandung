@@ -87,6 +87,7 @@ export function articleSchema(post: BlogPost) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
+    ...(post.image && { image: absoluteUrl(post.image) }),
     description: post.description,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,

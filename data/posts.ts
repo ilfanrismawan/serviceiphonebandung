@@ -1,7 +1,10 @@
 import type { BlogPost } from "@/types";
 import { isPublishedPost } from "@/lib/publication";
 
+import { cibiruPost } from "./posts/cibiru";
+
 export const posts: BlogPost[] = [
+  cibiruPost,
   {
     slug: "cara-cek-iphone-bekas-sebelum-beli-di-bandung",
     title: "Panduan Lengkap Cek iPhone Bekas Sebelum Beli di Bandung (Anti Boncos)",
@@ -71,9 +74,9 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Layanan General Check-up Unit di Flow Service Bandung",
+        heading: "Layanan General Check-up Unit di Service iPhone Bandung",
         paragraphs: [
-          "Ingin janjian COD di area Bandung tetapi ragu memeriksa kondisinya sendiri? Bawa unit pilihan Anda ke workshop Flow Service Bandung.",
+          "Ingin janjian COD di area Bandung tetapi ragu memeriksa kondisinya sendiri? Bawa unit pilihan Anda ke workshop Service iPhone Bandung.",
           "Teknisi kami siap membantu melakukan pemeriksaan menyeluruh (general check-up): membaca riwayat pengisian baterai asli lewat komputer diagnostik, menguji tegangan mesin, hingga memeriksa keaslian modul display secara transparan di hadapan Anda sebelum Anda menyelesaikan pembayaran dengan pihak penjual.",
         ],
       },
@@ -147,9 +150,9 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Pemeriksaan dan servis speaker di Flow Service Bandung",
+        heading: "Pemeriksaan dan servis speaker di Service iPhone Bandung",
         paragraphs: [
-          "Di workshop Flow Service Bandung, teknisi kami menyediakan layanan pembersihan jaring earpiece menggunakan larutan khusus dan kuas antistatis tanpa biaya jika Anda datang berkonsultasi.",
+          "Di workshop Service iPhone Bandung, teknisi kami menyediakan layanan pembersihan jaring earpiece menggunakan larutan khusus dan kuas antistatis tanpa biaya jika Anda datang berkonsultasi.",
           "Bila pengujian menunjukkan modul speaker fisik memang sudah robek, kami menyediakan suku cadang modul speaker berkualitas tinggi dengan pengerjaan cepat sekitar 20 hingga 30 menit yang bisa ditunggu langsung di tempat.",
         ],
       },
@@ -212,9 +215,9 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Layanan perbaikan Face ID di Flow Service Bandung",
+        heading: "Layanan perbaikan Face ID di Service iPhone Bandung",
         paragraphs: [
-          "Di workshop Flow Service Bandung, teknisi kami memiliki pengalaman dan instrumen programmer TrueDepth terkini untuk memperbaiki sensor Face ID yang mati akibat korsleting cairan atau benturan tanpa menghilangkan keamanan perangkat.",
+          "Di workshop Service iPhone Bandung, teknisi kami memiliki pengalaman dan instrumen programmer TrueDepth terkini untuk memperbaiki sensor Face ID yang mati akibat korsleting cairan atau benturan tanpa menghilangkan keamanan perangkat.",
           "Kami melakukan pembacaan log diagnosa awal secara gratis di hadapan Anda untuk mengonfirmasi apakah komponen dot projector atau flood illuminator yang membutuhkan perbaikan.",
         ],
       },
@@ -276,9 +279,9 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Pengerjaan jumper layar iPhone di Flow Service Bandung",
+        heading: "Pengerjaan jumper layar iPhone di Service iPhone Bandung",
         paragraphs: [
-          "Di Flow Service Bandung, teknisi kami telah menangani puluhan kasus layar putih dan hijau pada seri iPhone 13 Pro dan 14 Pro dengan peralatan mikrosolder modern.",
+          "Di Service iPhone Bandung, teknisi kami telah menangani puluhan kasus layar putih dan hijau pada seri iPhone 13 Pro dan 14 Pro dengan peralatan mikrosolder modern.",
           "Kami memberikan diagnosa gratis di tempat. Jika unit Anda memenuhi syarat untuk dilakukan teknik jumper jalur, pengerjaan dapat selesai dalam hitungan jam dan dilengkapi dengan masa garansi pengerjaan untuk ketenangan pikiran Anda.",
         ],
       },
@@ -362,10 +365,10 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Pemeriksaan di workshop Flow Service Bandung",
+        heading: "Pemeriksaan di workshop Service iPhone Bandung",
         paragraphs: [
           "Jika Anda berada di Bandung dan sekitarnya, tidak perlu buru-buru membeli layar LCD baru sebelum dicek penyebab aslinya. Banyak kasus di mana layar blank hitam hanya disebabkan oleh soket fleksibel yang terlepas akibat benturan ringan.",
-          "Di workshop Flow Service Bandung, teknisi kami menyediakan diagnosa gratis di tempat. Kami membuka perangkat di depan Anda untuk memastikan apakah cukup dengan pemasangan ulang soket fleksibel, penanganan jalur, atau memang membutuhkan pergantian unit LCD baru. Seluruh estimasi biaya dikonfirmasi terlebih dahulu sebelum pengerjaan dimulai.",
+          "Di workshop Service iPhone Bandung, teknisi kami menyediakan diagnosa gratis di tempat. Kami membuka perangkat di depan Anda untuk memastikan apakah cukup dengan pemasangan ulang soket fleksibel, penanganan jalur, atau memang membutuhkan pergantian unit LCD baru. Seluruh estimasi biaya dikonfirmasi terlebih dahulu sebelum pengerjaan dimulai.",
         ],
       },
       {
@@ -434,9 +437,9 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Pemeriksaan gratis di Flow Service Bandung",
+        heading: "Pemeriksaan gratis di Service iPhone Bandung",
         paragraphs: [
-          "Di workshop Flow Service Bandung, teknisi kami selalu memulai dengan pembersihan port mendalam menggunakan alat khusus dan pengujian ampere meter. Jika kendalanya hanya tumpukan kotoran, kami bantu bersihkan tanpa harus mengganti part apa pun.",
+          "Di workshop Service iPhone Bandung, teknisi kami selalu memulai dengan pembersihan port mendalam menggunakan alat khusus dan pengujian ampere meter. Jika kendalanya hanya tumpukan kotoran, kami bantu bersihkan tanpa harus mengganti part apa pun.",
           "Bila memang diperlukan penggantian fleksibel port charger atau penanganan IC mesin, kami jelaskan rincian biaya terlebih dahulu secara transparan dan pengerjaan port charger umumnya dapat ditunggu.",
         ],
       },
@@ -510,9 +513,9 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Penanganan iPhone bootloop di workshop Flow Service Bandung",
+        heading: "Penanganan iPhone bootloop di workshop Service iPhone Bandung",
         paragraphs: [
-          "Jika Anda khawatir kehilangan data atau iPhone tetap tidak bisa menyala setelah dicoba di rumah, teknisi Flow Service Bandung siap membantu.",
+          "Jika Anda khawatir kehilangan data atau iPhone tetap tidak bisa menyala setelah dicoba di rumah, teknisi Service iPhone Bandung siap membantu.",
           "Prioritas kami adalah menyelamatkan data pengguna (data-first recovery). Kami memeriksa kondisi jalur mesin, menguji pelepasan sensor earpiece sementara, dan mendiagnosa sumber bootloop dengan software diagnosa profesional secara transparan di hadapan Anda.",
         ],
       },
@@ -573,10 +576,10 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "3. Langkah penanganan dan perbaikan di Flow Service Bandung",
+        heading: "3. Langkah penanganan dan perbaikan di Service iPhone Bandung",
         paragraphs: [
           "Solusi paling aman dan tuntas untuk mengatasi kamera iPhone yang bergetar adalah melakukan penggantian modul kamera belakang yang sesuai dengan tipe perangkat Anda.",
-          "Di Flow Service Bandung, teknisi kami menyediakan suku cadang modul kamera berkualitas tinggi. Kami melakukan pengecekan fungsi autofokus, zoom optik, flash, dan hasil foto setelah pemasangan untuk memastikan performa fotografi kembali sempurna seperti semula.",
+          "Di Service iPhone Bandung, teknisi kami menyediakan suku cadang modul kamera berkualitas tinggi. Kami melakukan pengecekan fungsi autofokus, zoom optik, flash, dan hasil foto setelah pemasangan untuk memastikan performa fotografi kembali sempurna seperti semula.",
         ],
       },
       {
@@ -664,7 +667,7 @@ export const posts: BlogPost[] = [
         heading: "Masih boros setelah beberapa hari? Siapkan ini untuk pemeriksaan",
         paragraphs: [
           "Jika keluhan tidak membaik, pemeriksaan dapat membantu menentukan langkah berikutnya. Hindari mencoba banyak perubahan sekaligus karena hasilnya sulit dibandingkan.",
-          "Untuk konsultasi di Flow Service Bandung, siapkan informasi berikut agar keluhan lebih mudah ditelusuri. Penggantian baterai sebaiknya diputuskan setelah kondisi perangkat diperiksa.",
+          "Untuk konsultasi di Service iPhone Bandung, siapkan informasi berikut agar keluhan lebih mudah ditelusuri. Penggantian baterai sebaiknya diputuskan setelah kondisi perangkat diperiksa.",
         ],
         list: [
           "Model iPhone, versi iOS, dan tanggal pembaruan.",

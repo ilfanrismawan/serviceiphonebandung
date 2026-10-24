@@ -7,9 +7,9 @@ import { getSiteOrigin } from "./origin";
  * Ganti semua nilai bertanda TODO sebelum go-live.
  */
 export const siteConfig = {
-  // Owner-confirmed business identity, 2026-10-13.
-  name: "Flow Service",
-  legalName: "Flow Service",
+  // Owner-confirmed brand name, 2026-10-25.
+  name: "Service iPhone Bandung",
+  legalName: "Service iPhone Bandung",
   tagline: "Service iPhone di Bandung",
   url: getSiteOrigin(),
   locale: "id_ID",

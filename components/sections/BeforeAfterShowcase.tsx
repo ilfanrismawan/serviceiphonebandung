@@ -39,7 +39,7 @@ const repairCases: CaseItem[] = [
     beforeImage: "/images/showcase/screen-before.jpg",
     afterImage: "/images/showcase/screen-after.jpg",
     beforeBadge: "Sebelum Servis",
-    afterBadge: "Hasil Servis Flow",
+    afterBadge: "Hasil Servis",
     statusHighlight: "True Tone Aktif • Warna 100% Akurat",
   },
   {
@@ -56,7 +56,7 @@ const repairCases: CaseItem[] = [
     beforeImage: "/images/showcase/back-before.jpg",
     afterImage: "/images/showcase/back-after.jpg",
     beforeBadge: "Sebelum Servis",
-    afterBadge: "Hasil Servis Flow",
+    afterBadge: "Hasil Servis",
     statusHighlight: "Finishing Matte Rapat Tanpa Celah",
   },
   {
@@ -73,7 +73,7 @@ const repairCases: CaseItem[] = [
     beforeImage: "/images/showcase/cam-before.jpg",
     afterImage: "/images/showcase/cam-after.jpg",
     beforeBadge: "Sebelum Servis",
-    afterBadge: "Hasil Servis Flow",
+    afterBadge: "Hasil Servis",
     statusHighlight: "Lensa Sapphire Jernih • Fokus Presisi",
   },
 ];
@@ -279,7 +279,7 @@ export function BeforeAfterShowcase() {
               <div className="rounded-2xl border border-emerald-200/60 bg-emerald-50/40 p-4">
                 <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 uppercase tracking-wider">
                   <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  Hasil Pengerjaan Flow Service
+                  Hasil Pengerjaan Service iPhone Bandung
                 </div>
                 <p className="mt-1.5 text-[13px] leading-relaxed text-ink/80">
                   {activeCase.afterDescription}
@@ -304,7 +304,7 @@ export function BeforeAfterShowcase() {
           <div className="mt-8 border-t border-black/5 pt-6">
             <Button
               href={buildWhatsAppUrl(
-                `Halo Flow Service, saya ingin konsultasi servis ${activeCase.category} untuk ${activeCase.model}. Apakah part-nya ready?`
+                `Halo Service iPhone Bandung, saya ingin konsultasi servis ${activeCase.category} untuk ${activeCase.model}. Apakah part-nya ready?`
               )}
               external
               icon="whatsapp"

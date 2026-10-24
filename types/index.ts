@@ -64,9 +64,14 @@ export interface BlogSection {
   heading: string;
   paragraphs: string[];
   list?: string[];
+  links?: { label: string; href: string }[];
 }
 
 export interface BlogPost {
+  imageAlt?: string;
+  imageCaption?: string;
+  /** Explicit editorial approval for an individual post beyond the frozen cutoff. */
+  publicationApproved?: boolean;
   slug: string;
   title: string;
   description: string;

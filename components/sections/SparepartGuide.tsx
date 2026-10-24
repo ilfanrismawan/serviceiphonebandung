@@ -207,7 +207,7 @@ export function SparepartGuide() {
               <div className="mt-6 pt-4 border-t border-black/5">
                 <Button
                   href={buildWhatsAppUrl(
-                    `Halo Flow Service, saya ingin tanya harga ganti layar tipe ${tier.name} untuk iPhone saya.`
+                    `Halo Service iPhone Bandung, saya ingin tanya harga ganti layar tipe ${tier.name} untuk iPhone saya.`
                   )}
                   external
                   variant={tier.highlight ? "primary" : "secondary"}
@@ -269,7 +269,7 @@ export function SparepartGuide() {
               <div className="mt-8 pt-4 border-t border-black/5">
                 <Button
                   href={buildWhatsAppUrl(
-                    `Halo Flow Service, saya ingin konsultasi ganti baterai tipe ${tier.name} untuk iPhone saya.`
+                    `Halo Service iPhone Bandung, saya ingin konsultasi ganti baterai tipe ${tier.name} untuk iPhone saya.`
                   )}
                   external
                   variant={tier.highlight ? "primary" : "secondary"}
@@ -287,7 +287,7 @@ export function SparepartGuide() {
       {/* Footer Info Box */}
       <div className="mt-10 rounded-2xl border border-accent/20 bg-white/70 p-5 backdrop-blur-md text-center max-w-3xl mx-auto">
         <p className="text-xs text-ink/80 leading-relaxed">
-          <span className="font-semibold text-accent">Catatan Kejujuran Teknisi:</span> Semua pemasangan layar OLED di Flow Service sudah termasuk pemindahan fitur <strong>True Tone</strong> tanpa biaya tambahan. Untuk baterai, kesehatan 100% dipastikan sebelum iPhone diserahkan ke pelanggan.
+          <span className="font-semibold text-accent">Catatan Kejujuran Teknisi:</span> Semua pemasangan layar OLED di Service iPhone Bandung sudah termasuk pemindahan fitur <strong>True Tone</strong> tanpa biaya tambahan. Untuk baterai, kesehatan 100% dipastikan sebelum iPhone diserahkan ke pelanggan.
         </p>
       </div>
     </Section>

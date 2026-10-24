@@ -378,7 +378,7 @@ export const PROMO_SUBTITLE =
   "Garansi 2–3 bulan. Konfirmasikan durasi, cakupan dan pengecualian sesuai perbaikan sebelum pengerjaan.";
 
 export const PRICE_DISCLAIMER =
-  "Harga suku cadang berkualitas tinggi dan terupdate. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di workshop Flow Service Bandung.";
+  "Harga suku cadang berkualitas tinggi dan terupdate. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di workshop Service iPhone Bandung.";
 
 export function getPrice(modelSlug: string, key: PriceKey): number | undefined {
   return priceBook[modelSlug]?.[key];

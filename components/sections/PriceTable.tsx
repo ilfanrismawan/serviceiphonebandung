@@ -44,7 +44,7 @@ export function PriceTable() {
 
           <div className="shrink-0">
             <Button
-              href={buildWhatsAppUrl("Halo Flow Service Bandung, saya mau tanya ketersediaan stok sparepart iPhone.")}
+              href={buildWhatsAppUrl("Halo Service iPhone Bandung, saya mau tanya ketersediaan stok sparepart iPhone.")}
               external
               variant="inverse"
               icon="whatsapp"
@@ -241,7 +241,7 @@ export function PriceTable() {
 
                     <td className="py-3.5 px-4 text-center whitespace-nowrap">
                       <a
-                        href={buildWhatsAppUrl(`Halo Flow Service Bandung, saya mau servis ${row.name}. Apakah part-nya ready?`)}
+                        href={buildWhatsAppUrl(`Halo Service iPhone Bandung, saya mau servis ${row.name}. Apakah part-nya ready?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 rounded-xl bg-accent/10 px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent hover:text-white transition-all"
@@ -268,7 +268,7 @@ export function PriceTable() {
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span><strong>Garansi resmi:</strong> Berlaku jika pemasangan langsung dilakukan di workshop Flow Service Bandung.</span>
+            <span><strong>Garansi resmi:</strong> Berlaku jika pemasangan langsung dilakukan di workshop Service iPhone Bandung.</span>
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />

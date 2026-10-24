@@ -32,6 +32,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: post.description,
     path: `/blog/${post.slug}`,
     type: "article",
+    image: post.image,
+    imageAlt: post.imageAlt ?? post.title,
     publishedTime: post.publishedAt,
     modifiedTime: post.updatedAt,
   });
@@ -65,14 +67,15 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-black/10 bg-mist shadow-xl">
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={post.imageAlt ?? post.title}
                   fill
-                  priority
+                  preload
                   sizes="(max-width: 768px) 100vw, 768px"
                   className="object-cover"
                 />
               </div>
             )}
+            {post.imageCaption && <p className="mt-3 text-sm text-muted">{post.imageCaption}</p>}
           </header>
 
           <div className="mt-10 space-y-10">
@@ -94,6 +97,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     ))}
                   </ul>
                 )}
+                {section.links && <div className="mt-5 flex flex-wrap gap-4">{section.links.map((link) => <Link key={link.href} href={link.href} className="font-semibold text-accent underline underline-offset-4">{link.label}</Link>)}</div>}
               </section>
             ))}
           </div>

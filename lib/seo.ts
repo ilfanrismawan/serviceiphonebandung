@@ -7,6 +7,8 @@ interface BuildMetadataInput {
   /** Path relatif, mis. "/layanan/ganti-baterai-iphone". */
   path: string;
   keywords?: string[];
+  image?: string;
+  imageAlt?: string;
   type?: "website" | "article";
   publishedTime?: string;
   modifiedTime?: string;
@@ -24,6 +26,8 @@ export function buildMetadata({
   description,
   path,
   keywords,
+  image,
+  imageAlt,
   type = "website",
   publishedTime,
   modifiedTime,
@@ -45,12 +49,12 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type,
-      images: [{ url: absoluteUrl("/opengraph-image"), width: 1200, height: 630, alt: `${siteConfig.name} — Service iPhone Bandung` }],
+      images: [{ url: absoluteUrl(image ?? "/opengraph-image"), ...(image ? {} : { width: 1200, height: 630 }), alt: imageAlt ?? `${siteConfig.name} — Service iPhone Bandung` }],
       ...(type === "article" && { publishedTime, modifiedTime }),
     },
     twitter: {
       card: "summary_large_image",
-      images: [absoluteUrl("/opengraph-image")],
+      images: [absoluteUrl(image ?? "/opengraph-image")],
       title,
       description,
     },
