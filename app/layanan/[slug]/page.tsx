@@ -13,6 +13,8 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { ServicePriceTable } from "@/components/sections/ServicePriceTable";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { getModel } from "@/data/models";
+import { getModelServicePages } from "@/data/modelServices";
 import { PRICE_DISCLAIMER } from "@/data/prices";
 import { getService, services } from "@/data/services";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -47,6 +49,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   if (!service) notFound();
 
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const modelPages = getModelServicePages(service.slug);
 
   return (
     <>
@@ -131,7 +134,24 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             title={`Harga ${priceLabels[service.priceKey].toLowerCase()}`}
             description={PRICE_DISCLAIMER}
           />
-          <ServicePriceTable priceKey={service.priceKey} label={priceLabels[service.priceKey]} />
+          <ServicePriceTable priceKey={service.priceKey} label={priceLabels[service.priceKey]} serviceSlug={service.slug} />
+          {modelPages.length > 0 && (
+            <div className="mt-8">
+              <h3 className="text-lg font-medium text-ink">Detail harga per model</h3>
+              <ul className="mt-4 flex flex-wrap gap-3">
+                {modelPages.map((p) => (
+                  <li key={p.modelSlug}>
+                    <Link
+                      href={`/layanan/${service.slug}/${p.modelSlug}`}
+                      className="glass-pill inline-flex rounded-full px-4 py-2 text-sm text-ink hover:text-accent"
+                    >
+                      {service.shortTitle} {getModel(p.modelSlug)?.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </Section>
       )}
 

@@ -44,6 +44,25 @@ export interface ServiceItem {
   keywords: string[];
 }
 
+/**
+ * Halaman layanan khusus satu model, mis. /layanan/ganti-baterai-iphone/iphone-11.
+ * Teks boleh memuat placeholder harga {battery}, {lcdGradeA}, {lcdOled}, {lcdGenuine}
+ * yang diisi dari data/prices.ts saat render.
+ */
+export interface ModelServicePage {
+  serviceSlug: string;
+  modelSlug: string;
+  /** Satu kalimat pelengkap meta description setelah harga. */
+  summary: string;
+  intro: string;
+  notes: string[];
+  /** Model satu keluarga untuk tabel pembanding harga (termasuk model ini). */
+  relatedModelSlugs: string[];
+  relatedPostSlug?: string;
+  keywords: string[];
+  faqs: Faq[];
+}
+
 export interface IPhoneModel {
   slug: string;
   name: string;

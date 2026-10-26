@@ -1,11 +1,24 @@
+import Link from "next/link";
 import { Table } from "@/components/ui/Table";
+import { getModelServicePage } from "@/data/modelServices";
 import { detailedPricelist, getPrice } from "@/data/prices";
 import { formatRupiah } from "@/lib/format";
 import type { PriceKey } from "@/types";
 
-/** Tabel harga untuk satu jenis servis di seluruh model. Dipakai di halaman layanan. */
-export function ServicePriceTable({ priceKey, label }: { priceKey: PriceKey; label: string }) {
+/**
+ * Tabel harga untuk satu jenis servis di seluruh model. Dipakai di halaman layanan.
+ * Jika `serviceSlug` diisi, nama model yang punya halaman khusus menjadi link.
+ */
+export function ServicePriceTable({ priceKey, label, serviceSlug }: { priceKey: PriceKey; label: string; serviceSlug?: string }) {
   const fmt = (val?: number) => (val ? formatRupiah(val) : "—");
+  const modelName = (item: { name: string; slug: string }) =>
+    serviceSlug && getModelServicePage(serviceSlug, item.slug) ? (
+      <Link href={`/layanan/${serviceSlug}/${item.slug}`} className="text-accent underline">
+        {item.name}
+      </Link>
+    ) : (
+      item.name
+    );
 
   if (priceKey === "lcd") {
     const headers = [
@@ -17,7 +30,7 @@ export function ServicePriceTable({ priceKey, label }: { priceKey: PriceKey; lab
     const rows = detailedPricelist
       .filter((m) => m.lcdGradeA || m.lcdOled || m.lcdGenuine)
       .map((item) => [
-        item.name,
+        modelName(item),
         fmt(item.lcdGradeA),
         fmt(item.lcdOled),
         fmt(item.lcdGenuine),
@@ -36,7 +49,7 @@ export function ServicePriceTable({ priceKey, label }: { priceKey: PriceKey; lab
     const headers = ["Model iPhone", "Baterai"];
     const rows = detailedPricelist
       .filter((m) => m.battery)
-      .map((item) => [item.name, fmt(item.battery)]);
+      .map((item) => [modelName(item), fmt(item.battery)]);
 
     return (
       <Table

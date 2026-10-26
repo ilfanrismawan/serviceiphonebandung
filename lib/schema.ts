@@ -57,6 +57,23 @@ export function serviceSchema(service: ServiceItem) {
   };
 }
 
+/** Layanan untuk satu model iPhone, mis. ganti baterai iPhone 11. */
+export function modelServiceSchema(
+  service: ServiceItem,
+  page: { name: string; description: string; path: string },
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: page.name,
+    serviceType: service.shortTitle,
+    description: page.description,
+    url: absoluteUrl(page.path),
+    provider: { "@id": absoluteUrl("/#business") },
+    areaServed: { "@type": "City", name: address.city },
+  };
+}
+
 export function faqSchema(faqs: Faq[]) {
   return {
     "@context": "https://schema.org",

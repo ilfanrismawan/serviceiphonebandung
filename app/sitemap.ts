@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { isPublishedPost } from "@/lib/publication";
 import { posts } from "@/data/posts";
+import { modelServicePages } from "@/data/modelServices";
 import { services } from "@/data/services";
 import { siteConfig } from "@/config/site";
 
@@ -19,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const modelServiceEntries: MetadataRoute.Sitemap = modelServicePages.map((p) => ({
+    url: `${siteConfig.url}/layanan/${p.serviceSlug}/${p.modelSlug}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   const postEntries: MetadataRoute.Sitemap = posts.filter(isPublishedPost).map((p) => ({
     url: `${siteConfig.url}/blog/${p.slug}`,
     lastModified: new Date(p.updatedAt),
@@ -26,5 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticEntries, ...serviceEntries, ...postEntries];
+  return [...staticEntries, ...serviceEntries, ...modelServiceEntries, ...postEntries];
 }
