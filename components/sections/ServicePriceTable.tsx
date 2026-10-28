@@ -24,14 +24,18 @@ export function ServicePriceTable({ priceKey, label, serviceSlug }: { priceKey: 
     const headers = [
       "Model iPhone",
       "LCD (Grade A)",
+      "LCD (Grade A+)",
+      "LCD (BPT)",
       "LCD (Oled Plus)",
       "LCD (Genuine/Asli)",
     ];
     const rows = detailedPricelist
-      .filter((m) => m.lcdGradeA || m.lcdOled || m.lcdGenuine)
+      .filter((m) => m.lcdGradeA || m.lcdGradeAPlus || m.lcdBpt || m.lcdOled || m.lcdGenuine)
       .map((item) => [
         modelName(item),
         fmt(item.lcdGradeA),
+        fmt(item.lcdGradeAPlus),
+        fmt(item.lcdBpt),
         fmt(item.lcdOled),
         fmt(item.lcdGenuine),
       ]);
@@ -46,10 +50,10 @@ export function ServicePriceTable({ priceKey, label, serviceSlug }: { priceKey: 
   }
 
   if (priceKey === "baterai") {
-    const headers = ["Model iPhone", "Baterai"];
+    const headers = ["Model iPhone", "Baterai Grade A", "Baterai Grade A+", "Baterai Genuine"];
     const rows = detailedPricelist
       .filter((m) => m.battery)
-      .map((item) => [modelName(item), fmt(item.battery)]);
+      .map((item) => [modelName(item), fmt(item.battery), fmt(item.batteryGradeAPlus), fmt(item.batteryGenuine)]);
 
     return (
       <Table
@@ -91,10 +95,10 @@ export function ServicePriceTable({ priceKey, label, serviceSlug }: { priceKey: 
   }
 
   if (priceKey === "speaker") {
-    const headers = ["Model iPhone", "Speaker Atas / Bawah"];
+    const headers = ["Model iPhone", "Speaker Atas", "Speaker Bawah"];
     const rows = detailedPricelist
       .filter((m) => m.speaker)
-      .map((item) => [item.name, fmt(item.speaker)]);
+      .map((item) => [item.name, fmt(item.speakerTop), fmt(item.speakerBottom)]);
 
     return (
       <Table

@@ -33,12 +33,18 @@ export function generateStaticParams() {
   return modelServicePages.map((p) => ({ slug: p.serviceSlug, model: p.modelSlug }));
 }
 
-type PriceField = "battery" | "lcdGradeA" | "lcdOled" | "lcdGenuine";
+type PriceField = "battery" | "batteryGradeAPlus" | "batteryGenuine" | "lcdGradeA" | "lcdGradeAPlus" | "lcdBpt" | "lcdOled" | "lcdGenuine";
 
 const priceOptions: Record<"baterai" | "lcd", { field: PriceField; label: string }[]> = {
-  baterai: [{ field: "battery", label: "Baterai" }],
+  baterai: [
+    { field: "battery", label: "Baterai Grade A" },
+    { field: "batteryGradeAPlus", label: "Baterai Grade A+" },
+    { field: "batteryGenuine", label: "Baterai Genuine" },
+  ],
   lcd: [
     { field: "lcdGradeA", label: "LCD (Grade A)" },
+    { field: "lcdGradeAPlus", label: "LCD (Grade A+)" },
+    { field: "lcdBpt", label: "LCD (BPT)" },
     { field: "lcdOled", label: "LCD (Oled Plus)" },
     { field: "lcdGenuine", label: "LCD (Genuine/Asli)" },
   ],

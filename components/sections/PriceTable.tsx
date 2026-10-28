@@ -3,11 +3,26 @@
 import { useMemo, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { Button } from "@/components/ui/Button";
-import { detailedPricelist } from "@/data/prices";
+import { detailedPricelist, type DetailedPrice } from "@/data/prices";
 import { formatRupiah } from "@/lib/format";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 type CategoryTab = "all" | "lcd" | "battery" | "camera" | "charger" | "speaker";
+
+const priceColumns: { field: keyof DetailedPrice; category: CategoryTab; label: string; note: string }[] = [
+  { field: "lcdGradeA", category: "lcd", label: "LCD Grade A", note: "Garansi 6 bulan" },
+  { field: "lcdGradeAPlus", category: "lcd", label: "LCD Grade A+", note: "Garansi 12 bulan" },
+  { field: "lcdOled", category: "lcd", label: "LCD OLED Plus", note: "Garansi 12 bulan" },
+  { field: "lcdBpt", category: "lcd", label: "LCD BPT", note: "Garansi 24 bulan" },
+  { field: "lcdGenuine", category: "lcd", label: "LCD Genuine/Asli", note: "Garansi 3 bulan" },
+  { field: "battery", category: "battery", label: "Baterai Grade A", note: "Garansi 12 bulan" },
+  { field: "batteryGradeAPlus", category: "battery", label: "Baterai Grade A+", note: "Garansi 12 bulan" },
+  { field: "batteryGenuine", category: "battery", label: "Baterai Genuine", note: "Garansi 12 bulan" },
+  { field: "cameraBack", category: "camera", label: "Kamera Belakang", note: "Garansi 1 bulan" },
+  { field: "charger", category: "charger", label: "Konektor Charger", note: "Port Charging" },
+  { field: "speakerTop", category: "speaker", label: "Speaker Atas", note: "Garansi 1 bulan" },
+  { field: "speakerBottom", category: "speaker", label: "Speaker Bawah", note: "Garansi 1 bulan" },
+];
 
 export function PriceTable() {
   const [search, setSearch] = useState("");
@@ -18,6 +33,8 @@ export function PriceTable() {
       item.name.toLowerCase().includes(search.toLowerCase())
     );
   }, [search]);
+
+  const visibleColumns = priceColumns.filter((column) => activeTab === "all" || column.category === activeTab);
 
   const renderPrice = (val?: number) => {
     if (!val) return <span className="text-muted/40 font-normal">—</span>;
@@ -38,7 +55,7 @@ export function PriceTable() {
               Pricelist Sparepart &amp; Servis iPhone Bandung
             </h2>
             <p className="mt-1 text-sm text-white/80">
-              Transparan dan bergaransi. Suku cadang berkualitas mulai dari Grade A, OLED Plus, hingga Genuine Apple.
+              Transparan dan bergaransi. Suku cadang berkualitas mulai dari Grade A, Grade A+, OLED Plus, BPT, hingga Genuine Apple.
             </p>
           </div>
 
@@ -152,50 +169,12 @@ export function PriceTable() {
                   Tipe iPhone
                 </th>
 
-                {(activeTab === "all" || activeTab === "lcd") && (
-                  <>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      LCD (Grade A)
-                      <span className="block text-[10px] font-normal text-muted">Ekonomis</span>
-                    </th>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      LCD (Oled Plus)
-                      <span className="block text-[10px] font-normal text-accent font-semibold">Warna Tajam</span>
-                    </th>
-                    <th className="py-4 px-4 whitespace-nowrap">
-                      LCD (Genuine/Asli)
-                      <span className="block text-[10px] font-normal text-emerald-600 font-semibold">Original Apple</span>
-                    </th>
-                  </>
-                )}
-
-                {(activeTab === "all" || activeTab === "battery") && (
-                  <th className="py-4 px-4 whitespace-nowrap">
-                    Baterai
-                    <span className="block text-[10px] font-normal text-muted">Kapasitas 100%</span>
+                {visibleColumns.map((column) => (
+                  <th key={column.field} className="py-4 px-4 whitespace-nowrap">
+                    {column.label}
+                    <span className="block text-[10px] font-normal text-muted">{column.note}</span>
                   </th>
-                )}
-
-                {(activeTab === "all" || activeTab === "camera") && (
-                  <th className="py-4 px-4 whitespace-nowrap">
-                    Kamera Belakang
-                    <span className="block text-[10px] font-normal text-muted">Sensor &amp; OIS</span>
-                  </th>
-                )}
-
-                {(activeTab === "all" || activeTab === "charger") && (
-                  <th className="py-4 px-4 whitespace-nowrap">
-                    Konektor Charger
-                    <span className="block text-[10px] font-normal text-muted">Port Charging</span>
-                  </th>
-                )}
-
-                {(activeTab === "all" || activeTab === "speaker") && (
-                  <th className="py-4 px-4 whitespace-nowrap">
-                    Speaker Atas/Bawah
-                    <span className="block text-[10px] font-normal text-muted">Earpiece / Buzzer</span>
-                  </th>
-                )}
+                ))}
 
                 <th className="py-4 px-4 text-center">Aksi</th>
               </tr>
@@ -204,7 +183,7 @@ export function PriceTable() {
             <tbody className="divide-y divide-black/5">
               {filteredList.length === 0 ? (
                 <tr>
-                  <td colSpan={10} className="py-12 text-center text-muted">
+                  <td colSpan={visibleColumns.length + 2} className="py-12 text-center text-muted">
                     Model &ldquo;{search}&rdquo; tidak ditemukan. Silakan hubungi kami untuk informasi ketersediaan part.
                   </td>
                 </tr>
@@ -215,29 +194,11 @@ export function PriceTable() {
                       {row.name}
                     </td>
 
-                    {(activeTab === "all" || activeTab === "lcd") && (
-                      <>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdGradeA)}</td>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdOled)}</td>
-                        <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.lcdGenuine)}</td>
-                      </>
-                    )}
-
-                    {(activeTab === "all" || activeTab === "battery") && (
-                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.battery)}</td>
-                    )}
-
-                    {(activeTab === "all" || activeTab === "camera") && (
-                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.cameraBack)}</td>
-                    )}
-
-                    {(activeTab === "all" || activeTab === "charger") && (
-                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.charger)}</td>
-                    )}
-
-                    {(activeTab === "all" || activeTab === "speaker") && (
-                      <td className="py-3.5 px-4 whitespace-nowrap">{renderPrice(row.speaker)}</td>
-                    )}
+                    {visibleColumns.map((column) => (
+                      <td key={column.field} className="py-3.5 px-4 whitespace-nowrap">
+                        {renderPrice(row[column.field] as number | undefined)}
+                      </td>
+                    ))}
 
                     <td className="py-3.5 px-4 text-center whitespace-nowrap">
                       <a
@@ -276,7 +237,7 @@ export function PriceTable() {
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span><strong>Pilihan Kualitas LCD:</strong> Tersedia Grade A (ekonomis terjangkau), OLED Plus (kontras tinggi tajam), dan Genuine/Asli (Original bawaan Apple).</span>
+            <span><strong>Pilihan Kualitas LCD:</strong> Tersedia Grade A, Grade A+, OLED Plus, BPT, dan Genuine/Asli sesuai model. Tanda — berarti harga tidak tersedia di pricelist.</span>
           </li>
         </ul>
       </div>

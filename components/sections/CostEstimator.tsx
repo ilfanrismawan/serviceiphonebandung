@@ -25,13 +25,13 @@ const issueOptions: IssueOption[] = [
     name: "Ganti Layar / LCD (Pecah/Garis/Blank)",
     duration: "20 – 45 Menit",
     warranty: "Garansi Toko",
-    description: "Tersedia 3 opsi kualitas: LCD Grade A, LCD OLED Plus, dan LCD Genuine / Asli.",
+    description: "Tersedia LCD Grade A, Grade A+, OLED Plus, BPT, dan Genuine / Asli sesuai model.",
   },
   {
     id: "baterai",
     name: "Ganti Baterai (Boros/Drop/Kembung)",
     duration: "15 – 30 Menit",
-    warranty: "Garansi Toko",
+    warranty: "12 Bulan",
     description: "Penggantian cell baterai baru berkapasitas 100% stabil dan bergaransi.",
   },
   {
@@ -45,14 +45,14 @@ const issueOptions: IssueOption[] = [
     id: "kamera",
     name: "Kamera Belakang (Getar / Buram / Blank)",
     duration: "30 – 60 Menit",
-    warranty: "60 Hari",
+    warranty: "1 Bulan",
     description: "Penggantian modul sensor kamera belakang bergaransi resmi toko.",
   },
   {
     id: "speaker",
     name: "Speaker Atas / Bawah (Kresek / Mati / Kecil)",
     duration: "20 – 40 Menit",
-    warranty: "60 Hari",
+    warranty: "1 Bulan",
     description: "Pembersihan mesh atau penggantian modul speaker earpiece dan buzzer bawah.",
   },
   {
