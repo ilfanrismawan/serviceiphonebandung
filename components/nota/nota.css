@@ -1,0 +1,967 @@
+.nota-app {
+  --nota-accent: #0071e3;
+  min-height: 100dvh;
+  background: #f5f6f8;
+  color: #192332;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+.nota-workspace-picker {
+  margin: -10px 0 22px;
+}
+.nota-workspace-picker select {
+  margin-top: 8px;
+  font-size: 12px !important;
+  padding: 10px 7px !important;
+}
+.nota-brand-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.nota-brand-card {
+  border-top: 3px solid;
+}
+.nota-brand-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+.nota-brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+.nota-brand-monogram {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f0f4fa;
+  font-size: 23px;
+  font-weight: 750;
+  flex-shrink: 0;
+}
+.nota-brand-details dt {
+  font-size: 11px;
+  color: #718096;
+  margin-top: 18px;
+}
+.nota-brand-details dd {
+  margin-top: 5px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+.nota-brand-details {
+  margin-bottom: 24px;
+}
+.nota-brand-badge {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #f2f6fc;
+  font-size: 10px;
+  max-width: 240px;
+  white-space: normal;
+}
+.nota-brand-strip {
+  border-left: 3px solid;
+  padding: 4px 13px;
+  margin-top: 20px;
+}
+.nota-brand-strip small {
+  display: block;
+  margin-top: 5px;
+}
+@media (max-width: 720px) {
+  .nota-brand-grid {
+    grid-template-columns: 1fr;
+  }
+  .nota-workspace-picker {
+    margin: 12px 0;
+    max-width: 100%;
+  }
+  .nota-sidebar nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .nota-sidebar nav button {
+    font-size: 12px;
+  }
+  .nota-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nota-stat:first-child {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nota-stat:first-child strong {
+    margin: 0;
+  }
+  .nota-sidebar .nota-brand {
+    max-width: 75%;
+  }
+}
+.nota-app * {
+  box-sizing: border-box;
+}
+.nota-app h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+.nota-app h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.nota-app h3 {
+  font-weight: 650;
+}
+.nota-app p {
+  line-height: 1.6;
+}
+.nota-app small,
+.nota-muted {
+  color: #718096;
+}
+.nota-app button,
+.nota-app a,
+.nota-app input,
+.nota-app select,
+.nota-app textarea {
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.nota-app button,
+.nota-app a {
+  touch-action: manipulation;
+}
+.nota-app button {
+  cursor: pointer;
+}
+.nota-app button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.nota-app :focus-visible {
+  outline: 3px solid #92c7ff;
+  outline-offset: 3px;
+}
+.nota-app input:not([type="color"]):not([type="file"]),
+.nota-app select,
+.nota-app textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #dce1e8;
+  border-radius: 9px;
+  background: #fff;
+  padding: 11px 12px;
+  color: #192332;
+  font-size: 14px;
+  min-height: 42px;
+}
+.nota-app textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.nota-app label {
+  display: block;
+  font-size: 12px;
+  font-weight: 650;
+  color: #536174;
+}
+.nota-app label > * {
+  margin-top: 7px;
+}
+.nota-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  background: var(--nota-accent);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 10px 17px;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.nota-btn:hover {
+  filter: brightness(0.95);
+}
+.nota-btn.secondary {
+  background: #fff;
+  color: #39465a;
+  border-color: #dce1e8;
+}
+.nota-btn.quiet {
+  background: transparent;
+  color: #64748b;
+}
+.nota-btn.danger {
+  background: #fff0f0;
+  color: #b42318;
+}
+.nota-login {
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse at top, #e7f0ff, transparent 65%), #f5f6f8;
+}
+.nota-login-card {
+  width: 100%;
+  max-width: 430px;
+  background: #fff;
+  padding: 38px;
+  border: 1px solid #e1e7ef;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px #20375609;
+}
+.nota-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #e9f2ff;
+  color: #0071e3;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+.nota-login-card h1 {
+  margin-bottom: 12px;
+}
+.nota-login-card form {
+  display: grid;
+  gap: 20px;
+  margin-top: 28px;
+}
+.nota-error {
+  background: #fff0ef;
+  color: #ad2e26;
+  padding: 12px 16px;
+  border: 1px solid #f8d6d2;
+  border-radius: 9px;
+  line-height: 1.5;
+  margin: 14px 0;
+}
+.nota-success {
+  background: #e9f8f0;
+  color: #23774f;
+  padding: 12px 16px;
+  border-radius: 9px;
+  margin: 14px 0;
+}
+.nota-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 238px;
+  background: #fff;
+  border-right: 1px solid #e6e9ef;
+  padding: 30px 22px;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+.nota-brand {
+  font-weight: 750;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+.nota-brand small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+.nota-sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+.nota-sidebar nav button {
+  text-align: left;
+  padding: 13px 15px;
+  border-radius: 9px;
+  color: #627084;
+  font-weight: 600;
+}
+.nota-sidebar nav button.active {
+  background: #edf4ff;
+  color: #0067ce;
+}
+.nota-sidebar-bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 18px;
+  font-size: 12px;
+}
+.nota-main {
+  margin-left: 238px;
+  max-width: 1500px;
+  padding: 40px 46px;
+}
+.nota-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.nota-eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #8290a2;
+  font-weight: 750;
+  margin-bottom: 9px;
+}
+.nota-card {
+  background: #fff;
+  border: 1px solid #e5e9ef;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.nota-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.nota-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+.nota-stat {
+  background: #fff;
+  border: 1px solid #e5e9ef;
+  border-radius: 13px;
+  padding: 20px;
+}
+.nota-stat strong {
+  display: block;
+  font-size: 25px;
+  font-weight: 750;
+  margin-top: 9px;
+}
+.nota-stat span {
+  font-size: 12px;
+  color: #758195;
+}
+.nota-toolbar {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 22px;
+}
+.nota-toolbar input {
+  flex: 1;
+}
+.nota-toolbar select {
+  max-width: 230px;
+}
+.nota-table-wrap {
+  overflow-x: auto;
+}
+.nota-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+.nota-table th {
+  font-size: 10px;
+  color: #8792a1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9edf2;
+}
+.nota-table td {
+  padding: 18px 15px;
+  border-bottom: 1px solid #eff1f5;
+  font-size: 13px;
+}
+.nota-table td small {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+}
+.nota-table tbody tr:hover {
+  background: #fafcff;
+}
+.nota-link {
+  color: #0071e3;
+  font-weight: 650;
+}
+.nota-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 650;
+  background: #eef3f9;
+  color: #51647c;
+  white-space: nowrap;
+}
+.nota-badge.done {
+  background: #e7f7ef;
+  color: #25815a;
+}
+.nota-badge.work {
+  background: #eaf1ff;
+  color: #286ac1;
+}
+.nota-badge.cancel {
+  background: #fff0ed;
+  color: #ac4f38;
+}
+.nota-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #778599;
+}
+.nota-empty strong {
+  display: block;
+  color: #253247;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.nota-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+  color: #758195;
+  font-size: 12px;
+}
+.nota-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.nota-grid .full {
+  grid-column: 1/-1;
+}
+.nota-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 22px;
+  align-items: start;
+}
+.nota-stack {
+  display: grid;
+  gap: 16px;
+}
+.nota-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nota-item {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 65px 125px 32px;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+.nota-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 9px 0;
+  font-size: 13px;
+}
+.nota-total.large {
+  font-size: 20px;
+  font-weight: 750;
+  padding-top: 18px;
+  margin-top: 10px;
+  border-top: 1px solid #e8ecf2;
+}
+.nota-history {
+  border-left: 2px solid #e6edf5;
+  padding-left: 18px;
+  display: grid;
+  gap: 23px;
+  margin: 12px 0;
+}
+.nota-history p {
+  font-size: 12px;
+}
+.nota-history time {
+  font-size: 10px;
+  color: #8391a3;
+}
+.nota-settings {
+  max-width: 850px;
+}
+.nota-logo-preview {
+  max-width: 130px;
+  max-height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.nota-public {
+  padding: 36px 20px 60px;
+}
+.nota-public-top {
+  max-width: 790px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.nota-public-brand {
+  font-weight: 700;
+  font-size: 14px;
+}
+.nota-receipt {
+  max-width: 790px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e3e8f0;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 15px 55px #1c334b05;
+}
+.nota-receipt-head {
+  padding: 32px 36px;
+  border-top: 5px solid var(--nota-accent);
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid #e8edf3;
+}
+.nota-receipt-head h1 {
+  font-size: 24px;
+  margin: 5px 0 9px;
+}
+.nota-receipt-head p {
+  font-size: 12px;
+  color: #718096;
+  white-space: pre-line;
+}
+.nota-receipt-body {
+  padding: 30px 36px;
+}
+.nota-public-status {
+  padding: 21px 24px;
+  border-radius: 11px;
+  background: #f2f7ff;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.nota-public-status strong {
+  display: block;
+  font-size: 18px;
+  margin-top: 6px;
+}
+.nota-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+  margin-bottom: 28px;
+}
+.nota-detail-grid dt {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b97a5;
+  margin-bottom: 6px;
+}
+.nota-detail-grid dd {
+  font-size: 13px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.nota-receipt-foot {
+  margin-top: 25px;
+  border-top: 1px dashed #dce4ef;
+  padding-top: 23px;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 20px;
+  align-items: center;
+}
+.nota-receipt-foot p {
+  font-size: 11px;
+  white-space: pre-line;
+  color: #718096;
+}
+.nota-receipt-foot img {
+  width: 90px;
+  height: 90px;
+}
+.nota-text-block {
+  margin-top: 24px;
+}
+.nota-text-block h3 {
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+.nota-text-block p {
+  white-space: pre-line;
+  font-size: 12px;
+  color: #637185;
+  overflow-wrap: anywhere;
+}
+.nota-print-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.nota-print-controls select {
+  width: auto !important;
+}
+.nota-updated {
+  max-width: 790px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 11px;
+  color: #8896a8;
+}
+.nota-loading {
+  padding: 70px 30px;
+  text-align: center;
+  color: #718096;
+}
+.nota-preview-link {
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  color: #0071e3;
+}
+.nota-payment-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.nota-payment-list p {
+  font-size: 12px;
+}
+.nota-print-only {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .nota-main {
+    padding: 30px 24px;
+  }
+  .nota-editor {
+    grid-template-columns: 1fr;
+  }
+  .nota-editor aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .nota-sidebar {
+    width: 200px;
+  }
+  .nota-main {
+    margin-left: 200px;
+  }
+}
+@media print {
+  .nota-thermal .nota-table-wrap {
+    overflow: visible;
+  }
+  .nota-thermal .nota-table,
+  .nota-thermal .nota-table tbody {
+    display: block;
+    width: 100%;
+  }
+  .nota-thermal .nota-table thead {
+    display: none;
+  }
+  .nota-thermal .nota-table tr {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr;
+    gap: 2px;
+    border-bottom: 1px dashed #ddd;
+    padding: 8px 0;
+  }
+  .nota-thermal .nota-table td {
+    border: 0;
+    padding: 2px;
+    white-space: normal;
+    min-width: 0 !important;
+    overflow-wrap: anywhere;
+  }
+  .nota-thermal .nota-table td:first-child {
+    grid-column: 1/-1;
+    font-weight: 650;
+  }
+  .nota-thermal .nota-table td:nth-child(3) {
+    text-align: center;
+  }
+  .nota-thermal .nota-table td:nth-child(2):after {
+    content: " x";
+  }
+  .nota-thermal .nota-total {
+    gap: 6px;
+  }
+  .nota-thermal .nota-receipt-body {
+    padding: 12px 0;
+  }
+}
+@media (max-width: 720px) {
+  .nota-public .nota-table-wrap {
+    overflow: visible;
+  }
+  .nota-public .nota-table,
+  .nota-public .nota-table tbody {
+    display: block;
+    width: 100%;
+  }
+  .nota-public .nota-table thead {
+    display: none;
+  }
+  .nota-public .nota-table tr {
+    display: grid;
+    grid-template-columns: 35px 1fr 1fr;
+    gap: 6px;
+    border-bottom: 1px solid #e8edf3;
+    padding: 15px 0;
+  }
+  .nota-public .nota-table td {
+    border: 0;
+    padding: 2px 0;
+    min-width: 0 !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .nota-public .nota-table td:first-child {
+    grid-column: 1 / -1;
+    font-weight: 650;
+    margin-bottom: 5px;
+  }
+  .nota-public .nota-table td:nth-child(2)::after {
+    content: " ×";
+  }
+  .nota-public .nota-table td:last-child {
+    font-weight: 650;
+  }
+  .nota-sidebar {
+    position: static;
+    width: 100%;
+    padding: 18px 20px;
+    border-right: 0;
+    border-bottom: 1px solid #e6e9ef;
+    display: block;
+  }
+  .nota-brand {
+    margin-bottom: 12px;
+  }
+  .nota-brand small {
+    display: none;
+  }
+  .nota-sidebar nav {
+    display: flex;
+    gap: 8px;
+  }
+  .nota-sidebar nav button {
+    padding: 9px 12px;
+  }
+  .nota-sidebar-bottom {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+  }
+  .nota-sidebar-bottom > span,
+  .nota-sidebar-bottom > a {
+    display: none;
+  }
+  .nota-main {
+    margin-left: 0;
+    padding: 26px 16px;
+  }
+  .nota-topbar {
+    align-items: flex-start;
+  }
+  .nota-topbar h1 {
+    font-size: 25px;
+  }
+  .nota-stats {
+    gap: 8px;
+  }
+  .nota-stat {
+    padding: 14px 11px;
+  }
+  .nota-stat strong {
+    font-size: 18px;
+  }
+  .nota-stat span {
+    font-size: 10px;
+  }
+  .nota-card {
+    padding: 19px 16px;
+  }
+  .nota-toolbar {
+    flex-direction: column;
+  }
+  .nota-toolbar select {
+    max-width: none;
+  }
+  .nota-grid {
+    grid-template-columns: 1fr;
+  }
+  .nota-item {
+    grid-template-columns: minmax(100px, 1fr) 55px 95px 24px;
+    gap: 6px;
+  }
+  .nota-item input {
+    padding: 9px 6px !important;
+  }
+  .nota-editor aside {
+    display: block;
+  }
+  .nota-public {
+    padding: 20px 10px;
+  }
+  .nota-public-top {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 8px;
+  }
+  .nota-receipt-head {
+    padding: 25px 20px;
+    gap: 10px;
+  }
+  .nota-receipt-head h1 {
+    font-size: 20px;
+  }
+  .nota-receipt-body {
+    padding: 24px 20px;
+  }
+  .nota-detail-grid {
+    gap: 20px 15px;
+  }
+  .nota-login-card {
+    padding: 28px;
+  }
+  .nota-receipt-head .nota-logo-preview {
+    max-width: 80px;
+  }
+  .nota-pagination {
+    flex-wrap: wrap;
+  }
+}
+@media print {
+  html,
+  body {
+    background: #fff !important;
+  }
+  body > * {
+    box-shadow: none !important;
+  }
+  .nota-no-print,
+  body > a,
+  .nota-sidebar {
+    display: none !important;
+  }
+  .nota-app,
+  .nota-public {
+    min-height: 0;
+    background: #fff;
+    padding: 0 !important;
+  }
+  .nota-receipt {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .nota-receipt-head {
+    padding: 15px 0;
+  }
+  .nota-receipt-body {
+    padding: 20px 0;
+  }
+  .nota-receipt-head,
+  .nota-public-status,
+  .nota-detail-grid,
+  .nota-text-block,
+  .nota-receipt-foot,
+  tr {
+    break-inside: avoid;
+  }
+  .nota-print-only {
+    display: block;
+  }
+  .nota-receipt-foot img {
+    print-color-adjust: exact;
+  }
+  .nota-app {
+    font-size: 11px;
+  }
+  .nota-thermal .nota-receipt-head {
+    display: block;
+    border-top: 0;
+  }
+  .nota-thermal .nota-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .nota-thermal .nota-receipt-head h1 {
+    font-size: 17px;
+  }
+  .nota-thermal .nota-receipt-head p {
+    font-size: 10px;
+  }
+  .nota-thermal .nota-public-status {
+    display: block;
+    padding: 10px 0;
+    background: transparent;
+    margin-bottom: 16px;
+  }
+  .nota-thermal .nota-public-status strong {
+    font-size: 15px;
+  }
+  .nota-thermal .nota-table {
+    white-space: normal;
+  }
+  .nota-thermal .nota-table th,
+  .nota-thermal .nota-table td {
+    padding: 8px 2px;
+    font-size: 9px;
+  }
+  .nota-thermal .nota-receipt-foot {
+    display: block;
+    text-align: center;
+  }
+  .nota-thermal .nota-receipt-foot img {
+    margin: 12px auto;
+  }
+  .nota-thermal .nota-total {
+    font-size: 11px;
+  }
+  .nota-thermal .nota-total.large {
+    font-size: 15px;
+  }
+}

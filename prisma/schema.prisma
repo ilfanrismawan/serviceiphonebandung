@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  schemas  = ["nota"]
+}
+
+model Invoice {
+  id           String   @id @default(cuid())
+  number       Int      @unique @default(autoincrement())
+  brandId      String
+  brand        Brand    @relation(fields: [brandId], references: [id], onDelete: Restrict)
+  brandNumber  Int
+  numberPrefix String
+  brandSnapshot Json
+  token        String   @unique
+  customerName String
+  phone        String
+  device       String
+  identifier   String   @default("")
+  complaint    String
+  action       String   @default("")
+  warranty     String   @default("")
+  notes        String   @default("")
+  internalNote String   @default("")
+  status       String   @default("Diterima")
+  discount     Int      @default(0)
+  version      Int      @default(1)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  items        InvoiceItem[]
+  payments     Payment[]
+  history      InvoiceHistory[]
+  @@index([createdAt])
+  @@index([status])
+  @@index([brandId, createdAt])
+  @@unique([brandId, brandNumber])
+  @@unique([numberPrefix, brandNumber])
+  @@schema("nota")
+}
+
+model Brand {
+  id        String @id @default(cuid())
+  prefix    String @unique
+  counter   Int @default(0)
+  version   Int @default(1)
+  data      Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  invoices  Invoice[]
+  @@schema("nota")
+}
+
+model InvoiceItem {
+  id        String @id @default(cuid())
+  invoiceId String
+  invoice   Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  label     String
+  quantity  Int
+  price     Int
+  position  Int
+  @@index([invoiceId])
+  @@schema("nota")
+}
+
+model Payment {
+  id        String @id @default(cuid())
+  invoiceId String
+  invoice   Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  amount    Int
+  method    String
+  note      String @default("")
+  createdAt DateTime @default(now())
+  @@index([invoiceId])
+  @@schema("nota")
+}
+
+model InvoiceHistory {
+  id        String @id @default(cuid())
+  invoiceId String
+  invoice   Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  status    String
+  event     String
+  createdAt DateTime @default(now())
+  @@index([invoiceId])
+  @@schema("nota")
+}
+
+model ShopSettings {
+  id        String @id @default("shop")
+  data      Json
+  updatedAt DateTime @updatedAt
+  @@schema("nota")
+}
+
+model AdminCredential {
+  id           String @id @default("admin")
+  passcodeHash String
+  @@schema("nota")
+}
+
+model AdminSession {
+  tokenHash String @id
+  expiresAt DateTime
+  @@index([expiresAt])
+  @@schema("nota")
+}
+
+model LoginThrottle {
+  key       String @id
+  attempts  Int @default(1)
+  expiresAt DateTime
+  @@index([expiresAt])
+  @@schema("nota")
+}
