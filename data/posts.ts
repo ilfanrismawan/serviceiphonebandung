@@ -12,13 +12,17 @@ export const posts: BlogPost[] = [
       "Mau beli iPhone second di Bandung? Cek poin penting ini: True Tone, Face ID, cek IMEI Bea Cukai/Kemenperin, baterai suntikan, dan keaslian layar LCD.",
     image: "/images/workshop-bandung.webp",
     publishedAt: "2026-10-22",
-    updatedAt: "2026-10-22",
-    readingMinutes: 6,
+    updatedAt: "2026-10-31",
+    readingMinutes: 8,
     relatedServiceSlug: "ganti-lcd-iphone",
     sources: [
       { title: "Apple Support: Riwayat suku cadang dan servis iPhone", url: "https://support.apple.com/id-id/102658" },
       { title: "Kemenperin: Pengecekan IMEI Ponsel Resmi", url: "https://imei.kemenperin.go.id/" },
       { title: "Bea Cukai RI: Pengecekan Pendaftaran IMEI HKT", url: "https://www.beacukai.go.id/cek-imei.html" },
+      { title: "DDTC News: Pembelian ponsel di dalam negeri tidak bisa daftar IMEI lewat Bea Cukai", url: "https://news.ddtc.co.id/berita/nasional/1793884/hp-baru-saat-lebaran-pembelian-di-dalam-negeri-tak-bisa-daftar-imei" },
+      { title: "Bisnis.com: Update harga iPhone 15, 16, dan 17 di iBox 1 Oktober 2026", url: "https://teknologi.bisnis.com/read/20261001/280/2008758/update-harga-iphone-15-16-dan-17-di-ibox-1-oktober-ada-yang-turun-rp15-juta" },
+      { title: "Industry.co.id: Daftar harga iPhone baru dan second Oktober 2026", url: "https://www.industry.co.id/read/158052/daftar-harga-iphone-baru-dan-second-oktober-2026-mulai-rp3-jutaan" },
+      { title: "AppleInsider: iOS 27 tetap mendukung iPhone 11 dan yang lebih baru", url: "https://appleinsider.com/articles/26/06/08/ios-27-keeps-iphone-11-and-newer-compatibility" },
     ],
     sections: [
       {
@@ -30,6 +34,13 @@ export const posts: BlogPost[] = [
         ],
       },
       {
+        heading: "Kisaran harga iPhone bekas Oktober 2026 setelah iPhone 18 rilis",
+        paragraphs: [
+          "Masuknya iPhone 18 Pro ke Indonesia ikut menggeser harga model lama. Per 1 Oktober 2026, iBox menurunkan harga iPhone 15 128 GB menjadi Rp13.999.000 dan iPhone 16 128 GB menjadi Rp16.499.000, masing-masing turun Rp1,5 juta.",
+          "Di pasar second, pantauan listing hingga akhir Oktober 2026 menunjukkan iPhone 15 128 GB berada di kisaran Rp6–11 juta dan iPhone 11 128 GB sekitar Rp3,9–5 juta. Angka ini hanya acuan pasar, bukan harga transaksi pasti. Selisihnya ditentukan oleh kesehatan baterai, status IMEI, riwayat komponen, dan kelengkapan unit, sehingga setiap temuan dari pemeriksaan di bawah bisa menjadi bahan menawar.",
+        ],
+      },
+      {
         heading: "1. Cek status IMEI dan kestabilan sinyal seluler",
         paragraphs: [
           "Langkah pertama yang paling krusial di Indonesia adalah memastikan nomor IMEI tidak terblokir oleh aturan CEIR.",
@@ -38,10 +49,24 @@ export const posts: BlogPost[] = [
           "Bawa minimal dua kartu SIM dari operator seluler berbeda (misalnya Telkomsel dan Indosat/XL) saat bertransaksi.",
           "Ketik *#06# pada papan telepon untuk memunculkan nomor IMEI fisik, lalu cocokkan dengan nomor IMEI di menu Pengaturan > Umum > Mengenai dan pada baki SIM (SIM tray).",
           "Buka situs resmi Kemenperin atau Bea Cukai untuk memverifikasi apakah IMEI terdaftar secara permanen. Hindari unit dengan embel-embel 'all operator sementara' atau garansi sinyal hanya beberapa bulan, karena unit tersebut berisiko hilang sinyal sewaktu-waktu.",
+          "Pahami batas pendaftaran IMEI: registrasi lewat Bea Cukai hanya berlaku untuk ponsel yang dibawa sebagai barang bawaan penumpang atau barang kiriman dari luar negeri. Unit ex-inter yang dibeli dari penjual di dalam negeri tidak bisa didaftarkan sendiri oleh pembeli. Hindari pula jasa 'unlock IMEI' atau pendaftaran tidak resmi yang sudah berulang kali diperingatkan oleh Bea Cukai.",
+          "Lihat kode negara: buka Pengaturan > Umum > Mengenai, lalu ketuk sekali bagian Nomor Model hingga muncul kode lengkap. Akhiran seperti PA/A atau ID/A umumnya menandakan unit resmi Indonesia, sedangkan akhiran lain (misalnya LL/A atau ZP/A) menandakan unit luar negeri yang IMEI-nya wajib dicek lebih teliti. Huruf pertama kode juga memberi petunjuk: M untuk unit baru, F umumnya unit refurbished, dan N untuk unit pengganti hasil klaim servis.",
         ],
       },
       {
-        heading: "2. Cek keaslian layar: True Tone, akurasi sentuhan, dan respon panel",
+        heading: "2. Pastikan iCloud sudah keluar dan unit tidak terkunci MDM",
+        paragraphs: [
+          "iPhone yang masih terhubung ke Apple Account pemilik lama (Activation Lock) tidak bisa dipakai oleh pembeli, dan unit seperti ini hanya bisa dibuka oleh pemilik aslinya. Unit yang ditawarkan sebagai 'bypass iCloud' sebaiknya dihindari karena tidak bisa masuk iCloud dan berisiko terkunci kembali.",
+        ],
+        list: [
+          "Buka Pengaturan: nama atau Apple Account penjual tidak boleh lagi tampil di bagian paling atas.",
+          "Minta penjual menghapus iPhone di depan Anda lewat Pengaturan > Umum > Transfer atau Atur Ulang iPhone > Hapus Semua Konten dan Pengaturan.",
+          "Saat iPhone menyala ulang dan proses pengaturan berjalan, pastikan tidak muncul layar 'iPhone Terkunci ke Pemilik' atau permintaan Apple Account dan kata sandi pemilik lama. Jika muncul, batalkan transaksi.",
+          "Buka Pengaturan > Umum > VPN & Manajemen Perangkat. Jika ada profil manajemen dari perusahaan atau sekolah (MDM), unit tersebut dapat dikendalikan dari jarak jauh oleh institusi pemiliknya.",
+        ],
+      },
+      {
+        heading: "3. Cek keaslian layar: True Tone, akurasi sentuhan, dan respon panel",
         paragraphs: [
           "Layar pengganti non-original sering kali memiliki sudut pandang sempit, warna pucat kebiruan, dan konsumsi daya baterai yang jauh lebih boros.",
         ],
@@ -52,25 +77,33 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "3. Periksa riwayat komponen (Parts and Service History)",
+        heading: "4. Periksa riwayat komponen (Parts and Service History)",
         paragraphs: [
           "Pada iPhone yang menjalankan iOS 15.2 ke atas, Apple menyediakan menu riwayat servis resmi di Pengaturan > Umum > Mengenai.",
           "Jika ada komponen yang pernah diganti oleh pihak ketiga tanpa kalibrasi, sistem akan menampilkan status 'Komponen Tidak Dikenal' (Unknown Part) pada bagian Baterai, Layar, atau Kamera. Adanya keterangan ini bukan berarti ponsel rusak, namun menjadi kartu negosiasi penting untuk menawar harga ponsel lebih murah.",
+          "Pada model dan versi iOS yang lebih baru, Apple juga dapat menampilkan label 'Bekas' (Used) untuk komponen asli yang sebelumnya terpasang di iPhone lain. Apple menyebut status komponen seperti ini dapat memengaruhi nilai tukar tambah perangkat.",
         ],
       },
       {
-        heading: "4. Waspadai baterai 'suntikan' (Battery Health Reset)",
+        heading: "5. Waspadai baterai 'suntikan' (Battery Health Reset)",
         paragraphs: [
           "Jangan langsung percaya jika iPhone keluaran 3–4 tahun lalu (seperti iPhone 11 atau iPhone 12) masih menunjukkan Battery Health 98% atau 100%.",
           "Banyak penjual nakal menggunakan alat programmer baterai murah untuk mereset persentase Battery Health tanpa mengganti sel baterai fisiknya. Saat dites menggunakan laptop dengan software diagnostik (seperti 3uTools), siklus pengisian (cycle count) sudah menyentuh 800+ kali. Baterai hasil manipulasi seperti ini biasanya akan anjlok drastis setelah beberapa minggu Anda gunakan.",
         ],
       },
       {
-        heading: "5. Uji seluruh sensor hardware: Face ID, Kamera, dan Mikrofon",
+        heading: "6. Uji seluruh sensor hardware: Face ID, Kamera, dan Mikrofon",
         paragraphs: [
           "Pastikan Face ID dapat mendeteksi wajah dengan lancar. Modul TrueDepth yang rusak membutuhkan perbaikan mikrosolder yang cukup rumit.",
           "Buka aplikasi Kamera, uji lensa utama (1x), ultrawide (0.5x), dan telephoto. Pastikan tidak ada bintik hitam (kamera jamur/sensor spot) dan tidak ada getaran liar.",
           "Rekam video menggunakan kamera depan dan belakang sambil berbicara pelan, lalu dengarkan hasilnya untuk memastikan ketiga mikrofon iPhone bekerja normal.",
+        ],
+      },
+      {
+        heading: "7. Pilih model yang masih mendapat update iOS",
+        paragraphs: [
+          "Saat ini iOS 27 masih mendukung iPhone 11 dan iPhone SE generasi ke-2 ke atas, sehingga model-model tersebut masih menerima pembaruan keamanan. Namun fitur Apple Intelligence hanya tersedia di iPhone 15 Pro dan model yang lebih baru.",
+          "Jika anggaran di bawah Rp5 juta dan pilihan jatuh ke iPhone 11, hitung juga kemungkinan biaya ganti baterai karena usia unitnya sudah cukup tua. Jika Anda menginginkan fitur AI terbaru, iPhone 15 Pro adalah batas bawahnya.",
         ],
       },
       {
@@ -85,6 +118,8 @@ export const posts: BlogPost[] = [
         paragraphs: [
           "Apakah iPhone yang pernah ganti LCD masih layak dibeli? Masih layak, asalkan kualitas layar penggantinya adalah tipe grade original (OLED) dan dipasang oleh teknisi berpengalaman, serta harga belinya disesuaikan.",
           "Apa bedanya unit resmi iBox dengan unit inter? Unit resmi iBox memiliki garansi IMEI permanen seumur hidup terdaftar di Kemenperin. Unit inter harus dipastikan telah membayar pajak resmi di Bea Cukai agar sinyal operator Indonesia tidak terblokir.",
+          "Bagaimana cara tahu iPhone bekas masih terkunci iCloud? Minta penjual menghapus iPhone di depan Anda. Jika setelah menyala ulang muncul permintaan Apple Account pemilik lama atau tulisan 'iPhone Terkunci ke Pemilik', unit tersebut masih terkunci dan sebaiknya tidak dibeli.",
+          "Bisakah IMEI iPhone ex-inter yang belum terdaftar didaftarkan setelah dibeli? Registrasi IMEI lewat Bea Cukai hanya untuk barang bawaan penumpang atau barang kiriman dari luar negeri, sehingga unit yang dibeli dari penjual di dalam negeri tidak bisa didaftarkan sendiri oleh pembeli.",
         ],
       },
     ],
@@ -608,15 +643,19 @@ export const posts: BlogPost[] = [
     description:
       "Baterai iPhone boros atau cepat panas setelah update iOS 27? Bedakan efek sementara update dan masalah baterai, lalu cek langkah penanganannya.",
     image: "/images/blog/baterai.webp",
+    publicationApproved: true,
     publishedAt: "2026-10-12",
-    updatedAt: "2026-10-12",
-    readingMinutes: 4,
+    updatedAt: "2026-10-31",
+    readingMinutes: 6,
     relatedServiceSlug: "ganti-baterai-iphone",
     sources: [
       { title: "Apple: rilis iOS 27 pada 14 September 2026", url: "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/" },
       { title: "Apple: dampak pembaruan terhadap baterai dan suhu", url: "https://support.apple.com/en-us/125039" },
       { title: "Apple: jika daya baterai iPhone habis terlalu cepat", url: "https://support.apple.com/id-id/120745" },
       { title: "Apple: jika iPhone menjadi terlalu panas atau dingin", url: "https://support.apple.com/id-id/118431" },
+      { title: "Apple: baterai dan kinerja iPhone 11 dan yang lebih baru", url: "https://support.apple.com/id-id/106348" },
+      { title: "MacRumors: Wi-Fi Assist berganti nama menjadi Connectivity Assist di iOS 27", url: "https://www.macrumors.com/2026/06/11/ios-27-connectivity-assist/" },
+      { title: "TechSpot: iOS 27 membuat baterai lebih cepat habis, tetapi bersifat sementara", url: "https://www.techspot.com/news/113867-apple-ios-27-draining-iphone-batteries-faster-but.html" },
     ],
     sections: [
       {
@@ -642,14 +681,35 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "3. Gunakan Mode Daya Rendah saat membutuhkan baterai lebih lama",
+        heading: "3. Pastikan iOS dan aplikasi sudah versi terbaru",
+        paragraphs: [
+          "Buka Pengaturan > Umum > Pembaruan Perangkat Lunak dan pasang pembaruan lanjutan iOS 27 bila tersedia. Pembaruan kecil setelah rilis besar biasanya berisi perbaikan bug, tetapi periksa catatan rilisnya; jangan menganggap masalah baterai pasti teratasi sebelum Apple menyebutkannya.",
+          "Perbarui juga aplikasi lewat App Store. Aplikasi yang belum disesuaikan dengan iOS 27 dapat bekerja kurang efisien di latar belakang, sehingga ikut memengaruhi daya tahan baterai.",
+        ],
+      },
+      {
+        heading: "4. Coba matikan Connectivity Assist (fitur jaringan di iOS 27)",
+        paragraphs: [
+          "Di iOS 27, fitur yang sebelumnya bernama Bantuan Wi-Fi (Wi-Fi Assist) berganti nama menjadi Connectivity Assist dan letaknya pindah ke bagian paling bawah menu Pengaturan > Wi-Fi. Fitur ini otomatis memakai data seluler ketika koneksi Wi-Fi sedang lemah.",
+          "Sejumlah pengguna melaporkan baterai dan kuota data lebih hemat setelah fitur ini dimatikan, tetapi Apple belum menyatakan fitur ini sebagai penyebab baterai boros dan tidak semua pengguna merasakan perbedaan. Anggap ini sebagai satu langkah uji: matikan, pakai seperti biasa selama satu sampai dua hari, lalu bandingkan penggunaan baterainya.",
+        ],
+      },
+      {
+        heading: "5. Batasi Refresh App Latar untuk aplikasi yang tidak penting",
+        paragraphs: [
+          "Buka Pengaturan > Umum > Refresh App Latar. Matikan untuk aplikasi yang tidak perlu memperbarui isi saat tidak dibuka, misalnya game atau aplikasi belanja. Aplikasi pesan dan email yang Anda andalkan sebaiknya tetap aktif agar notifikasi tidak terlambat.",
+          "Ubah sedikit demi sedikit dan catat perubahannya, supaya Anda tahu langkah mana yang benar-benar berpengaruh.",
+        ],
+      },
+      {
+        heading: "6. Gunakan Mode Daya Rendah saat membutuhkan baterai lebih lama",
         paragraphs: [
           "Aktifkan Mode Daya Rendah lewat menu Baterai atau Pusat Kontrol. Fitur ini mengurangi sebagian aktivitas untuk menghemat daya. Ikuti juga saran baterai yang muncul, seperti mengurangi kecerahan layar.",
           "Mode hemat daya bisa membantu menjalani hari, tetapi hasilnya tidak membuktikan komponen baterai sehat atau rusak. Evaluasi kembali keluhan dalam penggunaan normal.",
         ],
       },
       {
-        heading: "4. iPhone panas setelah update: kapan harus berhenti dipakai?",
+        heading: "7. iPhone panas setelah update: kapan harus berhenti dipakai?",
         paragraphs: [
           "Apple menjelaskan bahwa iPhone dapat terasa hangat setelah pembaruan besar. Kehangatan saat proses berlangsung berbeda dari peringatan suhu pada layar.",
           "Jika muncul peringatan suhu, matikan iPhone, pindahkan ke tempat lebih sejuk yang jauh dari sinar matahari langsung, lalu tunggu suhunya turun. Panas juga dapat membuat pengisian daya melambat atau berhenti sementara.",
@@ -657,9 +717,10 @@ export const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "5. Cek Battery Health sebelum memutuskan ganti baterai",
+        heading: "8. Cek Battery Health sebelum memutuskan ganti baterai",
         paragraphs: [
           "Periksa Kesehatan Baterai di menu Baterai; pada model lama namanya Kesehatan & Pengisian Daya Baterai. Jika muncul keterangan Servis, Apple menyarankan mempertimbangkan penggantian.",
+          "Sebagai patokan, Apple menyebut baterai iPhone 14 dan model sebelumnya dirancang mempertahankan sekitar 80% kapasitas awal pada 500 siklus pengisian penuh, sedangkan iPhone 15 dan yang lebih baru sekitar 80% pada 1.000 siklus, dalam kondisi ideal. Pada iPhone 15 ke atas, jumlah siklus dapat dilihat di Pengaturan > Umum > Mengenai.",
           "Sampaikan hasil pemeriksaan ini bersama pola keluhan. Persentase kesehatan baterai dan pengalaman pemakaian memberi konteks berbeda, sehingga keputusan servis sebaiknya mempertimbangkan keduanya.",
         ],
       },
@@ -682,6 +743,8 @@ export const posts: BlogPost[] = [
           "Apakah semua iPhone pasti boros setelah update? Tidak. Panduan Apple menjelaskan kemungkinan dampak sementara; kondisi tersebut bukan bukti bahwa setiap perangkat mengalami masalah yang sama.",
           "Apakah harus langsung ganti baterai? Tidak ada dasar untuk memutuskan hanya dari keluhan setelah update. Periksa aktivitas sistem, pola pemakaian, dan kesehatan baterai terlebih dahulu.",
           "Apakah reset pabrik perlu jadi langkah pertama? Mulailah dengan pemeriksaan yang tidak menghapus data di atas. Jika kemudian diperlukan tindakan yang menghapus data, siapkan cadangan dan pahami langkahnya sebelum melanjutkan.",
+          "Apakah aman mematikan Connectivity Assist? Aman. Dampaknya, iPhone tidak lagi otomatis beralih ke data seluler saat Wi-Fi lemah, sehingga Anda mungkin perlu mematikan Wi-Fi secara manual ketika koneksinya buruk.",
+          "Berapa lama baterai boros setelah update biasanya berlangsung? Apple menyarankan menunggu beberapa hari lalu mengevaluasi kembali. Jika setelah sekitar satu minggu tidak ada perbaikan, telusuri aplikasi yang boros dan kesehatan baterai, atau konsultasikan ke teknisi.",
         ],
       },
     ],
