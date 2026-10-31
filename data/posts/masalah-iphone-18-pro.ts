@@ -15,8 +15,8 @@ export const masalahIphone18ProPost: BlogPost = {
   seoTitle: "Masalah iPhone 18 Pro: Panas, Restart, Cat Pudar",
   description:
     "iPhone 18 Pro panas, restart sendiri setelah Face ID gagal, atau cat pudar? Cek mana yang normal, sudah diperbaiki iOS 27.0.1, dan kapan harus klaim garansi.",
-  image: "/images/hero-repair.webp",
-  imageAlt: "Teknisi memeriksa iPhone di meja servis untuk mengecek masalah panas dan restart",
+  image: "/images/blog/masalah-iphone-18-pro-panas-restart-cat-pudar.webp",
+  imageAlt: "Ilustrasi iPhone dengan warna bodi memudar, termometer, dan ikon restart",
   publicationApproved: true,
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",

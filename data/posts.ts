@@ -23,7 +23,8 @@ export const posts: BlogPost[] = [
     title: "Panduan Lengkap Cek iPhone Bekas Sebelum Beli di Bandung (Anti Boncos)",
     description:
       "Mau beli iPhone second di Bandung? Cek poin penting ini: True Tone, Face ID, cek IMEI Bea Cukai/Kemenperin, baterai suntikan, dan keaslian layar LCD.",
-    image: "/images/workshop-bandung.webp",
+    image: "/images/blog/cara-cek-iphone-bekas-sebelum-beli-di-bandung.webp",
+    imageAlt: "Ilustrasi iPhone dengan checklist pengecekan iPhone bekas dan kaca pembesar",
     publishedAt: "2026-10-22",
     updatedAt: "2026-10-31",
     readingMinutes: 8,
@@ -143,7 +144,8 @@ export const posts: BlogPost[] = [
     title: "Suara Speaker & Earpiece iPhone Kecil atau Kresek? Cek Solusinya",
     description:
       "Suara lawan bicara saat telepon sangat kecil atau speaker musik bawah sember dan kresek? Coba trik pembersihan jaring mesh sebelum servis.",
-    image: "/images/services/charging.webp",
+    image: "/images/blog/suara-speaker-dan-earpiece-iphone-kecil-atau-kresek.webp",
+    imageAlt: "Ilustrasi iPhone dengan gelombang suara untuk masalah speaker dan earpiece",
     publishedAt: "2026-10-19",
     updatedAt: "2026-10-19",
     readingMinutes: 4,
@@ -220,7 +222,8 @@ export const posts: BlogPost[] = [
     title: "Face ID iPhone Tidak Berfungsi? Cek Penyebab TrueDepth Bermasalah",
     description:
       "Muncul notifikasi 'Face ID Dinonaktifkan' atau kamera TrueDepth tidak dapat mendeteksi wajah? Kenali pemicu kerusakan dan langkah perbaikannya.",
-    image: "/images/services/matot.webp",
+    image: "/images/blog/face-id-iphone-tidak-berfungsi-penyebab-dan-solusi.webp",
+    imageAlt: "Ilustrasi layar iPhone dengan ikon Face ID dan tanda silang",
     publishedAt: "2026-10-16",
     updatedAt: "2026-10-16",
     readingMinutes: 5,
@@ -286,7 +289,8 @@ export const posts: BlogPost[] = [
     title: "Layar iPhone Green Screen / White Screen? Solusi Hemat Tanpa Ganti LCD",
     description:
       "Layar iPhone 13 Pro atau 14 Pro tiba-tiba berubah hijau pekat atau putih polos (WSOD)? Pahami penyebab jalur fleksibel putus dan solusi jumper tanpa ganti LCD.",
-    image: "/images/services/lcd.webp",
+    image: "/images/blog/layar-iphone-green-screen-white-screen-solusi.webp",
+    imageAlt: "Ilustrasi layar iPhone hijau dan putih bergaris",
     publishedAt: "2026-10-14",
     updatedAt: "2026-10-14",
     readingMinutes: 5,
@@ -350,7 +354,8 @@ export const posts: BlogPost[] = [
     title: "Layar iPhone Blank Hitam Tapi Masih Nyala? Ini Penyebab & Solusinya",
     description:
       "Layar iPhone tiba-tiba hitam padahal masih bunyi, bergetar, atau bisa ditelepon? Pelajari penyebab Black Screen of Death dan cara mengatasinya sebelum ganti LCD.",
-    image: "/images/services/lcd.webp",
+    image: "/images/blog/layar-iphone-blank-hitam-tapi-nyala.webp",
+    imageAlt: "Ilustrasi layar iPhone hitam dengan notifikasi yang masih berbunyi",
     publishedAt: "2026-10-12",
     updatedAt: "2026-10-12",
     readingMinutes: 5,
@@ -437,7 +442,8 @@ export const posts: BlogPost[] = [
     title: "Kenapa iPhone Tidak Bisa Dicas? Cek Penyebab & Cara Mengatasinya",
     description:
       "iPhone tidak mau mengisi daya, dicas putus-putus, atau persentase malah berkurang? Ikuti cara pembersihan port yang benar dan diagnosa penyebabnya.",
-    image: "/images/services/charging.webp",
+    image: "/images/blog/iphone-tidak-bisa-dicas-penyebab-dan-solusi.webp",
+    imageAlt: "Ilustrasi iPhone dengan baterai kosong dan kabel charger yang tidak mengisi",
     publishedAt: "2026-10-12",
     updatedAt: "2026-10-12",
     readingMinutes: 4,
@@ -509,7 +515,8 @@ export const posts: BlogPost[] = [
     title: "iPhone Stuck Logo Apple (Bootloop)? Cara Mengatasi Tanpa Kehilangan Data",
     description:
       "iPhone mentok di logo Apple atau restart terus-menerus? Pelajari penyebab mulai dari memori penuh hingga update gagal, dan cara memperbaikinya.",
-    image: "/images/services/matot.webp",
+    image: "/images/blog/iphone-stuck-logo-apple-cara-mengatasi.webp",
+    imageAlt: "Ilustrasi iPhone stuck di layar logo dengan ikon restart berulang",
     publishedAt: "2026-10-12",
     updatedAt: "2026-10-12",
     readingMinutes: 5,
@@ -584,7 +591,8 @@ export const posts: BlogPost[] = [
     title: "Kamera Belakang iPhone Bergetar & Bunyi Kresek? Ini Penyebab & Solusinya",
     description:
       "Kamera iPhone bergetar hebat, gambar bergelombang, atau mengeluarkan suara dengung dan kresek? Pahami penyebab kerusakan OIS dan solusinya.",
-    image: "/images/services/camera.webp",
+    image: "/images/blog/kamera-belakang-iphone-bergetar-dan-bunyi.webp",
+    imageAlt: "Ilustrasi modul kamera belakang iPhone yang bergetar",
     publishedAt: "2026-10-12",
     updatedAt: "2026-10-12",
     readingMinutes: 4,
@@ -658,7 +666,8 @@ export const posts: BlogPost[] = [
     title: "Baterai iPhone Boros Setelah Update iOS 27? Cek Sebelum Ganti",
     description:
       "Baterai iPhone boros atau cepat panas setelah update iOS 27? Bedakan efek sementara update dan masalah baterai, lalu cek langkah penanganannya.",
-    image: "/images/blog/baterai.webp",
+    image: "/images/blog/baterai-iphone-boros-setelah-update-ios-27.webp",
+    imageAlt: "Ilustrasi iPhone sedang update iOS dengan baterai tinggal sedikit",
     publicationApproved: true,
     publishedAt: "2026-10-12",
     updatedAt: "2026-10-31",
@@ -820,7 +829,8 @@ export const posts: BlogPost[] = [
     title: "Kapan Baterai iPhone Perlu Diganti? Cek Battery Health dan Tandanya",
     description:
       "Cara mengecek Battery Health iPhone, batas 80% menurut Apple, dan tanda baterai yang sudah waktunya diganti, termasuk baterai kembung.",
-    image: "/images/blog/baterai.webp",
+    image: "/images/blog/kapan-baterai-iphone-perlu-diganti.webp",
+    imageAlt: "Ilustrasi menu Kesehatan Baterai iPhone di bawah 80 persen",
     publishedAt: "2026-09-21",
     updatedAt: "2026-09-21",
     readingMinutes: 4,

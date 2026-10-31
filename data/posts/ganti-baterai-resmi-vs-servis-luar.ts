@@ -35,8 +35,8 @@ export const gantiBateraiResmiVsLuarPost: BlogPost = {
   seoTitle: "Ganti Baterai iPhone: Resmi vs Servis Luar",
   description:
     "Bandingkan ganti baterai iPhone di servis resmi Apple dan servis independen: tarif, status Suku Cadang, Kesehatan Baterai, garansi, dan kapan pilih yang mana.",
-  image: "/images/blog/baterai.webp",
-  imageAlt: "Baterai iPhone pengganti di meja servis",
+  image: "/images/blog/ganti-baterai-iphone-resmi-vs-servis-luar.webp",
+  imageAlt: "Ilustrasi perbandingan baterai iPhone servis resmi dan servis independen",
   publicationApproved: true,
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",

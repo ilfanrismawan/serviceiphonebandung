@@ -12,8 +12,8 @@ export const iphonePanasPost: BlogPost = {
   seoTitle: "iPhone Panas Wajar atau Rusak? Cek Tandanya",
   description:
     "iPhone panas saat dicas atau padahal tidak dipakai? Bedakan panas wajar dan tanda baterai, port charger, atau mesin bermasalah, plus kapan harus dibawa servis.",
-  image: "/images/blog/baterai.webp",
-  imageAlt: "iPhone yang sedang dicas di atas meja",
+  image: "/images/blog/iphone-panas-wajar-atau-rusak-kapan-perlu-servis.webp",
+  imageAlt: "Ilustrasi iPhone dengan termometer dan peringatan suhu panas",
   publicationApproved: true,
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",

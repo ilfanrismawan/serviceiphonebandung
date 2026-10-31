@@ -10,8 +10,8 @@ export const pesanBateraiPentingPost: BlogPost = {
   seoTitle: "Arti Pesan Baterai Penting di iPhone",
   description:
     "Arti pesan \"Pesan Baterai Penting\" dan \"Suku Cadang Tidak Dikenal\" di iPhone setelah ganti baterai, apakah berbahaya, dan apa yang perlu ditanyakan ke teknisi.",
-  image: "/images/blog/baterai.webp",
-  imageAlt: "Baterai iPhone yang sedang diperiksa",
+  image: "/images/blog/pesan-baterai-penting-iphone-setelah-ganti-baterai.webp",
+  imageAlt: "Ilustrasi notifikasi Pesan Baterai Penting di layar iPhone",
   publicationApproved: true,
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",

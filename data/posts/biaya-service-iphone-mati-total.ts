@@ -22,8 +22,8 @@ export const biayaServiceMatiTotalPost: BlogPost = {
   seoTitle: "Biaya Service iPhone Mati Total Bandung",
   description:
     "Biaya service iPhone mati total di Bandung tergantung penyebabnya: baterai, port charger, software, atau mesin. Cek kisaran harga part dan cara cek sendiri.",
-  image: "/images/services/matot.webp",
-  imageAlt: "iPhone mati total dengan layar hitam yang sedang diperiksa teknisi",
+  image: "/images/blog/biaya-service-iphone-mati-total-bandung.webp",
+  imageAlt: "Ilustrasi iPhone mati total dengan layar hitam dan ikon daya",
   publicationApproved: true,
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",
