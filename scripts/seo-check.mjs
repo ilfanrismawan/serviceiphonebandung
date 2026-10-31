@@ -51,7 +51,10 @@ assert.ok(!home.includes("350+ Ulasan"));
 for (const slug of ["cara-cek-iphone-bekas-sebelum-beli-di-bandung", "suara-speaker-dan-earpiece-iphone-kecil-atau-kresek", "face-id-iphone-tidak-berfungsi-penyebab-dan-solusi", "layar-iphone-green-screen-white-screen-solusi"]) {
   assert.equal((await fetch(new URL(`/blog/${slug}`, base))).status, 404, `Unreviewed scheduled article: ${slug}`);
 }
-if (!process.env.NEXT_PUBLIC_GA4_ID) assert.ok(!home.includes("googletagmanager.com/gtag/js"));
+// GA4 (components/seo/Analytics.tsx) is opt-in via NEXT_PUBLIC_GA4_ID. The site also loads a
+// deliberate, always-on Google Ads tag (AW-…) from app/(website)/layout.tsx through the same
+// gtag.js URL, so match GA4 measurement IDs (G-…) specifically instead of any gtag.js script.
+if (!process.env.NEXT_PUBLIC_GA4_ID) assert.ok(!/googletagmanager\.com\/gtag\/js\?id=G-/.test(home), "GA4 must stay disabled without NEXT_PUBLIC_GA4_ID");
 const image = await fetch(new URL("/opengraph-image", base));
 assert.equal(image.status, 200);
 assert.match(image.headers.get("content-type"), /image\/png/);
