@@ -6,8 +6,10 @@ import { pesanBateraiPentingPost } from "./posts/pesan-baterai-penting";
 import { biayaServiceMatiTotalPost } from "./posts/biaya-service-iphone-mati-total";
 import { gantiBateraiResmiVsLuarPost } from "./posts/ganti-baterai-resmi-vs-servis-luar";
 import { iphonePanasPost } from "./posts/iphone-panas-kapan-perlu-servis";
+import { masalahIphone18ProPost } from "./posts/masalah-iphone-18-pro";
 
 export const posts: BlogPost[] = [
+  masalahIphone18ProPost,
   iphonePanasPost,
   gantiBateraiResmiVsLuarPost,
   biayaServiceMatiTotalPost,
