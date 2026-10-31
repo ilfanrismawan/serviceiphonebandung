@@ -5,8 +5,10 @@ import { cibiruPost } from "./posts/cibiru";
 import { pesanBateraiPentingPost } from "./posts/pesan-baterai-penting";
 import { biayaServiceMatiTotalPost } from "./posts/biaya-service-iphone-mati-total";
 import { gantiBateraiResmiVsLuarPost } from "./posts/ganti-baterai-resmi-vs-servis-luar";
+import { iphonePanasPost } from "./posts/iphone-panas-kapan-perlu-servis";
 
 export const posts: BlogPost[] = [
+  iphonePanasPost,
   gantiBateraiResmiVsLuarPost,
   biayaServiceMatiTotalPost,
   pesanBateraiPentingPost,
