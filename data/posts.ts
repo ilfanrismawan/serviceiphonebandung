@@ -7,6 +7,7 @@ export const posts: BlogPost[] = [
   cibiruPost,
   {
     slug: "cara-cek-iphone-bekas-sebelum-beli-di-bandung",
+    publicationApproved: true,
     title: "Panduan Lengkap Cek iPhone Bekas Sebelum Beli di Bandung (Anti Boncos)",
     description:
       "Mau beli iPhone second di Bandung? Cek poin penting ini: True Tone, Face ID, cek IMEI Bea Cukai/Kemenperin, baterai suntikan, dan keaslian layar LCD.",
@@ -126,6 +127,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "suara-speaker-dan-earpiece-iphone-kecil-atau-kresek",
+    publicationApproved: true,
     title: "Suara Speaker & Earpiece iPhone Kecil atau Kresek? Cek Solusinya",
     description:
       "Suara lawan bicara saat telepon sangat kecil atau speaker musik bawah sember dan kresek? Coba trik pembersihan jaring mesh sebelum servis.",
@@ -202,6 +204,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "face-id-iphone-tidak-berfungsi-penyebab-dan-solusi",
+    publicationApproved: true,
     title: "Face ID iPhone Tidak Berfungsi? Cek Penyebab TrueDepth Bermasalah",
     description:
       "Muncul notifikasi 'Face ID Dinonaktifkan' atau kamera TrueDepth tidak dapat mendeteksi wajah? Kenali pemicu kerusakan dan langkah perbaikannya.",
@@ -267,6 +270,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "layar-iphone-green-screen-white-screen-solusi",
+    publicationApproved: true,
     title: "Layar iPhone Green Screen / White Screen? Solusi Hemat Tanpa Ganti LCD",
     description:
       "Layar iPhone 13 Pro atau 14 Pro tiba-tiba berubah hijau pekat atau putih polos (WSOD)? Pahami penyebab jalur fleksibel putus dan solusi jumper tanpa ganti LCD.",
