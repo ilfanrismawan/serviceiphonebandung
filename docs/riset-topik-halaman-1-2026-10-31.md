@@ -25,7 +25,7 @@ Lanjutan dari `riset-keyword-longtail-2026-10-26.md`. Fokus: topik yang **belum 
 | --- | --- | --- |
 | Pesan Baterai Penting / Suku Cadang Tidak Dikenal setelah ganti baterai | Semua berbahasa Inggris (Apple Community, iFixit, Back Market) | **Terbit 31 Okt**: `/blog/pesan-baterai-penting-iphone-setelah-ganti-baterai` |
 | True Tone hilang setelah ganti LCD iPhone | Tidak ada artikel bahasa Indonesia | **Butuh konfirmasi owner**: apakah toko menyalin data layar (programmer JC/REWA)? |
-| Ganti baterai iPhone di iBox vs servis luar (harga 2026) | Artikel perbandingan masih memakai harga 2022–2023 | Kandidat berikutnya; perlu harga iBox/AASP terbaru yang bisa dikutip |
+| Ganti baterai iPhone di iBox vs servis luar (harga 2026) | Artikel perbandingan masih memakai harga 2022–2023 | **Terbit 31 Okt**: `/blog/ganti-baterai-iphone-resmi-vs-servis-luar` (tarif Apple dikutip dalam USD; harga AASP Indonesia belum ada sumbernya) |
 | Biaya ganti layar iPhone 17 di Indonesia | Hanya tarif USD dan Taiwan | Kandidat; perlu harga part iPhone 17 di `data/prices.ts` dulu |
 
 ## Catatan

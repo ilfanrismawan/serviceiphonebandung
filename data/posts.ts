@@ -4,8 +4,10 @@ import { isPublishedPost } from "@/lib/publication";
 import { cibiruPost } from "./posts/cibiru";
 import { pesanBateraiPentingPost } from "./posts/pesan-baterai-penting";
 import { biayaServiceMatiTotalPost } from "./posts/biaya-service-iphone-mati-total";
+import { gantiBateraiResmiVsLuarPost } from "./posts/ganti-baterai-resmi-vs-servis-luar";
 
 export const posts: BlogPost[] = [
+  gantiBateraiResmiVsLuarPost,
   biayaServiceMatiTotalPost,
   pesanBateraiPentingPost,
   cibiruPost,
