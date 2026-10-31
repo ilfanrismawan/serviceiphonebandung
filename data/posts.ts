@@ -8,8 +8,10 @@ import { gantiBateraiResmiVsLuarPost } from "./posts/ganti-baterai-resmi-vs-serv
 import { iphonePanasPost } from "./posts/iphone-panas-kapan-perlu-servis";
 import { masalahIphone18ProPost } from "./posts/masalah-iphone-18-pro";
 import { iphoneDuoLayarRetakPost } from "./posts/iphone-duo-layar-retak";
+import { layarTidakBisaDisentuhIos27Post } from "./posts/layar-iphone-tidak-bisa-disentuh-ios-27";
 
 export const posts: BlogPost[] = [
+  layarTidakBisaDisentuhIos27Post,
   iphoneDuoLayarRetakPost,
   masalahIphone18ProPost,
   iphonePanasPost,
