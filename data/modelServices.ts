@@ -198,6 +198,136 @@ export const modelServicePages: ModelServicePage[] = [
     ],
   },
   {
+    serviceSlug: "ganti-baterai-iphone",
+    modelSlug: "iphone-15",
+    summary: "Siklus dan Kesehatan Baterai dicek dulu, pilihan part dijelaskan di awal.",
+    intro:
+      "iPhone 15 adalah generasi pertama yang baterainya dirancang bertahan hingga 1.000 siklus pengisian penuh sebelum turun ke 80%. Jadi kalau baterai iPhone 15 kamu sudah terasa sangat boros, cek dulu jumlah siklus dan Kesehatan Baterai. Bisa jadi penyebabnya aplikasi atau pengaturan, bukan baterainya. Kalau memang perlu diganti, kami jelaskan pilihan part dan konsekuensinya sebelum dikerjakan.",
+    notes: [
+      "Apple menyebut baterai iPhone 15 dan yang lebih baru dirancang mempertahankan 80% kapasitas awal setelah 1.000 siklus pengisian penuh, dua kali lipat dari model sebelumnya.",
+      "Di iPhone 15, jumlah siklus baterai bisa dilihat langsung di Pengaturan > Umum > Mengenai atau di menu Baterai, tanpa perlu komputer.",
+      "Baterai non-Apple dapat memunculkan Pesan Baterai Penting dan tercatat sebagai Suku Cadang Tidak Dikenal di Riwayat Suku Cadang dan Servis.",
+      "iPhone 15 Plus, 15 Pro, dan 15 Pro Max memakai baterai yang berbeda dengan harga part berbeda. Lihat tabel di bawah.",
+    ],
+    relatedModelSlugs: ["iphone-15", "iphone-15-plus", "iphone-15-pro", "iphone-15-pro-max"],
+    relatedPostSlug: "pesan-baterai-penting-iphone-setelah-ganti-baterai",
+    keywords: ["ganti baterai iphone 15 bandung", "harga ganti baterai iphone 15 bandung", "ganti baterai iphone 15 pro bandung"],
+    faqs: [
+      {
+        question: "Berapa harga ganti baterai iPhone 15 di Bandung?",
+        answer:
+          "Harga part baterai iPhone 15 saat ini mulai {battery}, belum termasuk biaya pemasangan. Total biaya kami sampaikan sebelum pengerjaan dan baru dikerjakan setelah kamu setuju.",
+      },
+      {
+        question: "iPhone 15 saya masih garansi, sebaiknya ganti di mana?",
+        answer:
+          "Kalau masih tercakup garansi Apple atau AppleCare+ dan kapasitas baterainya di bawah 80%, cek dulu cakupannya di checkcoverage.apple.com dan ajukan lewat Apple atau penyedia servis resmi. Kami toko servis independen, bukan bagian dari Apple.",
+      },
+      {
+        question: "Setelah ganti baterai, apakah muncul Pesan Baterai Penting?",
+        answer:
+          "Dengan baterai non-Apple, pesan itu bisa muncul dan angka Kesehatan Baterai bisa tidak tampil, walau iPhone tetap bisa dipakai normal. Kami jelaskan kemungkinan ini untuk tiap pilihan part sebelum pengerjaan.",
+      },
+    ],
+  },
+  {
+    serviceSlug: "ganti-baterai-iphone",
+    modelSlug: "iphone-16",
+    summary: "Dicek dulu penyebab borosnya, harga part disepakati di awal.",
+    intro:
+      "iPhone 16 masih tergolong baru, jadi baterai yang terasa cepat habis belum tentu sudah aus. Penyebabnya sering dari proses indeks setelah update iOS, aplikasi yang berjalan di latar belakang, atau suhu. Kami cek jumlah siklus, Kesehatan Baterai, dan port USB-C dulu, supaya kamu tidak membayar baterai baru yang belum diperlukan.",
+    notes: [
+      "Baterai iPhone 16 dirancang mempertahankan 80% kapasitas awal setelah 1.000 siklus pengisian penuh.",
+      "Jumlah siklus baterai iPhone 16 bisa dilihat di Pengaturan > Umum > Mengenai atau di menu Baterai.",
+      "Unit yang masih dalam masa garansi Apple sebaiknya dicek cakupannya dulu di checkcoverage.apple.com sebelum dibuka di servis independen.",
+      "iPhone 16 Plus, 16 Pro, dan 16 Pro Max memakai baterai yang berbeda dengan harga part berbeda. Lihat tabel di bawah.",
+    ],
+    relatedModelSlugs: ["iphone-16", "iphone-16-plus", "iphone-16-pro", "iphone-16-pro-max"],
+    relatedPostSlug: "pesan-baterai-penting-iphone-setelah-ganti-baterai",
+    keywords: ["ganti baterai iphone 16 bandung", "harga ganti baterai iphone 16 bandung", "ganti baterai iphone 16 pro bandung"],
+    faqs: [
+      {
+        question: "Berapa harga ganti baterai iPhone 16 di Bandung?",
+        answer:
+          "Harga part baterai iPhone 16 saat ini mulai {battery}, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+      },
+      {
+        question: "Baterai iPhone 16 boros setelah update iOS, harus ganti?",
+        answer:
+          "Belum tentu. Setelah update besar, iPhone butuh beberapa hari untuk menyelesaikan proses di latar belakang dan baterai bisa terasa lebih boros sementara. Kalau setelah sekitar seminggu tetap boros dan Kesehatan Baterai rendah, baru baterainya perlu diperiksa.",
+      },
+      {
+        question: "Apakah ganti baterai iPhone 16 menghapus data?",
+        answer:
+          "Tidak. Ganti baterai tidak menyentuh data, tetapi tetap cadangkan iPhone lewat iCloud atau komputer lebih dulu sebagai langkah aman.",
+      },
+    ],
+  },
+  {
+    serviceSlug: "ganti-lcd-iphone",
+    modelSlug: "iphone-15",
+    summary: "Lima pilihan kualitas layar, perbedaannya ditunjukkan sebelum dipasang.",
+    intro:
+      "iPhone 15 memakai layar OLED Super Retina XDR 6,1 inci dengan Dynamic Island. Di daftar kami, pilihan layar penggantinya cukup lengkap, dari Grade A sampai Genuine, dengan selisih harga yang besar. Kami tunjukkan perbedaan kecerahan, warna, dan dukungan fitur tiap pilihan supaya kamu bisa memilih sesuai kebutuhan dan budget.",
+    notes: [
+      "Di iPhone 15, penggantian layar tercatat di Pengaturan > Umum > Mengenai. Layar yang tidak dapat diverifikasi bisa tercatat sebagai Suku Cadang Tidak Dikenal.",
+      "Tanyakan apakah True Tone bisa dipertahankan untuk jenis layar yang kamu pilih sebelum pengerjaan.",
+      "Kalau Dynamic Island atau Face ID bermasalah setelah jatuh, kerusakannya bisa ada di modul kamera depan, bukan di layar. Kami cek terpisah.",
+      "iPhone 15 Pro dan 15 Pro Max tidak tersedia pilihan Grade A di daftar kami. Lihat tabel di bawah.",
+    ],
+    relatedModelSlugs: ["iphone-15", "iphone-15-plus", "iphone-15-pro", "iphone-15-pro-max"],
+    relatedPostSlug: "layar-iphone-pecah-segera-diganti",
+    keywords: ["ganti lcd iphone 15 bandung", "harga ganti lcd iphone 15 bandung", "ganti layar iphone 15 bandung"],
+    faqs: [
+      {
+        question: "Berapa harga ganti LCD iPhone 15 di Bandung?",
+        answer:
+          "Harga part layar iPhone 15 saat ini mulai {lcdGradeA} untuk Grade A, {lcdOled} untuk Oled Plus, dan {lcdGenuine} untuk Genuine/Asli, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+      },
+      {
+        question: "Layar iPhone 15 ada garis hijau, harus ganti?",
+        answer:
+          "Garis hijau pada layar OLED bisa berasal dari panel yang rusak atau konektor yang bermasalah. Kami cek dulu sebelum menyarankan ganti layar.",
+      },
+      {
+        question: "Apakah data hilang saat ganti layar iPhone 15?",
+        answer: "Tidak. Ganti layar tidak menghapus data, tetapi tetap cadangkan iPhone lebih dulu sebagai langkah aman.",
+      },
+    ],
+  },
+  {
+    serviceSlug: "ganti-lcd-iphone",
+    modelSlug: "iphone-16",
+    summary: "Pilihan Oled Plus, BPT, atau Genuine, dicek dulu sebelum dipasang.",
+    intro:
+      "iPhone 16 memakai layar OLED Super Retina XDR 6,1 inci dengan Dynamic Island. Di daftar kami, pilihan layar penggantinya Oled Plus, BPT, dan Genuine. Untuk unit yang masih baru, kami sarankan cek dulu apakah masih tercakup AppleCare+, karena biaya klaim layar di sana bisa jauh lebih murah.",
+    notes: [
+      "Di iPhone 16, penggantian layar tercatat di Pengaturan > Umum > Mengenai. Layar yang tidak dapat diverifikasi bisa tercatat sebagai Suku Cadang Tidak Dikenal.",
+      "Cek status AppleCare+ di checkcoverage.apple.com sebelum memutuskan servis di luar Apple.",
+      "Tanyakan apakah True Tone bisa dipertahankan untuk jenis layar yang kamu pilih sebelum pengerjaan.",
+      "iPhone 16 Plus belum tersedia pilihan Genuine di daftar kami. Lihat tabel di bawah.",
+    ],
+    relatedModelSlugs: ["iphone-16", "iphone-16-plus", "iphone-16-pro", "iphone-16-pro-max"],
+    relatedPostSlug: "layar-iphone-pecah-segera-diganti",
+    keywords: ["ganti lcd iphone 16 bandung", "harga ganti lcd iphone 16 bandung", "ganti layar iphone 16 bandung"],
+    faqs: [
+      {
+        question: "Berapa harga ganti LCD iPhone 16 di Bandung?",
+        answer:
+          "Harga part layar iPhone 16 saat ini mulai {lcdOled} untuk Oled Plus dan {lcdGenuine} untuk Genuine/Asli, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+      },
+      {
+        question: "Layar iPhone 16 retak sedikit, perlu langsung ganti?",
+        answer:
+          "Retak halus cenderung menyebar dan bisa membuat touchscreen error atau memunculkan garis. Kalau masih ada AppleCare+, ajukan klaim dulu. Kalau tidak, periksakan sebelum kerusakannya melebar.",
+      },
+      {
+        question: "Apakah data hilang saat ganti layar iPhone 16?",
+        answer: "Tidak. Ganti layar tidak menghapus data, tetapi tetap cadangkan iPhone lebih dulu sebagai langkah aman.",
+      },
+    ],
+  },
+  {
     serviceSlug: "ganti-lcd-iphone",
     modelSlug: "iphone-11",
     summary: "Pilihan Grade A atau Genuine, dicek dulu sebelum dikerjakan.",

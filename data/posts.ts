@@ -2,8 +2,10 @@ import type { BlogPost } from "@/types";
 import { isPublishedPost } from "@/lib/publication";
 
 import { cibiruPost } from "./posts/cibiru";
+import { pesanBateraiPentingPost } from "./posts/pesan-baterai-penting";
 
 export const posts: BlogPost[] = [
+  pesanBateraiPentingPost,
   cibiruPost,
   {
     slug: "cara-cek-iphone-bekas-sebelum-beli-di-bandung",
