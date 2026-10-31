@@ -49,7 +49,7 @@ assert.ok((await get("/robots.txt")).includes(`${origin}/sitemap.xml`));
 const home = await get("/");
 assert.ok(!home.includes("350+ Ulasan"));
 for (const slug of ["cara-cek-iphone-bekas-sebelum-beli-di-bandung", "suara-speaker-dan-earpiece-iphone-kecil-atau-kresek", "face-id-iphone-tidak-berfungsi-penyebab-dan-solusi", "layar-iphone-green-screen-white-screen-solusi"]) {
-  assert.equal((await fetch(new URL(`/blog/${slug}`, base))).status, 404, `Unreviewed scheduled article: ${slug}`);
+  assert.equal((await fetch(new URL(`/blog/${slug}`, base))).status, 200, `Approved article is published: ${slug}`);
 }
 if (!process.env.NEXT_PUBLIC_GA4_ID) assert.ok(!home.includes("googletagmanager.com/gtag/js"));
 const image = await fetch(new URL("/opengraph-image", base));
