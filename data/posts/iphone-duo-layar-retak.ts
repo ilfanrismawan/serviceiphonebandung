@@ -14,8 +14,8 @@ export const iphoneDuoLayarRetakPost: BlogPost = {
   seoTitle: "Layar iPhone Duo Retak: Garansi & Biaya Ganti",
   description:
     "Layar iPhone Duo retak di area engsel? Apple sudah mengakuinya. Cek cara klaim garansi, biaya ganti layar, perlu AppleCare+ atau tidak, dan tips merawatnya.",
-  image: "/images/blog/layar-pecah.webp",
-  imageAlt: "Layar iPhone retak yang sedang diperiksa teknisi di meja servis",
+  image: "/images/blog/iphone-duo-layar-retak-garansi-biaya-ganti-layar.webp",
+  imageAlt: "Ilustrasi iPhone lipat terbuka dengan layar dalam retak di area lipatan dekat engsel",
   publicationApproved: true,
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",

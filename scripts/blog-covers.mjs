@@ -259,6 +259,39 @@ const covers = [
       <text x="150" y="374" text-anchor="middle" font-size="16" fill="#57534e">baterai asli Apple</text>`,
     extra: `<g filter="url(#soft)">${batteryIcon(1250, 600, 170, 84, 0.9, "#fde047")}</g>`,
   },
+  {
+    slug: "iphone-duo-layar-retak-garansi-biaya-ganti-layar",
+    tag: "IPHONE DUO", title: ["Layar Lipat Retak", "di Engsel"],
+    bg: ["#0b1324", "#1e3a8a"], accent: "#fbbf24",
+    screen: `
+      <defs><linearGradient id="duoL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#0e7490"/></linearGradient>
+      <linearGradient id="duoC" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="0.5" stop-color="#000" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient></defs>
+      <rect width="${W}" height="${H}" fill="url(#duoL)"/>
+      <g fill="#fff" fill-opacity="0.18"><rect x="22" y="70" width="110" height="120" rx="20"/><rect x="168" y="70" width="110" height="250" rx="20"/><rect x="22" y="210" width="110" height="110" rx="20"/><rect x="22" y="350" width="256" height="140" rx="20"/></g>
+      <rect x="125" y="0" width="50" height="${H}" fill="url(#duoC)"/>
+      <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M150 230 L143 280 L157 325 L145 370 L158 420 L147 470 L154 520 L150 600" stroke-width="5"/>
+        <path d="M143 280 L95 268 L60 282" stroke-width="3"/><path d="M157 325 L205 312 L245 330" stroke-width="3"/>
+        <path d="M145 370 L100 400 L55 396" stroke-width="3"/><path d="M158 420 L210 450 L250 440" stroke-width="3"/>
+        <path d="M147 470 L110 510" stroke-width="2.5"/><path d="M154 520 L200 548" stroke-width="2.5"/>
+      </g>`,
+    extra: `
+      ${badge(1420, 640, 72, "#fbbf24", `<rect x="-7" y="-36" width="14" height="46" rx="7" fill="#0b1324"/><circle cy="26" r="9" fill="#0b1324"/>`)}`,
+  },
+  {
+    slug: "layar-iphone-tidak-bisa-disentuh-setelah-update-ios-27",
+    tag: "IOS 27", title: ["Layar Tidak", "Bisa Disentuh?"],
+    bg: ["#1e1b4b", "#4338ca"], accent: "#a5b4fc",
+    screen: `
+      <defs><linearGradient id="ios27" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f7cff"/><stop offset="0.6" stop-color="#7b5cff"/><stop offset="1" stop-color="#d94fb0"/></linearGradient></defs>
+      <rect width="${W}" height="${H}" fill="url(#ios27)"/>
+      <g fill="#fff" fill-opacity="0.55">${Array.from({ length: 12 }, (_, i) => `<rect x="${30 + (i % 4) * 64}" y="${80 + Math.floor(i / 4) * 80}" width="48" height="48" rx="13"/>`).join("")}</g>
+      <rect width="${W}" height="${H}" fill="#0b1020" opacity="0.35"/>
+      <g transform="translate(150 430)"><circle r="46" fill="none" stroke="#fff" stroke-opacity="0.3" stroke-width="9"/><path d="M0 -46 A46 46 0 0 1 40 23" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/></g>
+      <g transform="translate(206 210)"><circle r="26" fill="#fff" fill-opacity="0.2" stroke="#fff" stroke-width="4"/><circle r="52" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="8 10"/></g>`,
+    extra: `
+      ${badge(1420, 640, 72, "#ef4444", `<path d="M-26 -26 L26 26 M26 -26 L-26 26" stroke="#fff" stroke-width="14" stroke-linecap="round"/>`)}`,
+  },
 ];
 
 const svgFor = (c) => {
