@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getPost, posts } from "@/data/posts";
 import { isPublishedPost } from "@/lib/publication";
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
 
   return buildMetadata({
-    title: post.title,
+    title: post.seoTitle ?? post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     type: "article",
@@ -136,6 +137,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </p>
         </Container>
       </article>
+      {post.faqs && post.faqs.length > 0 && <FaqSection faqs={post.faqs} title="Pertanyaan yang sering diajukan" />}
       <CtaBanner />
     </>
   );

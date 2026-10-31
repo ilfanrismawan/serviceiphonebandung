@@ -93,7 +93,11 @@ export interface BlogPost {
   publicationApproved?: boolean;
   slug: string;
   title: string;
+  /** Judul pendek untuk <title> dan hasil Google (±45 karakter, sebelum akhiran nama situs). H1 tetap memakai `title`. */
+  seoTitle?: string;
   description: string;
+  /** Tanya-jawab di akhir artikel, dirender dengan FAQPage schema. */
+  faqs?: Faq[];
   image?: string;
   publishedAt: string;
   updatedAt: string;

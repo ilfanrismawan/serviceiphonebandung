@@ -16,7 +16,7 @@ Lanjutan dari `riset-keyword-longtail-2026-10-26.md`. Fokus: topik yang **belum 
 | ganti kaca kamera iphone bandung | Tokopedia, forum Samsung | **Butuh konfirmasi owner** |
 | ganti baterai iphone 15 / 16 bandung | Hanya berita tarif resmi Apple (USD 99), tidak ada harga servis independen | **Dibuat 31 Okt**: `/layanan/ganti-baterai-iphone/iphone-15` dan `/iphone-16` |
 | ganti lcd iphone 15 / 16 bandung | Pola sama | **Dibuat 31 Okt**: `/layanan/ganti-lcd-iphone/iphone-15` dan `/iphone-16` |
-| biaya service iphone 11 mati total bandung | Tidak ada halaman Indonesia untuk Bandung (hasil Jerman, Turki, Vietnam) | Kandidat FAQ/bagian di `/layanan/service-iphone-mati-total` |
+| biaya service iphone 11 mati total bandung | Tidak ada halaman Indonesia untuk Bandung (hasil Jerman, Turki, Vietnam) | **Terbit 31 Okt**: `/blog/biaya-service-iphone-mati-total-bandung` |
 | service iphone jatinangor | Hampir semua spam; satu halaman meragukan menyebut iOutlet Jatinangor | Perkuat `/area/jatinangor` hanya dengan info layanan yang nyata |
 
 ## B. Artikel blog (belum ada versi bahasa Indonesia yang bagus)

@@ -7,6 +7,7 @@ import type { BlogPost } from "@/types";
 export const pesanBateraiPentingPost: BlogPost = {
   slug: "pesan-baterai-penting-iphone-setelah-ganti-baterai",
   title: "Muncul \"Pesan Baterai Penting\" Setelah Ganti Baterai iPhone? Ini Artinya",
+  seoTitle: "Arti Pesan Baterai Penting di iPhone",
   description:
     "Arti pesan \"Pesan Baterai Penting\" dan \"Suku Cadang Tidak Dikenal\" di iPhone setelah ganti baterai, apakah berbahaya, dan apa yang perlu ditanyakan ke teknisi.",
   image: "/images/blog/baterai.webp",
@@ -19,6 +20,28 @@ export const pesanBateraiPentingPost: BlogPost = {
   sources: [
     { title: "Apple Support: Riwayat suku cadang dan servis iPhone", url: "https://support.apple.com/id-id/102658" },
     { title: "Apple Support: Baterai dan kinerja iPhone", url: "https://support.apple.com/id-id/101575" },
+  ],
+  faqs: [
+    {
+      question: "Apa arti Pesan Baterai Penting di iPhone?",
+      answer:
+        "Artinya iPhone tidak dapat memverifikasi bahwa baterai yang terpasang adalah baterai asli Apple. Biasanya muncul setelah baterai diganti di luar Apple atau dengan baterai bekas dari iPhone lain.",
+    },
+    {
+      question: "Apakah Pesan Baterai Penting memengaruhi performa iPhone?",
+      answer:
+        "Pesan itu sendiri tidak memperlambat iPhone. Performa ditentukan oleh kualitas dan kondisi baterai yang terpasang. Yang biasanya hilang adalah tampilan angka Kesehatan Baterai.",
+    },
+    {
+      question: "Bagaimana cara menghilangkan Suku Cadang Tidak Dikenal di iPhone?",
+      answer:
+        "Status tersebut dicatat oleh iOS dan tidak bisa dihapus lewat pengaturan. Agar tercatat sebagai suku cadang asli, penggantian harus memakai suku cadang dan proses resmi Apple.",
+    },
+    {
+      question: "Apakah iPhone bekas dengan status Suku Cadang Tidak Dikenal sebaiknya dihindari?",
+      answer:
+        "Tidak harus, tetapi itu tanda komponen pernah diganti di luar Apple. Jadikan bahan pertimbangan harga dan cek kondisi baterainya secara langsung.",
+    },
   ],
   sections: [
     {
@@ -74,13 +97,6 @@ export const pesanBateraiPentingPost: BlogPost = {
       links: [
         { label: "Lihat harga ganti baterai iPhone di Bandung", href: "/layanan/ganti-baterai-iphone" },
         { label: "Kapan baterai iPhone perlu diganti?", href: "/blog/kapan-baterai-iphone-perlu-diganti" },
-      ],
-    },
-    {
-      heading: "Pertanyaan yang sering diajukan (FAQ)",
-      paragraphs: [
-        "Apakah pesan ini memengaruhi performa? Pesan itu sendiri tidak memperlambat iPhone. Performa ditentukan oleh kualitas dan kondisi baterai yang terpasang.",
-        "Apakah iPhone bekas dengan status Suku Cadang Tidak Dikenal sebaiknya dihindari? Tidak harus, tetapi itu tanda komponen pernah diganti di luar Apple. Jadikan bahan pertimbangan harga dan cek kondisi baterainya secara langsung.",
       ],
     },
   ],

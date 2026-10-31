@@ -15,6 +15,8 @@ import { ServicePriceTable } from "@/components/sections/ServicePriceTable";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getModel } from "@/data/models";
 import { getModelServicePages } from "@/data/modelServices";
+import { posts } from "@/data/posts";
+import { isPublishedPost } from "@/lib/publication";
 import { PRICE_DISCLAIMER } from "@/data/prices";
 import { getService, services } from "@/data/services";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -50,6 +52,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
   const modelPages = getModelServicePages(service.slug);
+  const relatedPosts = posts.filter((p) => p.relatedServiceSlug === service.slug && isPublishedPost(p)).slice(0, 4);
 
   return (
     <>
@@ -152,6 +155,21 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               </ul>
             </div>
           )}
+        </Section>
+      )}
+
+      {relatedPosts.length > 0 && (
+        <Section tone="white">
+          <SectionHeading title="Artikel terkait" />
+          <ul className="space-y-3">
+            {relatedPosts.map((post) => (
+              <li key={post.slug}>
+                <Link href={`/blog/${post.slug}`} className="text-lg font-medium text-accent underline underline-offset-4">
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Section>
       )}
 
