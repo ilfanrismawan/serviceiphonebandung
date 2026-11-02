@@ -6,10 +6,17 @@ import { services } from "@/data/services";
 import { siteConfig } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const publishedPosts = posts.filter(isPublishedPost);
+  const latestPostUpdate = publishedPosts.reduce<string | undefined>(
+    (latest, post) => !latest || post.updatedAt > latest ? post.updatedAt : latest,
+    undefined,
+  );
   const staticPaths = ["", "/layanan", "/harga", "/blog", "/kontak", "/lokasi/dipatiukur"];
 
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${siteConfig.url}${path}`,
+    // The blog listing changes when its published articles change.
+    ...(path === "/blog" && latestPostUpdate ? { lastModified: latestPostUpdate } : {}),
     changeFrequency: "weekly",
     priority: path === "" ? 1 : 0.8,
   }));
@@ -26,9 +33,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const postEntries: MetadataRoute.Sitemap = posts.filter(isPublishedPost).map((p) => ({
+  const postEntries: MetadataRoute.Sitemap = publishedPosts.map((p) => ({
     url: `${siteConfig.url}/blog/${p.slug}`,
     lastModified: new Date(p.updatedAt),
+    ...(p.image ? { images: [new URL(p.image, siteConfig.url).href] } : {}),
     changeFrequency: "yearly",
     priority: 0.5,
   }));

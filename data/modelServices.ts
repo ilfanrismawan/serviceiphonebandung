@@ -27,7 +27,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti baterai iPhone 11 di Bandung?",
         answer:
-          "Harga part baterai iPhone 11 saat ini {battery}, belum termasuk biaya pemasangan. Total biaya kami sampaikan lewat WhatsApp atau saat kamu datang, dan baru dikerjakan setelah kamu setuju.",
+          "Harga baterai iPhone 11 saat ini {battery}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya kami sampaikan lewat WhatsApp atau saat kamu datang, dan baru dikerjakan setelah kamu setuju.",
       },
       {
         question: "Apa bedanya dengan ganti baterai di servis resmi Apple?",
@@ -59,7 +59,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti baterai iPhone 13 di Bandung?",
         answer:
-          "Harga part baterai iPhone 13 saat ini {battery}, belum termasuk biaya pemasangan. Total biaya dikonfirmasi sebelum pengerjaan.",
+          "Harga baterai iPhone 13 saat ini {battery}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya dikonfirmasi sebelum pengerjaan.",
       },
       {
         question: "Apakah ganti baterai iPhone 13 bisa gratis?",
@@ -82,7 +82,7 @@ export const modelServicePages: ModelServicePage[] = [
     notes: [
       "Di halaman Parts and Service History Apple, iPhone XR tercatat untuk komponen baterai. Baterai non-Apple dapat memunculkan pesan bahwa baterai tidak dapat diverifikasi.",
       "Kalau XR kamu juga sering panas atau charging putus-putus, kami cek port charger dan kabel sekalian, karena gejalanya bisa mirip baterai lemah.",
-      "Harga part baterai iPhone XR di daftar kami sama dengan iPhone X, tetapi bentuk baterainya berbeda sehingga tidak bisa saling tukar.",
+      "Harga baterai iPhone XR di daftar kami sama dengan iPhone X, tetapi bentuk baterainya berbeda sehingga tidak bisa saling tukar.",
     ],
     relatedModelSlugs: ["iphone-xr", "iphone-xs", "iphone-xs-max", "iphone-x"],
     relatedPostSlug: "kapan-baterai-iphone-perlu-diganti",
@@ -91,7 +91,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti baterai iPhone XR di Bandung?",
         answer:
-          "Harga part baterai iPhone XR saat ini {battery}, belum termasuk biaya pemasangan. Total biaya kami sampaikan sebelum pengerjaan.",
+          "Harga baterai iPhone XR saat ini {battery}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya kami sampaikan sebelum pengerjaan.",
       },
       {
         question: "Setelah ganti baterai, apakah Battery Health iPhone XR tetap muncul?",
@@ -122,7 +122,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti baterai iPhone 12 di Bandung?",
         answer:
-          "Harga part baterai iPhone 12 saat ini {battery}, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+          "Harga baterai iPhone 12 saat ini {battery}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disepakati sebelum dikerjakan.",
       },
       {
         question: "Apakah ganti baterai iPhone 12 menghapus data?",
@@ -143,7 +143,7 @@ export const modelServicePages: ModelServicePage[] = [
       "iPhone X rilis tahun 2017, jadi kalau baterainya belum pernah diganti, kapasitasnya kemungkinan besar sudah jauh berkurang. Selama layar, Face ID, dan kamera masih normal, ganti baterai adalah cara paling murah untuk membuatnya nyaman dipakai lagi.",
     notes: [
       "iPhone X tidak termasuk model yang tercantum di halaman Parts and Service History Apple. Daftar tersebut dimulai dari iPhone XR dan XS.",
-      "Harga part baterai iPhone X di daftar kami sama dengan iPhone XR, tetapi bentuk baterainya berbeda sehingga tidak bisa saling tukar.",
+      "Harga baterai iPhone X di daftar kami sama dengan iPhone XR, tetapi bentuk baterainya berbeda sehingga tidak bisa saling tukar.",
       "Kalau Face ID ikut bermasalah, penyebabnya bukan baterai. Sampaikan saat konsultasi supaya dicek terpisah.",
     ],
     relatedModelSlugs: ["iphone-x", "iphone-xr", "iphone-xs", "iphone-xs-max"],
@@ -153,7 +153,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti baterai iPhone X di Bandung?",
         answer:
-          "Harga part baterai iPhone X saat ini {battery}, belum termasuk biaya pemasangan. Total biaya dikonfirmasi sebelum pengerjaan.",
+          "Harga baterai iPhone X saat ini {battery}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya dikonfirmasi sebelum pengerjaan.",
       },
       {
         question: "Masih layak ganti baterai iPhone X?",
@@ -184,7 +184,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti baterai iPhone 14 Pro di Bandung?",
         answer:
-          "Harga part baterai iPhone 14 Pro saat ini {battery}, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+          "Harga baterai iPhone 14 Pro saat ini {battery}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disepakati sebelum dikerjakan.",
       },
       {
         question: "Apakah layar Always-On bikin baterai iPhone 14 Pro cepat habis?",
@@ -345,7 +345,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti LCD iPhone 11 di Bandung?",
         answer:
-          "Harga part LCD iPhone 11 saat ini {lcdGradeA} untuk Grade A dan {lcdGenuine} untuk Genuine/Asli, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+          "Harga LCD iPhone 11 saat ini {lcdGradeA} untuk Grade A dan {lcdGenuine} untuk Genuine/Asli, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disepakati sebelum dikerjakan.",
       },
       {
         question: "Apa bedanya LCD Grade A dan Genuine untuk iPhone 11?",
@@ -377,7 +377,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti LCD iPhone XR di Bandung?",
         answer:
-          "Harga part LCD iPhone XR saat ini {lcdGradeA} untuk Grade A dan {lcdGenuine} untuk Genuine/Asli, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+          "Harga LCD iPhone XR saat ini {lcdGradeA} untuk Grade A dan {lcdGenuine} untuk Genuine/Asli, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disepakati sebelum dikerjakan.",
       },
       {
         question: "Layar iPhone XR bergaris tapi masih bisa disentuh, harus ganti?",
@@ -408,7 +408,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti LCD iPhone XS di Bandung?",
         answer:
-          "Harga part layar iPhone XS saat ini {lcdGradeA} untuk Grade A dan {lcdOled} untuk Oled Plus, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+          "Harga layar iPhone XS saat ini {lcdGradeA} untuk Grade A dan {lcdOled} untuk Oled Plus, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disepakati sebelum dikerjakan.",
       },
       {
         question: "Apa bedanya Grade A dan Oled Plus untuk iPhone XS?",
@@ -439,7 +439,7 @@ export const modelServicePages: ModelServicePage[] = [
       {
         question: "Berapa harga ganti LCD iPhone X di Bandung?",
         answer:
-          "Harga part layar iPhone X saat ini {lcdGradeA} untuk Grade A dan {lcdOled} untuk Oled Plus, belum termasuk biaya pemasangan. Total biaya disepakati sebelum dikerjakan.",
+          "Harga layar iPhone X saat ini {lcdGradeA} untuk Grade A dan {lcdOled} untuk Oled Plus, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disepakati sebelum dikerjakan.",
       },
       {
         question: "Layar iPhone X ada garis hijau, harus ganti?",

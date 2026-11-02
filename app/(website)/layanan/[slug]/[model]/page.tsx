@@ -79,7 +79,7 @@ function resolve(slug: string, modelSlug: string) {
     priceKey === "baterai"
       ? formatRupiah(options[0].value)
       : options.map((o) => `${o.label.replace(/^LCD \((.*)\)$/, "$1")} ${formatRupiah(o.value)}`).join(", ");
-  const description = `${service.shortTitle} ${model.name} di Bandung, harga part ${priceText}, belum termasuk pemasangan. ${page.summary}`;
+  const description = `${service.shortTitle} ${model.name} di Bandung, harga ${priceText}, sudah termasuk jasa pasang, konsultasi gratis, dan garansi. ${page.summary}`;
 
   return { page, service, model, price, priceKey, options, title, description, path: `/layanan/${slug}/${modelSlug}` };
 }
@@ -177,7 +177,7 @@ export default async function ModelServicePage({ params }: PageProps) {
 
             <div className="lg:col-span-5">
               <div className="rounded-3xl glass-card border border-white/80 p-6 shadow-xl sm:p-8">
-                <p className="text-sm font-semibold uppercase tracking-wider text-muted">Harga part {model.name}</p>
+                <p className="text-sm font-semibold uppercase tracking-wider text-muted">Harga {model.name}</p>
                 <dl className="mt-4 divide-y divide-black/5">
                   {options.map((o) => (
                     <div key={o.field} className="flex items-baseline justify-between gap-4 py-3">
@@ -189,7 +189,7 @@ export default async function ModelServicePage({ params }: PageProps) {
                 <ul className="mt-5 space-y-3 text-sm text-muted">
                   <li className="flex items-start gap-3">
                     <Icon name="receipt" size={18} className="mt-0.5 shrink-0 text-accent" />
-                    <span>Harga part, belum termasuk biaya pemasangan. Total biaya disampaikan dan disetujui sebelum dikerjakan.</span>
+                    <span>Harga sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Total biaya disampaikan dan disetujui sebelum dikerjakan.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="clock" size={18} className="mt-0.5 shrink-0 text-accent" />
@@ -247,10 +247,10 @@ export default async function ModelServicePage({ params }: PageProps) {
       <Section tone="white">
         <SectionHeading
           title={`Harga ${action} ${model.name} dan model sekeluarga`}
-          description="Harga part, belum termasuk biaya pemasangan. Stok bisa berubah, konfirmasikan lewat WhatsApp."
+          description="Harga sudah termasuk jasa pasang, konsultasi gratis, dan garansi. Stok bisa berubah, konfirmasikan lewat WhatsApp."
         />
         <Table
-          caption={`Harga part ${action} ${model.name} dan model sekeluarga di Bandung`}
+          caption={`Harga ${action} ${model.name} dan model sekeluarga di Bandung`}
           headers={["Model iPhone", ...priceOptions[priceKey].map((o) => o.label)]}
           rows={familyRows}
         />

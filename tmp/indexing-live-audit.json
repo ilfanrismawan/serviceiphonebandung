@@ -1,0 +1,863 @@
+{
+  "checkedAt": "2026-11-02T21:07:41.943Z",
+  "robots": {
+    "url": "https://serviceiphonebandung.vercel.app/robots.txt",
+    "finalUrl": "https://serviceiphonebandung.vercel.app/robots.txt",
+    "status": 200,
+    "ms": 625,
+    "headers": {
+      "content-type": "text/plain; charset=utf-8",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "age": "10",
+      "x-vercel-cache": "HIT",
+      "x-robots-tag": null,
+      "location": null
+    },
+    "body": "User-Agent: *\nAllow: /\nDisallow: /admin\nDisallow: /nota/\nDisallow: /api/nota-admin/\n\nSitemap: https://serviceiphonebandung.vercel.app/sitemap.xml\n"
+  },
+  "sitemap": {
+    "url": "https://serviceiphonebandung.vercel.app/sitemap.xml",
+    "finalUrl": "https://serviceiphonebandung.vercel.app/sitemap.xml",
+    "status": 200,
+    "ms": 853,
+    "headers": {
+      "content-type": "application/xml",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "age": "0",
+      "x-vercel-cache": "MISS",
+      "x-robots-tag": null,
+      "location": null
+    },
+    "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://serviceiphonebandung.vercel.app</loc>\n<changefreq>weekly</changefreq>\n<priority>1</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan</loc>\n<changefreq>weekly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/harga</loc>\n<changefreq>weekly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog</loc>\n<changefreq>weekly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/kontak</loc>\n<changefreq>weekly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/lokasi/dipatiukur</loc>\n<changefreq>weekly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/service-port-charger-iphone</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/service-iphone-mati-total</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/service-iphone-kena-air</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/service-kamera-iphone</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-11</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-13</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-xr</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-12</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-x</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-14-pro</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-15</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-16</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-15</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-16</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-11</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xr</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xs</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-x</loc>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/layar-iphone-tidak-bisa-disentuh-setelah-update-ios-27</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/iphone-duo-layar-retak-garansi-biaya-ganti-layar</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/masalah-iphone-18-pro-panas-restart-cat-pudar</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/iphone-panas-wajar-atau-rusak-kapan-perlu-servis</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/ganti-baterai-iphone-resmi-vs-servis-luar</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/biaya-service-iphone-mati-total-bandung</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/pesan-baterai-penting-iphone-setelah-ganti-baterai</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/service-iphone-cibiru</loc>\n<lastmod>2026-10-25T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/cara-cek-iphone-bekas-sebelum-beli-di-bandung</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/suara-speaker-dan-earpiece-iphone-kecil-atau-kresek</loc>\n<lastmod>2026-10-19T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/face-id-iphone-tidak-berfungsi-penyebab-dan-solusi</loc>\n<lastmod>2026-10-16T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/layar-iphone-green-screen-white-screen-solusi</loc>\n<lastmod>2026-10-14T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/layar-iphone-blank-hitam-tapi-nyala</loc>\n<lastmod>2026-10-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/iphone-tidak-bisa-dicas-penyebab-dan-solusi</loc>\n<lastmod>2026-10-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/iphone-stuck-logo-apple-cara-mengatasi</loc>\n<lastmod>2026-10-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/kamera-belakang-iphone-bergetar-dan-bunyi</loc>\n<lastmod>2026-10-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/baterai-iphone-boros-setelah-update-ios-27</loc>\n<lastmod>2026-10-31T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/iphone-kena-air-langkah-pertama</loc>\n<lastmod>2026-09-21T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/kapan-baterai-iphone-perlu-diganti</loc>\n<lastmod>2026-09-21T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://serviceiphonebandung.vercel.app/blog/layar-iphone-pecah-segera-diganti</loc>\n<lastmod>2026-09-21T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.5</priority>\n</url>\n</urlset>\n"
+  },
+  "results": [
+    {
+      "url": "https://serviceiphonebandung.vercel.app",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/",
+      "status": 200,
+      "ms": 80,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "156760",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service iPhone Bandung di Dipati Ukur | Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan",
+      "status": 200,
+      "ms": 433,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "153820",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Layanan Service iPhone Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/harga",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/harga",
+      "status": 200,
+      "ms": 412,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118734",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Harga Service iPhone Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/harga\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog",
+      "status": 200,
+      "ms": 418,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "177785",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Panduan Perawatan dan Servis iPhone — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/kontak",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/kontak",
+      "status": 200,
+      "ms": 515,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118726",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Kontak &amp; Lokasi Dipati Ukur, Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/kontak\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/lokasi/dipatiukur",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/lokasi/dipatiukur",
+      "status": 200,
+      "ms": 358,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118739",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service iPhone Dipatiukur di Jl. Dipati Ukur No.86 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/lokasi/dipatiukur\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone",
+      "status": 200,
+      "ms": 390,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118727",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone",
+      "status": 200,
+      "ms": 728,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118740",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/service-port-charger-iphone",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/service-port-charger-iphone",
+      "status": 200,
+      "ms": 55,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118734",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service Port Charger iPhone Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/service-port-charger-iphone\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/service-iphone-mati-total",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/service-iphone-mati-total",
+      "status": 200,
+      "ms": 445,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118742",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service iPhone Mati Total Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/service-iphone-mati-total\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/service-iphone-kena-air",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/service-iphone-kena-air",
+      "status": 200,
+      "ms": 393,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118734",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service iPhone Kena Air Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/service-iphone-kena-air\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/service-kamera-iphone",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/service-kamera-iphone",
+      "status": 200,
+      "ms": 387,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118730",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service Kamera iPhone Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/service-kamera-iphone\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-11",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-11",
+      "status": 200,
+      "ms": 397,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118716",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone 11 Bandung, Harga Part Rp 300.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-11\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-13",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-13",
+      "status": 200,
+      "ms": 368,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118710",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone 13 Bandung, Harga Part Rp 450.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-13\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-xr",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-xr",
+      "status": 200,
+      "ms": 59,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "153739",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone XR Bandung, Harga Part Rp 250.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-xr\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-12",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-12",
+      "status": 200,
+      "ms": 423,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118707",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone 12 Bandung, Harga Part Rp 320.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-12\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-x",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-x",
+      "status": 200,
+      "ms": 350,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118726",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone X Bandung, Harga Part Rp 250.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-x\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-14-pro",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-14-pro",
+      "status": 200,
+      "ms": 464,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118715",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone 14 Pro Bandung, Harga Part Rp 550.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-14-pro\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-15",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-15",
+      "status": 200,
+      "ms": 352,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118719",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone 15 Bandung, Harga Part Rp 600.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-15\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-16",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-16",
+      "status": 200,
+      "ms": 381,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118720",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone 16 Bandung, Harga Part Rp 1.100.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-baterai-iphone/iphone-16\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-15",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-15",
+      "status": 200,
+      "ms": 616,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118710",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone 15 Bandung, Harga Part Mulai Rp 1.100.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-15\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-16",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-16",
+      "status": 200,
+      "ms": 373,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118719",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone 16 Bandung, Harga Part Mulai Rp 3.100.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-16\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-11",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-11",
+      "status": 200,
+      "ms": 366,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118727",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone 11 Bandung, Harga Part Mulai Rp 380.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-11\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xr",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xr",
+      "status": 200,
+      "ms": 421,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118725",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone XR Bandung, Harga Part Mulai Rp 370.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xr\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xs",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xs",
+      "status": 200,
+      "ms": 68,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "153741",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone XS Bandung, Harga Part Mulai Rp 350.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-xs\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-x",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-x",
+      "status": 200,
+      "ms": 337,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118714",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti LCD iPhone X Bandung, Harga Part Mulai Rp 350.000 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/layanan/ganti-lcd-iphone/iphone-x\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-tidak-bisa-disentuh-setelah-update-ios-27",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-tidak-bisa-disentuh-setelah-update-ios-27",
+      "status": 200,
+      "ms": 354,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "162757",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Layar iPhone Tidak Bisa Disentuh Setelah iOS 27 — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/layar-iphone-tidak-bisa-disentuh-setelah-update-ios-27\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/iphone-duo-layar-retak-garansi-biaya-ganti-layar",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/iphone-duo-layar-retak-garansi-biaya-ganti-layar",
+      "status": 200,
+      "ms": 408,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "159128",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Layar iPhone Duo Retak: Garansi &amp; Biaya Ganti — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/iphone-duo-layar-retak-garansi-biaya-ganti-layar\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/masalah-iphone-18-pro-panas-restart-cat-pudar",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/masalah-iphone-18-pro-panas-restart-cat-pudar",
+      "status": 200,
+      "ms": 478,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118732",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Masalah iPhone 18 Pro: Panas, Restart, Cat Pudar — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/masalah-iphone-18-pro-panas-restart-cat-pudar\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/iphone-panas-wajar-atau-rusak-kapan-perlu-servis",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/iphone-panas-wajar-atau-rusak-kapan-perlu-servis",
+      "status": 200,
+      "ms": 374,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "115333",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "iPhone Panas Wajar atau Rusak? Cek Tandanya — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/iphone-panas-wajar-atau-rusak-kapan-perlu-servis\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/ganti-baterai-iphone-resmi-vs-servis-luar",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/ganti-baterai-iphone-resmi-vs-servis-luar",
+      "status": 200,
+      "ms": 517,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "116560",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Ganti Baterai iPhone: Resmi vs Servis Luar — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/ganti-baterai-iphone-resmi-vs-servis-luar\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/biaya-service-iphone-mati-total-bandung",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/biaya-service-iphone-mati-total-bandung",
+      "status": 200,
+      "ms": 368,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "109350",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Biaya Service iPhone Mati Total Bandung — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/biaya-service-iphone-mati-total-bandung\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/pesan-baterai-penting-iphone-setelah-ganti-baterai",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/pesan-baterai-penting-iphone-setelah-ganti-baterai",
+      "status": 200,
+      "ms": 343,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "162659",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Arti Pesan Baterai Penting di iPhone — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/pesan-baterai-penting-iphone-setelah-ganti-baterai\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/service-iphone-cibiru",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/service-iphone-cibiru",
+      "status": 200,
+      "ms": 409,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118718",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Service iPhone Cibiru: Teknisi Rekanan, Biaya &amp; Konsultasi — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/service-iphone-cibiru\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/cara-cek-iphone-bekas-sebelum-beli-di-bandung",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/cara-cek-iphone-bekas-sebelum-beli-di-bandung",
+      "status": 200,
+      "ms": 370,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "158308",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Panduan Lengkap Cek iPhone Bekas Sebelum Beli di Bandung (Anti Boncos) — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/cara-cek-iphone-bekas-sebelum-beli-di-bandung\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/suara-speaker-dan-earpiece-iphone-kecil-atau-kresek",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/suara-speaker-dan-earpiece-iphone-kecil-atau-kresek",
+      "status": 200,
+      "ms": 315,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118719",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Suara Speaker &amp; Earpiece iPhone Kecil atau Kresek? Cek Solusinya — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/suara-speaker-dan-earpiece-iphone-kecil-atau-kresek\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/face-id-iphone-tidak-berfungsi-penyebab-dan-solusi",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/face-id-iphone-tidak-berfungsi-penyebab-dan-solusi",
+      "status": 200,
+      "ms": 321,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118721",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Face ID iPhone Tidak Berfungsi? Cek Penyebab TrueDepth Bermasalah — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/face-id-iphone-tidak-berfungsi-penyebab-dan-solusi\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-green-screen-white-screen-solusi",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-green-screen-white-screen-solusi",
+      "status": 200,
+      "ms": 342,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118713",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Layar iPhone Green Screen / White Screen? Solusi Hemat Tanpa Ganti LCD — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/layar-iphone-green-screen-white-screen-solusi\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-blank-hitam-tapi-nyala",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-blank-hitam-tapi-nyala",
+      "status": 200,
+      "ms": 312,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "153742",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Layar iPhone Blank Hitam Tapi Masih Nyala? Ini Penyebab &amp; Solusinya — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/layar-iphone-blank-hitam-tapi-nyala\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/iphone-tidak-bisa-dicas-penyebab-dan-solusi",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/iphone-tidak-bisa-dicas-penyebab-dan-solusi",
+      "status": 200,
+      "ms": 356,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "153735",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Kenapa iPhone Tidak Bisa Dicas? Cek Penyebab &amp; Cara Mengatasinya — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/iphone-tidak-bisa-dicas-penyebab-dan-solusi\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/iphone-stuck-logo-apple-cara-mengatasi",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/iphone-stuck-logo-apple-cara-mengatasi",
+      "status": 200,
+      "ms": 69,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "2303",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "iPhone Stuck Logo Apple (Bootloop)? Cara Mengatasi Tanpa Kehilangan Data — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/iphone-stuck-logo-apple-cara-mengatasi\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/kamera-belakang-iphone-bergetar-dan-bunyi",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/kamera-belakang-iphone-bergetar-dan-bunyi",
+      "status": 200,
+      "ms": 614,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "0",
+        "x-vercel-cache": "PRERENDER",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Kamera Belakang iPhone Bergetar &amp; Bunyi Kresek? Ini Penyebab &amp; Solusinya — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/kamera-belakang-iphone-bergetar-dan-bunyi\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/baterai-iphone-boros-setelah-update-ios-27",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/baterai-iphone-boros-setelah-update-ios-27",
+      "status": 200,
+      "ms": 354,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "153734",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Baterai iPhone Boros Setelah Update iOS 27? Cek Sebelum Ganti — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/baterai-iphone-boros-setelah-update-ios-27\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/iphone-kena-air-langkah-pertama",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/iphone-kena-air-langkah-pertama",
+      "status": 200,
+      "ms": 328,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "746",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "iPhone Kena Air: Langkah Pertama yang Benar Sebelum Dibawa Service — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/iphone-kena-air-langkah-pertama\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/kapan-baterai-iphone-perlu-diganti",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/kapan-baterai-iphone-perlu-diganti",
+      "status": 200,
+      "ms": 432,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118717",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Kapan Baterai iPhone Perlu Diganti? Cek Battery Health dan Tandanya — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/kapan-baterai-iphone-perlu-diganti\"/>",
+      "robots": [],
+      "h1": 1
+    },
+    {
+      "url": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-pecah-segera-diganti",
+      "finalUrl": "https://serviceiphonebandung.vercel.app/blog/layar-iphone-pecah-segera-diganti",
+      "status": 200,
+      "ms": 391,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "age": "118717",
+        "x-vercel-cache": "HIT",
+        "x-robots-tag": null,
+        "location": null
+      },
+      "title": "Layar iPhone Pecah: Boleh Ditunda atau Harus Segera Diganti? — Service iPhone Bandung",
+      "canonical": "<link rel=\"canonical\" href=\"https://serviceiphonebandung.vercel.app/blog/layar-iphone-pecah-segera-diganti\"/>",
+      "robots": [],
+      "h1": 1
+    }
+  ]
+}

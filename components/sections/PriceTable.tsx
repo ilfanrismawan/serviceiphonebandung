@@ -225,7 +225,7 @@ export function PriceTable() {
         <ul className="mt-3 space-y-1.5 text-xs text-muted leading-relaxed">
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span><strong>Harga belum termasuk biaya pemasangan:</strong> Pemasangan dikerjakan langsung oleh teknisi berpengalaman di tempat dengan garansi resmi toko.</span>
+            <span><strong>Harga sudah termasuk jasa pasang, konsultasi gratis, dan garansi:</strong> Pemasangan dikerjakan langsung oleh teknisi berpengalaman di tempat dengan garansi resmi toko.</span>
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />

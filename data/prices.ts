@@ -532,7 +532,7 @@ export const PROMO_SUBTITLE =
   "Garansi sesuai komponen: baterai 12 bulan; LCD Grade A 6 bulan, Grade A+ dan OLED Plus 12 bulan, BPT 24 bulan, Genuine 3 bulan; kamera dan speaker 1 bulan. Konfirmasikan cakupan sebelum pengerjaan.";
 
 export const PRICE_DISCLAIMER =
-  "Harga suku cadang berkualitas tinggi dan terupdate. Harga belum termasuk biaya pemasangan. Garansi resmi berlaku jika pemasangan langsung dilakukan di workshop Service iPhone Bandung.";
+  "Harga suku cadang berkualitas tinggi dan terupdate, sudah termasuk jasa pasang, konsultasi gratis, dan garansi resmi toko di Service iPhone Bandung.";
 
 export function getPrice(modelSlug: string, key: PriceKey): number | undefined {
   return priceBook[modelSlug]?.[key];

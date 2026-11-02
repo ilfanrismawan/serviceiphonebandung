@@ -2,13 +2,20 @@ import assert from "node:assert/strict";
 
 const base = process.env.SEO_TEST_BASE || "http://localhost:3000";
 const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://serviceiphonebandung.vercel.app";
-const get = async (path) => {
+const get = async (path, indexable = false) => {
   const response = await fetch(new URL(path, base));
   assert.equal(response.status, 200, path);
+  if (indexable) assert.ok(!/noindex/i.test(response.headers.get("x-robots-tag") || ""), `Indexable response header: ${path}`);
   return response.text();
 };
 const xml = await get("/sitemap.xml");
 const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
+for (const match of xml.matchAll(/<lastmod>(.*?)<\/lastmod>/g)) {
+  assert.ok(Number.isFinite(Date.parse(match[1])), `Valid lastmod: ${match[1]}`);
+  assert.ok(Date.parse(match[1]) <= Date.now(), `No future lastmod: ${match[1]}`);
+}
+assert.match(xml, /xmlns:image=/, "Article images included in sitemap");
+assert.ok(!urls.some(url => /\/(admin|nota|api)(\/|$)/.test(new URL(url).pathname)));
 assert.equal(new Set(urls).size, urls.length);
 assert.ok(urls.some((url) => url.endsWith("/lokasi/dipatiukur")));
 assert.ok(!urls.some((url) => url.includes("/area/")));
@@ -17,7 +24,7 @@ const internalLinks = new Set();
 for (const url of urls) {
   assert.equal(new URL(url).origin, origin);
   const path = new URL(url).pathname;
-  const html = await get(path);
+  const html = await get(path, true);
   assert.equal([...html.matchAll(/<h1(?:\s|>)/g)].length, 1, `One H1: ${path}`);
   assert.equal([...html.matchAll(/<main(?:\s|>)/g)].length, 1, `One main: ${path}`);
   const canonical = html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/);
