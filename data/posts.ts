@@ -10,7 +10,10 @@ import { masalahIphone18ProPost } from "./posts/masalah-iphone-18-pro";
 import { iphoneDuoLayarRetakPost } from "./posts/iphone-duo-layar-retak";
 import { layarTidakBisaDisentuhIos27Post } from "./posts/layar-iphone-tidak-bisa-disentuh-ios-27";
 
+import { updateIos18711Post } from "./posts/update-ios-18-7-11-iphone-xr-xs";
+
 export const posts: BlogPost[] = [
+  updateIos18711Post,
   layarTidakBisaDisentuhIos27Post,
   iphoneDuoLayarRetakPost,
   masalahIphone18ProPost,
