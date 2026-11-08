@@ -91,3 +91,14 @@ Artikel penuh disimpan pada `data/posts/panduan-service-iphone-bandung.ts` dan d
 ## Catatan implementasi
 
 Saat instalasi dependensi masih berlangsung, folder panduan Next belum tersedia sehingga panduan resmi daring dibaca terlebih dahulu. Setelah `npm ci --ignore-scripts` selesai, panduan lokal `node_modules/next/dist/docs/01-app/03-api-reference/03-file-conventions/dynamic-routes.md` dan `04-functions/generate-metadata.md` sudah dibaca untuk memeriksa implementasi. Parameter rute tetap Promise dan metadata tetap di Server Component. Aset gambar yang sudah ada digunakan kembali tanpa klaim dokumentasi pelanggan.
+
+## Hasil publikasi dan verifikasi
+
+- Implementasi dipush ke `main`: commit `aa2bc68`.
+- Artikel publik: https://serviceiphonebandung.vercel.app/blog/panduan-service-iphone-bandung . HTTP 200; satu H1, sebelas H3; self-canonical sesuai; tidak ditemukan meta robots noindex; tampilan browser sudah diperiksa.
+- `npm run build` lulus pada versi akhir, termasuk TypeScript dan prerender artikel. ESLint untuk empat file TypeScript/TSX yang diubah lulus. `git diff --check` lulus.
+- `npx tsx scripts/indexing-check.ts` lulus: 49 URL sitemap, tanggal blog/gambar, pengecualian proxy halaman publik dan pencocokan rute admin. Sitemap produksi juga memuat 49 URL termasuk artikel baru.
+- Search Console: property `https://serviceiphonebandung.vercel.app/` dapat diakses. Sitemap sudah berstatus Success (last read 7 November, 48 discovered pages sebelum artikel baru), sehingga tidak dikirim ulang. Inspeksi awal artikel menunjukkan URL unknown to Google. Setelah Request indexing, UI menampilkan **Indexing requested** dan URL ditambahkan ke priority crawl queue. Ini bukti pengajuan, bukan bukti sudah terindeks.
+- X: dipublikasikan melalui akun `@serviceiphonerd`; posting terverifikasi di https://x.com/serviceiphonerd/status/2119529723386843361 . Teks: “Mencari service iPhone di Bandung? Pahami diagnosis, cara membandingkan biaya dan komponen, ketentuan garansi, serta persiapan data sebelum servis. Baca panduannya:” diikuti URL artikel.
+- Screenshot bukti lokal: `tmp/seo-publication-2026-11-09/search-console.jpg` dan `tmp/seo-publication-2026-11-09/x-post.jpg`. Bukti UI disimpan lokal, tidak dimasukkan ke commit.
+- Perubahan Blogger dan `.gitignore` yang sudah ada/dibuat oleh pekerjaan lain tidak dimasukkan dalam commit tugas ini.
