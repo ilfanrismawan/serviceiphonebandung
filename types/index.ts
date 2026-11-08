@@ -84,6 +84,7 @@ export interface BlogSection {
   paragraphs: string[];
   list?: string[];
   links?: { label: string; href: string }[];
+  subsections?: { heading: string; paragraphs: string[]; list?: string[] }[];
 }
 
 export interface BlogPost {

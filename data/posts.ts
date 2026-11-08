@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/types";
+import { panduanServiceBandungPost } from "./posts/panduan-service-iphone-bandung";
 import { isPublishedPost } from "@/lib/publication";
 
 import { cibiruPost } from "./posts/cibiru";
@@ -15,6 +16,7 @@ import { updateIos18711Post } from "./posts/update-ios-18-7-11-iphone-xr-xs";
 import { iphoneRestartUpdateResetPost } from "./posts/iphone-restart-setelah-update-reset";
 
 export const posts: BlogPost[] = [
+  panduanServiceBandungPost,
   iphoneRestartUpdateResetPost,
   updateIos18711Post,
   layarTidakBisaDisentuhIos27Post,

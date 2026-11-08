@@ -98,6 +98,19 @@ export default async function BlogPostPage({ params }: PageProps) {
                     ))}
                   </ul>
                 )}
+                {section.subsections?.map((subsection) => (
+                  <div key={subsection.heading} className="mt-6">
+                    <h3 className="text-xl font-semibold tracking-tight text-ink">{subsection.heading}</h3>
+                    {subsection.paragraphs.map((paragraph, index) => (
+                      <p key={index} className="mt-4 text-pretty text-lg leading-relaxed text-muted">{paragraph}</p>
+                    ))}
+                    {subsection.list && (
+                      <ul className="mt-4 list-disc space-y-2 pl-6 text-lg leading-relaxed text-muted">
+                        {subsection.list.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    )}
+                  </div>
+                ))}
                 {section.links && <div className="mt-5 flex flex-wrap gap-4">{section.links.map((link) => <Link key={link.href} href={link.href} className="font-semibold text-accent underline underline-offset-4">{link.label}</Link>)}</div>}
               </section>
             ))}
