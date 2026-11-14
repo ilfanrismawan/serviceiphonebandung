@@ -11,6 +11,7 @@ import {
   verifyPasscode,
 } from "@/lib/nota/auth";
 import { db } from "@/lib/nota/db";
+import { diagnoseDbError } from "@/lib/nota/db-diagnosis";
 import { getSettings } from "@/lib/nota/settings";
 import { settingsSchema } from "@/lib/nota/model";
 import { getBrand, listBrands, saveBrand } from "@/lib/nota/brands";
@@ -180,17 +181,10 @@ async function handle(request: Request, context: Context) {
       );
     if (error instanceof NotaError)
       return json({ error: error.message }, error.status);
-    console.error(
-      "Nota API:",
-      error instanceof Error ? error.name : "Unknown error",
-    );
-    return json(
-      {
-        error:
-          "Database belum siap atau sedang tidak dapat diakses. Periksa koneksi dan migrasi database.",
-      },
-      503,
-    );
+    const diagnosis = diagnoseDbError(error);
+    const e = error as { name?: string; code?: string; message?: string };
+    console.error("Nota API:", diagnosis.code, e?.name, e?.code, e?.message);
+    return json({ error: diagnosis.message, reason: diagnosis.code }, 503);
   }
 }
 export const GET = handle;
