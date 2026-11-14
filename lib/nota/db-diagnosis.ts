@@ -9,6 +9,8 @@ function collect(error: unknown, depth = 0): { codes: string[]; text: string } {
   const codes = [
     e.code,
     e.errno,
+    e.kind,
+    e.originalCode,
     (e.meta as Record<string, unknown>)?.code,
   ].filter((v): v is string => typeof v === "string");
   let text = `${e.name ?? ""} ${e.message ?? ""}`;
@@ -33,7 +35,16 @@ export function diagnoseDbError(error: unknown): DbDiagnosis {
       message:
         "DATABASE_URL belum diisi di environment hosting. Tambahkan di Vercel → Settings → Environment Variables, lalu redeploy.",
     };
-  if (has("P1000", "28P01", "28000") || says(/password authentication failed/i))
+  if (
+    has(
+      "P1000",
+      "28P01",
+      "28000",
+      "AuthenticationFailed",
+      "DatabaseAccessDenied",
+    ) ||
+    says(/password authentication failed/i)
+  )
     return {
       code: "auth_failed",
       message:
@@ -46,7 +57,12 @@ export function diagnoseDbError(error: unknown): DbDiagnosis {
         "Pooler Supabase tidak mengenali user. Pastikan user berformat postgres.<project-ref> dan host pooler sesuai region proyek.",
     };
   if (
-    has("P1011", "SELF_SIGNED_CERT_IN_CHAIN", "DEPTH_ZERO_SELF_SIGNED_CERT") ||
+    has(
+      "P1011",
+      "TlsConnectionError",
+      "SELF_SIGNED_CERT_IN_CHAIN",
+      "DEPTH_ZERO_SELF_SIGNED_CERT",
+    ) ||
     says(/certificate|SSL|TLS/i)
   )
     return {
@@ -55,7 +71,15 @@ export function diagnoseDbError(error: unknown): DbDiagnosis {
         "Koneksi SSL ke database gagal. Gunakan URI pooler dari Supabase → Connect (dengan ?sslmode=require atau tanpa parameter sslmode=verify-full).",
     };
   if (
-    has("P2021", "P2022", "42P01", "3F000", "42703") ||
+    has(
+      "P2021",
+      "P2022",
+      "42P01",
+      "3F000",
+      "42703",
+      "TableDoesNotExist",
+      "ColumnNotFound",
+    ) ||
     says(/does not exist/i)
   )
     return {
@@ -63,7 +87,7 @@ export function diagnoseDbError(error: unknown): DbDiagnosis {
       message:
         "Tabel database belum dibuat. Jalankan `npm run db:deploy` dengan DIRECT_URL mengarah ke database produksi.",
     };
-  if (has("P1003", "3D000"))
+  if (has("P1003", "3D000", "DatabaseDoesNotExist"))
     return {
       code: "database_missing",
       message:
@@ -80,6 +104,10 @@ export function diagnoseDbError(error: unknown): DbDiagnosis {
       "P1001",
       "P1002",
       "P1017",
+      "DatabaseNotReachable",
+      "ConnectionClosed",
+      "SocketTimeout",
+      "TooManyConnections",
       "ECONNREFUSED",
       "ETIMEDOUT",
       "ECONNRESET",
@@ -96,9 +124,9 @@ export function diagnoseDbError(error: unknown): DbDiagnosis {
       message:
         "Server database tidak dapat dihubungi. Cek apakah proyek Supabase sedang di-pause (Restore project di dashboard) dan pastikan DATABASE_URL memakai Transaction pooler port 6543.",
     };
+  const detail = [...new Set(codes)].slice(0, 3).join("/") || "tanpa kode";
   return {
     code: "unknown",
-    message:
-      "Database belum siap atau sedang tidak dapat diakses. Periksa koneksi dan migrasi database.",
+    message: `Database belum siap atau sedang tidak dapat diakses (kode: ${detail}). Periksa koneksi dan migrasi database.`,
   };
 }
