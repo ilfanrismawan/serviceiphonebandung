@@ -63,17 +63,22 @@ export async function login(passcode: string, request: Request) {
   let credential = await database.adminCredential.findUnique({
     where: { id: "admin" },
   });
-  if (!credential)
+  if (!credential) {
+    // The well-known development passcode must never become a production credential.
+    const initialPasscode =
+      process.env.ADMIN_INITIAL_PASSCODE ||
+      (process.env.NODE_ENV === "production" ? "" : "121413");
+    if (!initialPasscode)
+      return {
+        error: "Admin belum dikonfigurasi. Isi ADMIN_INITIAL_PASSCODE di server.",
+        status: 503,
+      };
     credential = await database.adminCredential.upsert({
       where: { id: "admin" },
-      create: {
-        id: "admin",
-        passcodeHash: hashPasscode(
-          process.env.ADMIN_INITIAL_PASSCODE || "121413",
-        ),
-      },
+      create: { id: "admin", passcodeHash: hashPasscode(initialPasscode) },
       update: {},
     });
+  }
   if (!verifyPasscode(passcode, credential.passcodeHash))
     return { error: "Passcode tidak sesuai.", status: 401 };
   const token = randomBytes(32).toString("base64url");

@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the homepage in `app/(website)/page.tsx`. The page auto-updates as you edit the file.
 
-The service receipt system lives at `/admin`; customer receipts use `/nota/[token]`. Run `npm run dev:nota` to try it with a local PostgreSQL database, or follow [the database and hosting setup guide](docs/nota-setup.md) to connect Supabase. The initial admin passcode is `121413`.
+The service receipt system lives at `/admin`; customer receipts use `/nota/[token]`. Run `npm run dev:nota` to try it with a local PostgreSQL database, or follow [the database and hosting setup guide](docs/nota-setup.md) to connect Supabase. In production, set `ADMIN_INITIAL_PASSCODE` before the first admin login; the admin panel refuses to initialize without it.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

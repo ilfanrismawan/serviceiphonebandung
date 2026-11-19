@@ -34,7 +34,7 @@ Kode aplikasi berada di proyek Next.js yang sama. Data tersimpan di PostgreSQL m
    npm run dev
    ```
 
-5. Buka `http://localhost:3000/admin`. Passcode awal adalah `121413`, atau nilai `ADMIN_INITIAL_PASSCODE` pada saat admin pertama kali diinisialisasi. Ganti melalui Pengaturan bila diperlukan. Mengubah variabel lingkungan setelah inisialisasi tidak mengganti passcode yang sudah disimpan.
+5. Buka `http://localhost:3000/admin`. Passcode awal adalah nilai `ADMIN_INITIAL_PASSCODE` pada saat admin pertama kali diinisialisasi. Di production, admin menolak inisialisasi bila variabel ini kosong; passcode pengembangan bawaan hanya berlaku di mode lokal dan pengujian. Ganti melalui Pengaturan bila diperlukan. Mengubah variabel lingkungan setelah inisialisasi tidak mengganti passcode yang sudah disimpan.
 
 Referensi resmi: [koneksi Prisma di Supabase](https://supabase.com/docs/guides/database/prisma), [Prisma PostgreSQL](https://www.prisma.io/docs/v7/prisma-orm/quickstart/postgresql).
 
