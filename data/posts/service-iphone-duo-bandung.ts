@@ -14,7 +14,7 @@ export const serviceIphoneDuoBandungPost: BlogPost = {
   title: "Service iPhone Duo di Bandung: Pilih Jalur Garansi atau Servis Luar, Biaya per Komponen, dan Cara Konsultasi",
   seoTitle: "Service iPhone Duo Bandung: Biaya & Panduan",
   description:
-    "Panduan service iPhone Duo di Bandung: kapan wajib klaim garansi Apple, biaya acuan ganti layar dalam, layar luar, baterai, dan kaca belakang, serta cara konsultasi sebelum perbaikan.",
+    "Service iPhone Duo di Bandung: kapan klaim garansi Apple, biaya ganti layar dalam, layar luar, dan baterai, plus diagnosa gratis sebelum perbaikan.",
   image: "/images/blog/service-iphone-duo-bandung.webp",
   imageAlt: "Ilustrasi iPhone lipat terbuka dengan ikon obeng dan engsel, menggambarkan service iPhone Duo di Bandung",
   publicationApproved: true,
