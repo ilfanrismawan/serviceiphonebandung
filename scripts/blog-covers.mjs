@@ -316,6 +316,27 @@ const covers = [
         <path d="M-6 110 l6 18 l6 -18 z" fill="#e7e5e4"/>
       </g>`,
   },
+  {
+    slug: "service-iphone-duo-bandung",
+    tag: "IPHONE DUO", title: ["Service iPhone Duo", "di Bandung"],
+    bg: ["#111827", "#0f766e"], accent: "#5eead4",
+    screen: `
+      <defs><linearGradient id="svcDuo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#134e4a"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+      <linearGradient id="svcFold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="0.5" stop-color="#000" stop-opacity="0.4"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient></defs>
+      <rect width="${W}" height="${H}" fill="url(#svcDuo)"/>
+      <rect x="125" y="0" width="50" height="${H}" fill="url(#svcFold)"/>
+      <text x="30" y="80" font-size="24" font-weight="700" fill="#5eead4">Diagnosa</text>
+      ${["Layar luar", "Baterai", "Kaca belakang", "Engsel & layar dalam"].map((t, i) => `
+        <g transform="translate(30 ${120 + i * 92})">
+          <rect width="240" height="70" rx="16" fill="#fff" fill-opacity="0.1"/>
+          <circle cx="34" cy="35" r="14" fill="${i < 3 ? "#5eead4" : "#fbbf24"}"/>
+          <text x="60" y="43" font-size="20" fill="#fff">${t}</text>
+        </g>`).join("")}
+      <text x="30" y="530" font-size="18" fill="#fff" opacity="0.7">Harga jelas sebelum</text>
+      <text x="30" y="556" font-size="18" fill="#fff" opacity="0.7">pengerjaan</text>`,
+    extra: `
+      ${badge(1420, 640, 72, "#5eead4", `<g transform="rotate(-45)"><rect x="-8" y="-46" width="16" height="58" rx="5" fill="#111827"/><rect x="-14" y="10" width="28" height="40" rx="9" fill="#111827"/></g>`)}`,
+  },
 ];
 
 const svgFor = (c) => {

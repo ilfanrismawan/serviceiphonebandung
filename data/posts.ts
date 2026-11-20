@@ -9,6 +9,7 @@ import { gantiBateraiResmiVsLuarPost } from "./posts/ganti-baterai-resmi-vs-serv
 import { iphonePanasPost } from "./posts/iphone-panas-kapan-perlu-servis";
 import { masalahIphone18ProPost } from "./posts/masalah-iphone-18-pro";
 import { iphoneDuoLayarRetakPost } from "./posts/iphone-duo-layar-retak";
+import { serviceIphoneDuoBandungPost } from "./posts/service-iphone-duo-bandung";
 import { layarTidakBisaDisentuhIos27Post } from "./posts/layar-iphone-tidak-bisa-disentuh-ios-27";
 
 import { updateIos18711Post } from "./posts/update-ios-18-7-11-iphone-xr-xs";
@@ -18,6 +19,7 @@ import { serviceIphone18ProMaxBandungPost } from "./posts/service-iphone-18-pro-
 
 export const posts: BlogPost[] = [
   serviceIphone18ProMaxBandungPost,
+  serviceIphoneDuoBandungPost,
   panduanServiceBandungPost,
   iphoneRestartUpdateResetPost,
   updateIos18711Post,
