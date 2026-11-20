@@ -15,7 +15,7 @@ export const serviceIphone18ProMaxBandungPost: BlogPost = {
   title: "Service iPhone 18 Pro Max di Bandung: Garansi, Komponen, dan Kisaran Biaya",
   seoTitle: "Service iPhone 18 Pro Max Bandung: Panduan Biaya",
   description:
-    "Layar iPhone 18 Pro Max pecah, baterai drop, atau kena air? Pahami jalur garansi, komponen yang mudah dan sulit diperbaiki, kisaran biaya, serta cara cek hasil servis di Bandung.",
+    "Service iPhone 18 Pro Max di Bandung: kapan klaim garansi, komponen yang sulit diperbaiki, kisaran biaya layar dan baterai, serta cara cek hasil servis.",
   image: "/images/blog/service-iphone-18-pro-max-bandung.webp",
   imageAlt: "Ilustrasi iPhone dengan menu Riwayat Komponen menunjukkan layar, baterai, dan kamera berstatus asli",
   publicationApproved: true,
@@ -67,7 +67,7 @@ export const serviceIphone18ProMaxBandungPost: BlogPost = {
       heading: "iPhone 18 Pro Max baru sebulan dijual, lalu kenapa butuh servis?",
       paragraphs: [
         "iPhone 18 Pro Max resmi dijual di Indonesia sejak 16 Oktober 2026 dengan harga mulai sekitar Rp29,5 juta untuk kapasitas 256 GB. Usianya memang masih muda, tetapi kerusakan karena jatuh, terbentur, atau terkena cairan bisa terjadi sejak hari pertama. Layar 6,9 inci yang lebar dan bodi yang lebih berat membuat ponsel ini mudah terlepas dari genggaman saat dipakai satu tangan.",
-        "Artikel ini membahas kapan iPhone 18 Pro Max sebaiknya dibawa ke jalur resmi, kapan servis independen di Bandung masuk akal, komponen mana yang mudah dan sulit diperbaiki menurut teardown, kisaran biaya sebagai acuan, dan cara memeriksa hasil servis. Tujuannya membantu Anda mengambil keputusan, bukan sekadar mencari tempat termurah.",
+        "Panduan service iPhone 18 Pro Max di Bandung ini membahas kapan ponsel Anda sebaiknya dibawa ke jalur resmi, kapan servis independen di Bandung masuk akal, komponen mana yang mudah dan sulit diperbaiki menurut teardown, kisaran biaya sebagai acuan, dan cara memeriksa hasil servis. Tujuannya membantu Anda mengambil keputusan, bukan sekadar mencari tempat termurah.",
       ],
       list: [
         "Masih garansi dan masalahnya cacat atau bug software: klaim ke jalur resmi.",
