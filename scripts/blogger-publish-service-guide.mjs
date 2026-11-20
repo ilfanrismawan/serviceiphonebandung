@@ -1,0 +1,15 @@
+import { api } from './blogger-api.mjs';
+import { readFile, writeFile } from 'node:fs/promises';
+const title = 'Service iPhone Bandung: Layanan, Biaya, dan Lokasi';
+const content = await readFile(new URL('../docs/service-iphone-bandung-artikel.html', import.meta.url), 'utf8');
+const found = (await api('/posts?view=ADMIN&status=live&status=draft&maxResults=100')).items || [];
+const matches = found.filter(post => post.title === title);
+if (matches.length > 1) throw new Error('Duplicate title; inspect manually.');
+let post = matches[0];
+if (!post) post = await api('/posts?isDraft=true', { method: 'POST', body: JSON.stringify({ title, content, labels: ['Service iPhone Bandung', 'Panduan Servis', 'Bandung'] }) });
+else if (post.content !== content) throw new Error('Existing content differs; inspect manually.');
+if (post.status === 'DRAFT') post = await api(`/posts/${post.id}/publish`, { method: 'POST' });
+if (post.status !== 'LIVE') throw new Error('Post not LIVE');
+const result = { id: post.id, title: post.title, url: post.url, status: post.status };
+await writeFile(new URL('../docs/service-iphone-bandung-publication.json', import.meta.url), JSON.stringify(result, null, 2));
+console.log(JSON.stringify(result, null, 2));

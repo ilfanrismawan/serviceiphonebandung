@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://catataniphonebandung.blogspot.com/p/tentang-blog.html",
+    "status": 200,
+    "backlinks": [
+      "https://serviceiphonebandung.vercel.app/"
+    ]
+  },
+  {
+    "url": "https://catataniphonebandung.blogspot.com/p/kontak-dan-lokasi.html",
+    "status": 200,
+    "backlinks": [
+      "https://serviceiphonebandung.vercel.app/kontak"
+    ]
+  },
+  {
+    "url": "https://catataniphonebandung.blogspot.com/2026/11/cara-membandingkan-estimasi-biaya.html",
+    "status": 200,
+    "backlinks": [
+      "https://serviceiphonebandung.vercel.app/harga"
+    ]
+  },
+  {
+    "url": "https://catataniphonebandung.blogspot.com/2026/11/memilih-tempat-servis-iphone-di-bandung.html",
+    "status": 200,
+    "backlinks": [
+      "https://serviceiphonebandung.vercel.app/layanan"
+    ]
+  },
+  {
+    "url": "https://serviceiphonebandung.vercel.app/",
+    "status": 200
+  },
+  {
+    "url": "https://serviceiphonebandung.vercel.app/harga",
+    "status": 200
+  },
+  {
+    "url": "https://serviceiphonebandung.vercel.app/layanan",
+    "status": 200
+  },
+  {
+    "url": "https://serviceiphonebandung.vercel.app/kontak",
+    "status": 200
+  }
+]
