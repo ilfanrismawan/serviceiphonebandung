@@ -14,8 +14,10 @@ import { layarTidakBisaDisentuhIos27Post } from "./posts/layar-iphone-tidak-bisa
 import { updateIos18711Post } from "./posts/update-ios-18-7-11-iphone-xr-xs";
 
 import { iphoneRestartUpdateResetPost } from "./posts/iphone-restart-setelah-update-reset";
+import { serviceIphone18ProMaxBandungPost } from "./posts/service-iphone-18-pro-max-bandung";
 
 export const posts: BlogPost[] = [
+  serviceIphone18ProMaxBandungPost,
   panduanServiceBandungPost,
   iphoneRestartUpdateResetPost,
   updateIos18711Post,

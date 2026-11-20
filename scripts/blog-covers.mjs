@@ -292,6 +292,30 @@ const covers = [
     extra: `
       ${badge(1420, 640, 72, "#ef4444", `<path d="M-26 -26 L26 26 M26 -26 L-26 26" stroke="#fff" stroke-width="14" stroke-linecap="round"/>`)}`,
   },
+  {
+    slug: "service-iphone-18-pro-max-bandung",
+    tag: "IPHONE 18 PRO MAX", title: ["Service iPhone 18", "Pro Max Bandung"],
+    bg: ["#1c1917", "#57534e"], accent: "#fcd34d",
+    screen: `
+      <rect width="${W}" height="${H}" fill="#f5f5f4"/>
+      <text x="30" y="76" font-size="24" font-weight="700" fill="#1c1917">Riwayat Komponen</text>
+      ${["Layar", "Baterai", "Kamera"].map((t, i) => `
+        <g transform="translate(30 ${120 + i * 92})">
+          <rect width="240" height="70" rx="16" fill="#fff" stroke="#e7e5e4" stroke-width="2"/>
+          <text x="20" y="44" font-size="22" fill="#292524">${t}</text>
+          <rect x="140" y="20" width="84" height="30" rx="15" fill="#16a34a"/>
+          <text x="182" y="41" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Asli</text>
+        </g>`).join("")}
+      <g transform="translate(150 500)" fill="none" stroke="#a8a29e" stroke-width="4" stroke-linecap="round">
+        <circle r="54"/><path d="M-22 0 l14 14 l30 -30" stroke="#16a34a" stroke-width="8"/>
+      </g>`,
+    extra: `
+      <g transform="translate(1400 650) rotate(-35)" filter="url(#soft)">
+        <rect x="-14" y="-110" width="28" height="150" rx="10" fill="#fcd34d"/>
+        <rect x="-6" y="40" width="12" height="70" rx="4" fill="#e7e5e4"/>
+        <path d="M-6 110 l6 18 l6 -18 z" fill="#e7e5e4"/>
+      </g>`,
+  },
 ];
 
 const svgFor = (c) => {
