@@ -148,9 +148,10 @@ export const iphoneDuoLayarRetakPost: BlogPost = {
       heading: "Konsultasi kerusakan layar iPhone di Bandung",
       paragraphs: [
         "Untuk iPhone Duo yang masih baru dan bergaransi, jalur terbaik adalah klaim resmi ke Apple. Kami menyarankan ini dengan jujur walaupun kami servis independen. Untuk iPhone lain yang layarnya pecah, bergaris, atau blank, Anda bisa datang ke workshop Service iPhone Bandung di Jl. Dipati Ukur No. 86. Diagnosa dilakukan lebih dulu tanpa biaya, dan harga disampaikan sebelum pengerjaan.",
-        "Ragu apakah kerusakan iPhone Anda masuk garansi atau tidak? Kirim foto dan kronologinya lewat WhatsApp, kami bantu jelaskan pilihan terbaiknya.",
+        "Ragu apakah kerusakan iPhone Anda masuk garansi atau tidak? Kirim foto dan kronologinya lewat WhatsApp, kami bantu jelaskan pilihan terbaiknya. Untuk kerusakan iPhone Duo lain seperti baterai, layar luar, atau kaca belakang, baca panduan service iPhone Duo di Bandung beserta biaya acuan per komponennya.",
       ],
       links: [
+        { label: "Service iPhone Duo di Bandung: jalur garansi, biaya per komponen, dan konsultasi", href: "/blog/service-iphone-duo-bandung" },
         { label: "Layar iPhone pecah: boleh ditunda atau harus segera diganti?", href: "/blog/layar-iphone-pecah-segera-diganti" },
         { label: "Layanan ganti LCD iPhone Bandung", href: "/layanan/ganti-lcd-iphone" },
       ],
