@@ -8,8 +8,10 @@ import { Container } from "@/components/ui/Container";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getPost, posts } from "@/data/posts";
-import { isPublishedPost } from "@/lib/publication";
+import {
+  getPublishedPostBySlugFromDb,
+  getPublishedPostsFromDb,
+} from "@/lib/blog-data";
 import { getService } from "@/data/services";
 import { formatDate } from "@/lib/format";
 import { articleSchema } from "@/lib/schema";
@@ -19,13 +21,16 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return posts.filter(isPublishedPost).map((p) => ({ slug: p.slug }));
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const allPosts = await getPublishedPostsFromDb();
+  return allPosts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = await getPublishedPostBySlugFromDb(slug);
   if (!post) return {};
 
   return buildMetadata({
@@ -42,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = await getPublishedPostBySlugFromDb(slug);
   if (!post) notFound();
 
   const relatedService = getService(post.relatedServiceSlug);
@@ -52,7 +57,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       <JsonLd data={articleSchema(post)} />
       <article className="pb-20 pt-10 sm:pb-28">
         <Container size="narrow">
-          <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: post.title, href: `/blog/${post.slug}` }]} />
+          <Breadcrumbs
+            items={[
+              { name: "Blog", href: "/blog" },
+              { name: post.title, href: `/blog/${post.slug}` },
+            ]}
+          />
 
           <header>
             <h1 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
@@ -76,58 +86,46 @@ export default async function BlogPostPage({ params }: PageProps) {
                 />
               </div>
             )}
-            {post.imageCaption && <p className="mt-3 text-sm text-muted">{post.imageCaption}</p>}
+            {post.imageCaption && (
+              <p className="mt-3 text-sm text-muted">{post.imageCaption}</p>
+            )}
           </header>
 
           <div className="mt-10 space-y-10">
-            {post.sections.map((section) => (
-              <section key={section.heading}>
-                <h2 className="text-2xl font-semibold tracking-tight text-ink">{section.heading}</h2>
+            {post.sections.map((section, idx) => (
+              <section key={section.heading || idx}>
+                {section.heading && (
+                  <h2 className="text-2xl font-semibold tracking-tight text-ink">
+                    {section.heading}
+                  </h2>
+                )}
                 {section.paragraphs.map((p, i) => (
-                  <p key={i} className="mt-4 text-pretty text-lg leading-relaxed text-muted">
+                  <p
+                    key={i}
+                    className="mt-4 text-pretty text-lg leading-relaxed text-muted"
+                  >
                     {p}
                   </p>
                 ))}
                 {section.list && (
                   <ul className="mt-4 space-y-2">
                     {section.list.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-lg leading-relaxed text-muted">
-                        <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-lg leading-relaxed text-muted"
+                      >
+                        <span
+                          className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                          aria-hidden="true"
+                        />
                         {item}
                       </li>
                     ))}
                   </ul>
                 )}
-                {section.subsections?.map((subsection) => (
-                  <div key={subsection.heading} className="mt-6">
-                    <h3 className="text-xl font-semibold tracking-tight text-ink">{subsection.heading}</h3>
-                    {subsection.paragraphs.map((paragraph, index) => (
-                      <p key={index} className="mt-4 text-pretty text-lg leading-relaxed text-muted">{paragraph}</p>
-                    ))}
-                    {subsection.list && (
-                      <ul className="mt-4 list-disc space-y-2 pl-6 text-lg leading-relaxed text-muted">
-                        {subsection.list.map((item) => <li key={item}>{item}</li>)}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-                {section.links && <div className="mt-5 flex flex-wrap gap-4">{section.links.map((link) => <Link key={link.href} href={link.href} className="font-semibold text-accent underline underline-offset-4">{link.label}</Link>)}</div>}
               </section>
             ))}
           </div>
-
-          {post.sources && (
-            <section className="mt-10 border-t border-black/10 pt-6" aria-labelledby="article-sources">
-              <h2 id="article-sources" className="text-xl font-semibold text-ink">Sumber dan referensi</h2>
-              <ul className="mt-4 space-y-3">
-                {post.sources.map((source) => (
-                  <li key={source.url}>
-                    <a href={source.url} className="text-accent underline underline-offset-4">{source.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
 
           {relatedService && (
             <div className="mt-14 rounded-3xl bg-mist p-8">
@@ -150,7 +148,9 @@ export default async function BlogPostPage({ params }: PageProps) {
           </p>
         </Container>
       </article>
-      {post.faqs && post.faqs.length > 0 && <FaqSection faqs={post.faqs} title="Pertanyaan yang sering diajukan" />}
+      {post.faqs && post.faqs.length > 0 && (
+        <FaqSection faqs={post.faqs} title="Pertanyaan yang sering diajukan" />
+      )}
       <CtaBanner />
     </>
   );
