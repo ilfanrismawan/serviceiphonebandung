@@ -82,7 +82,8 @@ function mapDbToBlogPost(row: {
     relatedServiceSlug: row.category.includes("-") ? row.category : "ganti-lcd-iphone",
     publicationApproved: row.published,
     sections: markdownToSections(row.content),
-  } as BlogPost;
+    rawContent: row.content,
+  } as BlogPost & { rawContent?: String};
 }
 
 export async function getPublishedPostsFromDb(): Promise<BlogPost[]> {

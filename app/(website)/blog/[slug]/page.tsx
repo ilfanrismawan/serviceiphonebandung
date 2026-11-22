@@ -16,6 +16,8 @@ import { getService } from "@/data/services";
 import { formatDate } from "@/lib/format";
 import { articleSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -45,10 +47,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
+ 
   const post = await getPublishedPostBySlugFromDb(slug);
   if (!post) notFound();
+  const rawContent = (post as typeof post & { rawContent?: string }).rawContent;
 
   const relatedService = getService(post.relatedServiceSlug);
 
@@ -91,40 +96,110 @@ export default async function BlogPostPage({ params }: PageProps) {
             )}
           </header>
 
-          <div className="mt-10 space-y-10">
-            {post.sections.map((section, idx) => (
-              <section key={section.heading || idx}>
-                {section.heading && (
-                  <h2 className="text-2xl font-semibold tracking-tight text-ink">
-                    {section.heading}
-                  </h2>
-                )}
-                {section.paragraphs.map((p, i) => (
-                  <p
-                    key={i}
-                    className="mt-4 text-pretty text-lg leading-relaxed text-muted"
-                  >
-                    {p}
-                  </p>
-                ))}
-                {section.list && (
-                  <ul className="mt-4 space-y-2">
-                    {section.list.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-lg leading-relaxed text-muted"
+          <div className="mt-10">
+            {rawContent ? (
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  h2: ({ children }) => (
+                    <h2 className="mt-10 mb-4 text-2xl font-semibold tracking-tight text-ink">
+                      {children}
+                    </h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="mt-8 mb-3 text-xl font-semibold tracking-tight text-ink">
+                      {children}
+                    </h3>
+                  ),
+                  p: ({ children }) => (
+                    <p className="mt-4 text-pretty text-lg leading-relaxed text-muted">
+                      {children}
+                    </p>
+                  ),
+                  strong: ({ children }) => (
+                    <strong className="font-semibold text-ink">{children}</strong>
+                  ),
+                  ul: ({ children }) => (
+                    <ul className="mt-4 list-disc space-y-2 pl-6 text-lg leading-relaxed text-muted">
+                      {children}
+                    </ul>
+                  ),
+                  ol: ({ children }) => (
+                    <ol className="mt-4 list-decimal space-y-2 pl-6 text-lg leading-relaxed text-muted">
+                      {children}
+                    </ol>
+                  ),
+                  li: ({ children }) => <li className="pl-1">{children}</li>,
+                  hr: () => <hr className="my-8 border-black/10" />,
+                  a: ({ href, children }) => (
+                    <a
+                      href={href}
+                      className="font-medium text-accent underline underline-offset-4 hover:opacity-80"
+                    >
+                      {children}
+                    </a>
+                  ),
+                  table: ({ children }) => (
+                    <div className="my-6 overflow-x-auto rounded-2xl border border-black/10">
+                      <table className="w-full border-collapse text-left text-sm">
+                        {children}
+                      </table>
+                    </div>
+                  ),
+                  thead: ({ children }) => (
+                    <thead className="bg-mist text-ink">{children}</thead>
+                  ),
+                  th: ({ children }) => (
+                    <th className="border-b border-black/10 px-4 py-3 font-semibold">
+                      {children}
+                    </th>
+                  ),
+                  td: ({ children }) => (
+                    <td className="border-b border-black/5 px-4 py-3 text-muted">
+                      {children}
+                    </td>
+                  ),
+                }}
+              >
+                {rawContent}
+              </ReactMarkdown>
+            ) : (
+              <div className="space-y-10">
+                {post.sections.map((section, idx) => (
+                  <section key={section.heading || idx}>
+                    {section.heading && (
+                      <h2 className="text-2xl font-semibold tracking-tight text-ink">
+                        {section.heading}
+                      </h2>
+                    )}
+                    {section.paragraphs.map((p, i) => (
+                      <p
+                        key={i}
+                        className="mt-4 text-pretty text-lg leading-relaxed text-muted"
                       >
-                        <span
-                          className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
-                          aria-hidden="true"
-                        />
-                        {item}
-                      </li>
+                        {p}
+                      </p>
                     ))}
-                  </ul>
-                )}
-              </section>
-            ))}
+                    {section.list && (
+                      <ul className="mt-4 space-y-2">
+                        {section.list.map((item) => (
+                          <li
+                            key={item}
+                            className="flex items-start gap-3 text-lg leading-relaxed text-muted"
+                          >
+                            <span
+                              className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                              aria-hidden="true"
+                            />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </section>
+                ))}
+              </div>
+            )}
           </div>
 
           {relatedService && (
