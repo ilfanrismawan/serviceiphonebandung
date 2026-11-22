@@ -4,10 +4,11 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { posts } from "@/data/posts";
-import { isPublishedPost } from "@/lib/publication";
+import { getPublishedPostsFromDb } from "@/lib/blog-data";
 import { formatDate } from "@/lib/format";
 import { buildMetadata } from "@/lib/seo";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = buildMetadata({
   title: "Panduan Perawatan dan Servis iPhone",
@@ -15,14 +16,16 @@ export const metadata: Metadata = buildMetadata({
   path: "/blog",
 });
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage() {
+  const publishedPosts = await getPublishedPostsFromDb();
+
   return (
     <section className="pb-20 pt-10 sm:pb-28">
       <Container>
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
         <SectionHeading as="h1" title="Blog" description="Tips praktis sebelum kamu memutuskan servis." />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.filter(isPublishedPost).map((post) => (
+          {publishedPosts.map((post) => (
             <Card key={post.slug} href={`/blog/${post.slug}`}>
               {post.image && (
                 <div className="relative mb-4 -mx-1 -mt-1 aspect-[16/10] overflow-hidden rounded-2xl bg-black/5">

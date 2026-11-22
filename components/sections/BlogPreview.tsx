@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { posts } from "@/data/posts";
+import { getPublishedPostsFromDb } from "@/lib/blog-data";
 import { isPublishedPost } from "@/lib/publication";
 import { formatDate } from "@/lib/format";
 
-export function BlogPreview() {
+export async function BlogPreview() {
+    const publishedPosts = await getPublishedPostsFromDb();
   return (
     <Section tone="white" labelledBy="blog-heading">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4 sm:mb-12">
@@ -22,7 +23,7 @@ export function BlogPreview() {
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-        {posts.filter(isPublishedPost).slice(0, 3).map((post) => (
+        {publishedPosts.filter(isPublishedPost).slice(0, 3).map((post) => (
           <Card key={post.slug} href={`/blog/${post.slug}`} tone="glass">
             {post.image && (
               <div className="relative mb-4 -mx-1 -mt-1 aspect-[16/10] overflow-hidden rounded-2xl bg-black/5 border border-white/60 shadow-inner">
