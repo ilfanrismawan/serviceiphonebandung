@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Ping Health Endpoint
         run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://serviceiphoneebandung.vercel.app/api/health)
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://serviceiphonebandung.vercel.app/api/health)
           echo "HTTP Status: $STATUS"
           if [ "$STATUS" -ne 200 ]; then
             exit 1
